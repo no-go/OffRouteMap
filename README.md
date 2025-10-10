@@ -2,7 +2,7 @@
 
 A simple but modern Windows Application in C# and WPF to get and cache free
 map tiles (e.g. OSM or OpenBusMap) and use them offline to draw and measure routes
-in kilometerss, save and load them.
+in kilometers, save and load them.
 
 ## Creation roadmap and ideas
 
