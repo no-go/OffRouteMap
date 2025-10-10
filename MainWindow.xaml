@@ -1,12 +1,38 @@
-﻿<Window x:Class="OffRouteMap.MainWindow"
+﻿<mah:MetroWindow x:Class="OffRouteMap.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:local="clr-namespace:OffRouteMap"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="{Binding WindowTitle, UpdateSourceTrigger=PropertyChanged}" Height="450" Width="800">
 
+    <mah:MetroWindow.LeftWindowCommands>
+        <mah:WindowCommands>
+            <Button Command="{Binding ToggleLightCommand}">
+                <iconPacks:PackIconModern Width="22"
+                                  Height="22"
+                                  Kind="Lightbulb" />
+            </Button>
+            <Button Command="{Binding ZoomOutCommand}">
+                <iconPacks:PackIconModern Width="22"
+                                  Height="22"
+                                  Kind="MagnifyMinus" />
+            </Button>
+            <Button Command="{Binding ZoomInCommand}">
+                <iconPacks:PackIconModern Width="22"
+                                  Height="22"
+                                  Kind="MagnifyAdd" />
+            </Button>
+        </mah:WindowCommands>
+    </mah:MetroWindow.LeftWindowCommands>
+    
+    <Grid>
+        <Grid.LayoutTransform>
+            <ScaleTransform ScaleX="{Binding ZoomFactor}" ScaleY="{Binding ZoomFactor}" />
+        </Grid.LayoutTransform>
+        <Label Content="Label" Margin="10,0,10,10" VerticalAlignment="Bottom"/>
     </Grid>
-</Window>
+</mah:MetroWindow>
