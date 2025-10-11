@@ -8,7 +8,9 @@
         xmlns:gmap="clr-namespace:GMap.NET.WindowsPresentation;assembly=GMap.NET.WindowsPresentation"
         xmlns:local="clr-namespace:OffRouteMap"
         mc:Ignorable="d"
-        Title="{Binding WindowTitle, UpdateSourceTrigger=PropertyChanged}" Height="450" Width="800">
+        Title="{Binding WindowTitle, UpdateSourceTrigger=PropertyChanged}"
+        Closing="Window_Closing"
+        Height="450" Width="800">
 
     <mah:MetroWindow.LeftWindowCommands>
         <mah:WindowCommands>
@@ -17,12 +19,12 @@
                                   Height="22"
                                   Kind="Lightbulb" />
             </Button>
-            <Button Command="{Binding ZoomOutCommand}">
+            <Button Command="{Binding GuiZoomOutCommand}">
                 <iconPacks:PackIconModern Width="22"
                                   Height="22"
                                   Kind="MagnifyMinus" />
             </Button>
-            <Button Command="{Binding ZoomInCommand}">
+            <Button Command="{Binding GuiZoomInCommand}">
                 <iconPacks:PackIconModern Width="22"
                                   Height="22"
                                   Kind="MagnifyAdd" />
@@ -32,11 +34,14 @@
 
     <Grid>
         <Grid.LayoutTransform>
-            <ScaleTransform ScaleX="{Binding ZoomFactor}" ScaleY="{Binding ZoomFactor}" />
+            <ScaleTransform ScaleX="{Binding GuiZoomFactor}" ScaleY="{Binding GuiZoomFactor}" />
         </Grid.LayoutTransform>
 
-        <gmap:GMapControl Name="gmapControl" Margin="10,10,10,43" />
+        <gmap:GMapControl Name="gmapControl" Margin="10,10,10,43" MinZoom="0" MaxZoom="18" />
 
-        <Label Content="Label" Margin="10,0,10,10" VerticalAlignment="Bottom"/>
+        <Label x:Name="lblStatus" Margin="10,0,10,10" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontFamily="Consolas" />
+        <ComboBox Width="120"  Margin="10,0,10,10" VerticalAlignment="Bottom" HorizontalAlignment="Right" 
+                  SelectedItem="{Binding SelectedMap, Mode=TwoWay}"
+                  ItemsSource="{Binding Items}" />
     </Grid>
 </mah:MetroWindow>

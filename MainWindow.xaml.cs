@@ -1,6 +1,8 @@
 ﻿using GMap.NET;
 using GMap.NET.MapProviders;
+using GMap.NET.WindowsPresentation;
 using MahApps.Metro.Controls;
+using System.Windows;
 
 namespace OffRouteMap
 {
@@ -13,11 +15,23 @@ namespace OffRouteMap
         {
             InitializeComponent();
             DataContext = new MainViewModel(this);
-
-            gmapControl.MapProvider = OpenStreetMapProvider.Instance;
-            gmapControl.Position = new PointLatLng(52.5200, 13.4050); // Berlin (Latitude, Longitude)
-            gmapControl.Zoom = 10;
         }
 
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            var viewModel = (MainViewModel)this.DataContext;
+
+            if (viewModel.BeforeClosingCommand.CanExecute(null))
+            {
+                viewModel.BeforeClosingCommand.Execute(null);
+            }
+
+            // @todo some newbie trail and error here :-S
+
+            e.Cancel = false;
+            //Application.Current.Shutdown();
+            Environment.Exit(0);
+            //this.Close();
+        }
     }
 }

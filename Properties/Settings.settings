@@ -9,13 +9,16 @@
       <Value Profile="(Default)">1</Value>
     </Setting>
     <Setting Name="lastZoom" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">5</Value>
+      <Value Profile="(Default)">2</Value>
     </Setting>
     <Setting Name="lastLatitude" Type="System.Double" Scope="User">
       <Value Profile="(Default)">52</Value>
     </Setting>
     <Setting Name="lastLongitude" Type="System.Double" Scope="User">
       <Value Profile="(Default)">14</Value>
+    </Setting>
+    <Setting Name="lastMap" Type="System.String" Scope="User">
+      <Value Profile="(Default)">OSM</Value>
     </Setting>
   </Settings>
 </SettingsFile>

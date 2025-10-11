@@ -49,7 +49,7 @@ namespace OffRouteMap.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("5")]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
         public int lastZoom {
             get {
                 return ((int)(this["lastZoom"]));
@@ -80,6 +80,18 @@ namespace OffRouteMap.Properties {
             }
             set {
                 this["lastLongitude"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("OSM")]
+        public string lastMap {
+            get {
+                return ((string)(this["lastMap"]));
+            }
+            set {
+                this["lastMap"] = value;
             }
         }
     }

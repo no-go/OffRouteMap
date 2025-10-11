@@ -19,26 +19,29 @@ in kilometers, save and load them.
   - maybe using LiveCharts2 to visualisze downloads
 - maybe allow to set different map tile url sources similar to foxtrotgps
   - code must be open for that feature
+  - see https://github.com/ArduPilot/MissionPlanner/blob/master/ExtLibs/Maps/WMSProvider.cs
 - in code docu 
 
 ## Features
 
 - map
-  - [ ] given area from window size / region
+  - [x] given area from window size / region
   - [ ] load tiles from given folder (settings)
-  - [ ] load tiles from osm if missing (default feature, extension possible in feature versions)
-  - [ ] move area (left click)
-  - [ ] in/out zoom (mouse wheel)
-  - [ ] display position of cursor (status line)
+  - [x] load tiles from network if missing 
+  - [x] select different maps
+  - [ ] customize differnt map folder and sources
+  - [x] move area (right click)
+  - [x] in/out zoom (mouse wheel)
+  - [x] display position of cursor (status line)
 - route
   - [ ] display (or hide parts) on map in all zoom states
-  - [ ] start, end, remove and set a point/line (right click / context menu)
+  - [ ] start, end, remove and set a point/line (left click / context menu)
   - [ ] display length (status line)
 - settings
   - [ ] tiles folder
   - [x] GUI size and theme (part of window frame)
-  - [ ] initial/last position
-  - [ ] initial/last zoom
+  - [x] initial/last position
+  - [x] initial/last zoom
 - menu
   - [ ] load route (file window)
   - [ ] save route (file window)
