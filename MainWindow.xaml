@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:gmap="clr-namespace:GMap.NET.WindowsPresentation;assembly=GMap.NET.WindowsPresentation"
         xmlns:local="clr-namespace:OffRouteMap"
         mc:Ignorable="d"
         Title="{Binding WindowTitle, UpdateSourceTrigger=PropertyChanged}" Height="450" Width="800">
@@ -28,11 +29,14 @@
             </Button>
         </mah:WindowCommands>
     </mah:MetroWindow.LeftWindowCommands>
-    
+
     <Grid>
         <Grid.LayoutTransform>
             <ScaleTransform ScaleX="{Binding ZoomFactor}" ScaleY="{Binding ZoomFactor}" />
         </Grid.LayoutTransform>
+
+        <gmap:GMapControl Name="gmapControl" Margin="10,10,10,43" />
+
         <Label Content="Label" Margin="10,0,10,10" VerticalAlignment="Bottom"/>
     </Grid>
 </mah:MetroWindow>
