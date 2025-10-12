@@ -32,6 +32,16 @@
         </mah:WindowCommands>
     </mah:MetroWindow.LeftWindowCommands>
 
+    <mah:MetroWindow.RightWindowCommands>
+        <mah:WindowCommands>
+            <Button Command="{Binding SetCacheRootCommand}">
+                <iconPacks:PackIconModern Width="22"
+                                  Height="22"
+                                  Kind="Suitcase" />
+            </Button>
+        </mah:WindowCommands>
+    </mah:MetroWindow.RightWindowCommands>
+    
     <Grid>
         <Grid.LayoutTransform>
             <ScaleTransform ScaleX="{Binding GuiZoomFactor}" ScaleY="{Binding GuiZoomFactor}" />
@@ -40,8 +50,10 @@
         <gmap:GMapControl Name="gmapControl" Margin="10,10,10,43" MinZoom="0" MaxZoom="18" />
 
         <Label x:Name="lblStatus" Margin="10,0,10,10" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontFamily="Consolas" />
-        <ComboBox Width="120"  Margin="10,0,10,10" VerticalAlignment="Bottom" HorizontalAlignment="Right" 
-                  SelectedItem="{Binding SelectedMap, Mode=TwoWay}"
+        <ComboBox Width="120"  Margin="10,0,10,10" VerticalAlignment="Bottom" HorizontalAlignment="Right"
+                  DisplayMemberPath="DisplayName"
+                  SelectedValuePath="Key"
+                  SelectedValue="{Binding SelectedMap, Mode=TwoWay}"
                   ItemsSource="{Binding Items}" />
     </Grid>
 </mah:MetroWindow>

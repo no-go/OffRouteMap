@@ -24,12 +24,13 @@ in kilometers, save and load them.
 
 ## Features
 
+- [x] minimal localisation
 - map
   - [x] given area from window size / region
   - [x] load tiles from given folder
   - [x] load tiles from network if missing 
   - [x] select different maps
-  - [ ] customize differnt map folder and mapProvider urls (optional)
+  - [ ] add and customize differnt mapProvider urls (optional)
   - [x] move area via right click
   - [x] in/out zoom via mouse wheel
   - [x] display position of map center in status line
@@ -39,7 +40,7 @@ in kilometers, save and load them.
   - [ ] start, end, remove and set a point via left click
   - [ ] display length in status line
 - settings
-  - [ ] tiles folder
+  - [x] tiles folder
   - [x] GUI size and dark mode
   - [x] initial/last position
   - [x] initial/last zoom
@@ -51,7 +52,6 @@ in kilometers, save and load them.
 
 ## Not clear and to late design questions
 
-- localisation
 - unit tests
 - something similar to doxygen
 - ci/cd

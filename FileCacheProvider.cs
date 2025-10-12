@@ -1,11 +1,9 @@
-﻿
-using GMap.NET;
-using GMap.NET.Internals;
-using GMap.NET.MapProviders;
+﻿using GMap.NET;
 using GMap.NET.WindowsPresentation;
-using MahApps.Metro.Controls;
 using System.Collections.Concurrent;
 using System.IO;
+
+// thanks to GPT5-mini for greate basic help here!
 
 namespace OffRouteMap
 {
@@ -19,7 +17,7 @@ namespace OffRouteMap
         readonly Thread cleanupThread;
         bool disposed;
 
-        public FileCacheProvider(string rootPath, long maxCacheBytes = 0)
+        public FileCacheProvider (string rootPath, long maxCacheBytes = 0)
         {
             root = rootPath ?? throw new ArgumentNullException(nameof(rootPath));
             this.maxCacheBytes = maxCacheBytes;
@@ -32,10 +30,9 @@ namespace OffRouteMap
             }
         }
 
-        // PureImageCache interface --------------------------------------------------------
-
-        // tile: raw image bytes (png/jpg). type: provider-specific type (can be ignored or used to subfolder)
-        public bool PutImageToCache(byte[] tile, int type, GPoint pos, int zoom)
+        // tile: raw image bytes (png/jpg).
+        // type: provider-specific type (can be ignored or used to subfolder)
+        public bool PutImageToCache (byte[] tile, int type, GPoint pos, int zoom)
         {
             try
             {
@@ -69,7 +66,7 @@ namespace OffRouteMap
         }
 
         // returns PureImage or null
-        public PureImage GetImageFromCache(int type, GPoint pos, int zoom)
+        public PureImage GetImageFromCache (int type, GPoint pos, int zoom)
         {
             try
             {
@@ -110,7 +107,7 @@ namespace OffRouteMap
 
         // delete files older than date; if type != null, limit to that subfolder
         // returns number of deleted tiles
-        public int DeleteOlderThan(DateTime date, int? type)
+        public int DeleteOlderThan (DateTime date, int? type)
         {
             int deleted = 0;
             try
@@ -145,7 +142,7 @@ namespace OffRouteMap
         }
 
         // Background cleanup: enforce maxCacheBytes using LRU
-        void BackgroundCleanup()
+        void BackgroundCleanup ()
         {
             while (!disposed)
             {
@@ -180,7 +177,7 @@ namespace OffRouteMap
             }
         }
 
-        long GetCacheSizeBytes()
+        long GetCacheSizeBytes ()
         {
             try
             {
@@ -196,7 +193,7 @@ namespace OffRouteMap
             catch { return 0; }
         }
 
-        public void Dispose()
+        public void Dispose ()
         {
             disposed = true;
             try { cleanupThread?.Join(500); } catch { }

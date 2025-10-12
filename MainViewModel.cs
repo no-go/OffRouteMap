@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.IO;
 using System.Windows;
+using System.Windows.Forms;
 using System.Windows.Input;
 
 namespace OffRouteMap
@@ -17,17 +18,20 @@ namespace OffRouteMap
         private double _guiZoomFactor;
         private string _statusLine;
         private string _selectedMap;
+        private string _cacheRoot;
 
-        private readonly ThemeService _themeService;
         private readonly MainWindow _mainWindow;
+        private readonly ThemeService _themeService;
+        private readonly FolderDialogService _folderDialogService;
 
         public event PropertyChangedEventHandler PropertyChanged;
         public ICommand GuiZoomInCommand => new RelayCommand(GuiZoomIn);
         public ICommand GuiZoomOutCommand => new RelayCommand(GuiZoomOut);
         public ICommand ToggleLightCommand => new RelayCommand(ToggleLight);
         public ICommand BeforeClosingCommand => new RelayCommand(BeforeClosing);
+        public ICommand SetCacheRootCommand => new RelayCommand(SetCacheRoot);
 
-        public ObservableCollection<string> Items { get; set; }
+        public ProviderCollection Items { get; }
 
         public string WindowTitle
         {
@@ -74,32 +78,7 @@ namespace OffRouteMap
             {
                 _selectedMap = value;
                 OnPropertyChanged(nameof(SelectedMap));
-
-                string cachePath = Path.Combine(
-                    Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-                    "Maps",
-                    _selectedMap
-                );
-                _mainWindow.gmapControl.Manager.PrimaryCache = new FileCacheProvider(cachePath);
-                
-                // @todo not the elegant way
-
-                if (_selectedMap == "Google")
-                {
-                    _mainWindow.gmapControl.MapProvider = GMapProviders.GoogleMap;
-                }
-                else if (_selectedMap == "Cycle")
-                {
-                    _mainWindow.gmapControl.MapProvider = GMapProviders.OpenCycleMap;
-                }
-                else if (_selectedMap == "BingHybrid")
-                {
-                    _mainWindow.gmapControl.MapProvider = GMapProviders.BingHybridMap;
-                }
-                else
-                {
-                    _mainWindow.gmapControl.MapProvider = OpenStreetMapProvider.Instance;
-                }
+                HandleMapChanges();
             }
         }
 
@@ -107,19 +86,24 @@ namespace OffRouteMap
 
             // @todo make this init more configurable
 
+            // for testing
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("de");
+
             WindowTitle = GetType().Namespace;
-            this._mainWindow = mainWindow;
-            this._themeService = new ThemeService(255, 180, 0);
-            this._themeService.ApplyTheme(_mainWindow, Settings.Default.isDark);
+            _mainWindow = mainWindow;
+            _themeService = new ThemeService(255, 180, 0);
+            _themeService.ApplyTheme(_mainWindow, Settings.Default.isDark);
+            _folderDialogService = new FolderDialogService();
+            _cacheRoot = Settings.Default.cacheRoot;
             GuiZoomFactor = Settings.Default.guiSize;
 
-            Items = new ObservableCollection<string>
+            Items = new ProviderCollection(new[]
             {
-                "OSM",
-                "Google",
-                "Cycle",
-                "BingHybrid"
-            };
+                new ProviderItem("OSM",        "OpenStreetMap", OpenStreetMapProvider.Instance),
+                new ProviderItem("Google",     "Google Maps",   GMapProviders.GoogleMap),
+                new ProviderItem("Cycle",      "Cycle Maps",    GMapProviders.OpenCycleMap),
+                new ProviderItem("BingHybrid", "Bing Hybrid",   GMapProviders.BingHybridMap)
+            });
             SelectedMap = Settings.Default.lastMap;
 
             _mainWindow.gmapControl.OnPositionChanged += OnPositionChanged;
@@ -155,7 +139,41 @@ namespace OffRouteMap
         {
             Settings.Default.isDark = !Settings.Default.isDark;
             Settings.Default.Save();
-            this._themeService.ApplyTheme(_mainWindow, Settings.Default.isDark);
+            _themeService.ApplyTheme(_mainWindow, Settings.Default.isDark);
+        }
+
+        public void SetCacheRoot ()
+        {
+            var path = _folderDialogService.ShowSelectFolderDialog(
+                Strings.FolderDialog_Title,
+                _cacheRoot
+            );
+            if (path != null && path != _cacheRoot)
+            {
+                _cacheRoot = path;
+                Settings.Default.cacheRoot = _cacheRoot;
+                Settings.Default.Save();
+                HandleMapChanges();
+            }
+        }
+
+        private void HandleMapChanges ()
+        {
+            if (_cacheRoot == "")
+            {
+                _cacheRoot = Path.Combine(
+                    Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                    "Maps"
+                );
+            }
+            string cachePath = Path.Combine(_cacheRoot, _selectedMap);
+            _mainWindow.gmapControl.Manager.PrimaryCache = new FileCacheProvider(cachePath);
+            _mainWindow.gmapControl.Manager.Mode = AccessMode.ServerAndCache;
+
+            if (Items.TryGet(_selectedMap, out var item))
+            {
+                _mainWindow.gmapControl.MapProvider = item.Provider;
+            }
         }
 
         private void BeforeClosing ()

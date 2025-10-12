@@ -1,14 +1,8 @@
-﻿using GMap.NET;
-using GMap.NET.MapProviders;
-using GMap.NET.WindowsPresentation;
-using MahApps.Metro.Controls;
-using System.Windows;
+﻿using MahApps.Metro.Controls;
 
 namespace OffRouteMap
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : MetroWindow
     {
         public MainWindow()
@@ -27,7 +21,6 @@ namespace OffRouteMap
             }
 
             // @todo some newbie trail and error here :-S
-
             e.Cancel = false;
             //Application.Current.Shutdown();
             Environment.Exit(0);

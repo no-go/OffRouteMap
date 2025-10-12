@@ -20,5 +20,8 @@
     <Setting Name="lastMap" Type="System.String" Scope="User">
       <Value Profile="(Default)">OSM</Value>
     </Setting>
+    <Setting Name="cacheRoot" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>
