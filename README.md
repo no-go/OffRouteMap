@@ -26,7 +26,6 @@ in kilometers, save and load them.
 
 ## Features
 
-- [x] minimal localisation
 - map
   - [x] given area from window size / region
   - [x] load tiles from given folder
@@ -36,11 +35,10 @@ in kilometers, save and load them.
   - [x] move area via right click
   - [x] in/out zoom via mouse wheel
   - [x] display position of map center in status line
-  - [ ] map dark mode (optional, lightbulb icon)
 - route
   - [x] display on map in all zoom states
   - [x] start, end and set a point via double click
-  - [x] remove route from map
+  - [x] remove route from map (trash icon)
   - [x] display distance in status line
 - settings
   - [x] tiles folder
@@ -54,10 +52,12 @@ in kilometers, save and load them.
 
 ## Future tasks
 
-- unit tests
-- something similar to doxygen
-- ci/cd
-- any idea to port it to linux? maybe with glide or something strange like fltk? a hard break between code and gui?
+- [x] minimal localisation
+- [ ] unit tests
+- [ ] something similar to doxygen
+- [ ] ci/cd
+- [ ] map dark mode (optional, lightbulb icon)
+- Any idea to port it to linux? Maybe with glide or something strange like fltk? A hard break between code and gui?
 
 ## Known bugs
 
