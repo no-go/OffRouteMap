@@ -34,11 +34,12 @@ in kilometers, save and load them.
   - [x] move area via right click
   - [x] in/out zoom via mouse wheel
   - [x] display position of map center in status line
-  - [ ] map dark mode (optional)
+  - [ ] map dark mode (optional, lightbulb icon)
 - route
-  - [ ] display on map in all zoom states
-  - [ ] start, end, remove and set a point via left click
-  - [ ] display length in status line
+  - [x] display on map in all zoom states
+  - [x] start, end and set a point via double click
+  - [ ] remove route from map
+  - [x] display distance in status line
 - settings
   - [x] tiles folder
   - [x] GUI size and dark mode
@@ -47,8 +48,7 @@ in kilometers, save and load them.
 - menu
   - [ ] load route (file window)
   - [ ] save route (file window)
-  - [ ] set tiles folder ("file" window)
-  - [ ] clean map
+  - [x] set tiles folder ("file" window, suitcase icon)
 
 ## Not clear and to late design questions
 

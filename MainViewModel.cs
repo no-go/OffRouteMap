@@ -2,13 +2,12 @@
 using GMap.NET.MapProviders;
 using GMap.NET.WindowsPresentation;
 using OffRouteMap.Properties;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Globalization;
 using System.IO;
-using System.Windows;
-using System.Windows.Forms;
 using System.Windows.Input;
+using System.Windows.Media;
+using static GMap.NET.Entity.OpenStreetMapRouteEntity;
 
 namespace OffRouteMap
 {
@@ -19,6 +18,10 @@ namespace OffRouteMap
         private string _statusLine;
         private string _selectedMap;
         private string _cacheRoot;
+
+        private PointLatLng _mouseDownPos;
+        private List<PointLatLng> _routePoints;
+        private GMapRoute _route;
 
         private readonly MainWindow _mainWindow;
         private readonly ThemeService _themeService;
@@ -87,7 +90,7 @@ namespace OffRouteMap
             // @todo make this init more configurable
 
             // for testing
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo("de");
+            //Thread.CurrentThread.CurrentUICulture = new CultureInfo("de");
 
             WindowTitle = GetType().Namespace;
             _mainWindow = mainWindow;
@@ -99,14 +102,15 @@ namespace OffRouteMap
 
             Items = new ProviderCollection(new[]
             {
-                new ProviderItem("OSM",        "OpenStreetMap", OpenStreetMapProvider.Instance),
-                new ProviderItem("Google",     "Google Maps",   GMapProviders.GoogleMap),
-                new ProviderItem("Cycle",      "Cycle Maps",    GMapProviders.OpenCycleMap),
-                new ProviderItem("BingHybrid", "Bing Hybrid",   GMapProviders.BingHybridMap)
+                new ProviderItem("OSM",          "OpenStreetMap", OpenStreetMapProvider.Instance),
+                new ProviderItem("googlemaps",   "Google Maps",   GMapProviders.GoogleMap),
+                new ProviderItem("opencyclemap", "Cycle Maps",    GMapProviders.OpenCycleMap),
+                new ProviderItem("BingHybrid",   "Bing Hybrid",   GMapProviders.BingHybridMap)
             });
             SelectedMap = Settings.Default.lastMap;
 
-            _mainWindow.gmapControl.OnPositionChanged += OnPositionChanged;
+            _mainWindow.gmapControl.MouseDown += OnMouseDownClick;
+            _mainWindow.gmapControl.MouseDoubleClick += OnMouseDoubleDownClick;
 
             _mainWindow.gmapControl.Position = new PointLatLng(
                 Settings.Default.lastLatitude,
@@ -189,10 +193,92 @@ namespace OffRouteMap
         {
             string formattedLat = point.Lat.ToString("F10", CultureInfo.InvariantCulture);
             string formattedLng = point.Lng.ToString("F10", CultureInfo.InvariantCulture);
-            _mainWindow.lblStatus.Content = $"Lat Lng: {formattedLat} {formattedLng}";
+
+            double distance = RouteLengthKm();
+            if (distance > 0)
+            {
+                string formattedDist = distance.ToString("F5", CultureInfo.InvariantCulture);
+                StatusLine = $"Lat Lng Route: {formattedLat} {formattedLng} {formattedDist} km";
+            }
+            else
+            {
+                StatusLine = $"Lat Lng: {formattedLat} {formattedLng}";
+            }
         }
 
+        private void ShowRoute ()
+        {
+            if (_routePoints == null)
+            {
+                _routePoints = new List<PointLatLng>();
+            }
 
+            if (_route != null)
+            {
+                _mainWindow.gmapControl.Markers.Remove(_route);
+            }
 
+            if (_routePoints.Count > 0)
+            {
+                _route = new GMapRoute(_routePoints);
+                _route.Shape = new System.Windows.Shapes.Path()
+                {
+                    Stroke = new SolidColorBrush(Colors.Blue),
+                    StrokeThickness = 2
+                };
+
+                _mainWindow.gmapControl.Markers.Add(_route);
+            }
+        }
+        private double DistanceKm (PointLatLng p1, PointLatLng p2)
+        {
+            const double R = 6371.0; // Erdradius in km
+            double lat1 = DegreesToRadians(p1.Lat);
+            double lat2 = DegreesToRadians(p2.Lat);
+            double dLat = DegreesToRadians(p2.Lat - p1.Lat);
+            double dLon = DegreesToRadians(p2.Lng - p1.Lng);
+
+            double a = Math.Sin(dLat / 2) * Math.Sin(dLat / 2) +
+                       Math.Cos(lat1) * Math.Cos(lat2) *
+                       Math.Sin(dLon / 2) * Math.Sin(dLon / 2);
+            double c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
+            return R * c;
+        }
+
+        private double DegreesToRadians (double deg)
+        {
+            return deg * (Math.PI / 180.0);
+        }
+
+        private double RouteLengthKm ()
+        {
+            if (_routePoints == null || _routePoints.Count < 2) return 0.0;
+            double total = 0.0;
+            for (int i = 0; i < _routePoints.Count - 1; i++)
+            {
+                total += DistanceKm(_routePoints[i], _routePoints[i + 1]);
+            }
+            return total;
+        }
+
+        private void OnMouseDownClick (object sender, MouseButtonEventArgs e)
+        {
+            var point = e.GetPosition(_mainWindow.gmapControl);
+            _mouseDownPos = _mainWindow.gmapControl.FromLocalToLatLng((int)point.X, (int)point.Y);
+            OnPositionChanged(_mouseDownPos);
+        }
+
+        private void OnMouseDoubleDownClick (object sender, MouseButtonEventArgs e)
+        {
+            var point = e.GetPosition(_mainWindow.gmapControl);
+            _mouseDownPos = _mainWindow.gmapControl.FromLocalToLatLng((int)point.X, (int)point.Y);
+            if (_routePoints == null)
+            {
+                _routePoints = new List<PointLatLng>();
+            }
+            _routePoints.Add(_mouseDownPos);
+            OnPositionChanged(_mouseDownPos);
+            ShowRoute();
+        }
     }
 }
