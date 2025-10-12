@@ -46,7 +46,7 @@ in kilometers, save and load them.
   - [x] initial/last position
   - [x] initial/last zoom
 - menu (or similar)
-  - [ ] load route (file window)
+  - [x] load route (file window)
   - [ ] save route (file window)
   - [x] set tiles folder ("file" window, suitcase icon)
 

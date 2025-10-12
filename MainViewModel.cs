@@ -2,6 +2,7 @@
 using GMap.NET.MapProviders;
 using GMap.NET.WindowsPresentation;
 using OffRouteMap.Properties;
+using Ookii.Dialogs.Wpf;
 using System.ComponentModel;
 using System.Globalization;
 using System.IO;
@@ -34,6 +35,7 @@ namespace OffRouteMap
         public ICommand BeforeClosingCommand => new RelayCommand(BeforeClosing);
         public ICommand SetCacheRootCommand => new RelayCommand(SetCacheRoot);
         public ICommand RemoveRouteCommand => new RelayCommand(RemoveRoute);
+        public ICommand LoadRouteCommand => new RelayCommand(LoadRoute);
 
         public ProviderCollection Items { get; }
 
@@ -218,6 +220,55 @@ namespace OffRouteMap
             StatusLine = "";
         }
 
+        private void LoadRoute ()
+        {
+            var dialog = new VistaOpenFileDialog
+            {
+                Title = Strings.LoadDialog_Title,
+                Filter = Strings.Dialog_Filetype + " (*.txt)|*.txt",
+                DefaultExt = "txt",
+                Multiselect = false,
+                CheckFileExists = true,
+                CheckPathExists = true
+            };
+
+            bool? result = dialog.ShowDialog();
+
+            if (result == true)
+            {
+                var culture = CultureInfo.InvariantCulture;
+                string selected = dialog.FileName;
+
+                if (_route != null)
+                {
+                    _mainWindow.gmapControl.Markers.Remove(_route);
+                }
+                _routePoints = new List<PointLatLng>();
+
+                foreach (var line in File.ReadLines(selected))
+                {
+                    if (string.IsNullOrWhiteSpace(line)) continue;
+                    var parts = line.Split(new[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
+                    if (parts.Length < 2)
+                    {
+                        continue;
+                    }
+                    if (
+                        double.TryParse(parts[0], NumberStyles.Float | NumberStyles.AllowLeadingSign, culture, out double v1) &&
+                        double.TryParse(parts[1], NumberStyles.Float | NumberStyles.AllowLeadingSign, culture, out double v2)
+                    )
+                    {
+                        _routePoints.Add(new PointLatLng(v1, v2));
+                    }
+                }
+                if (_routePoints.Count > 1)
+                {
+                    ShowRoute();
+                    OnPositionChanged(_routePoints.Last());
+                }
+            }
+        }
+
         private void ShowRoute ()
         {
             if (_routePoints == null)
@@ -242,6 +293,7 @@ namespace OffRouteMap
                 _mainWindow.gmapControl.Markers.Add(_route);
             }
         }
+
         private double DistanceKm (PointLatLng p1, PointLatLng p2)
         {
             const double R = 6371.0; // Erdradius in km

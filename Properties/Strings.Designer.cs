@@ -61,6 +61,15 @@ namespace OffRouteMap.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Route files.
+        /// </summary>
+        public static string Dialog_Filetype {
+            get {
+                return ResourceManager.GetString("Dialog_Filetype", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select a cache folder.
         /// </summary>
         public static string FolderDialog_Title {
