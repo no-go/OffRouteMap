@@ -118,6 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="FolderDialog_Title" xml:space="preserve">
-    <value>Select folder</value>
+    <value>Select a cache folder</value>
+  </data>
+  <data name="LoadDialog_Title" xml:space="preserve">
+    <value>Load Route</value>
+  </data>
+  <data name="SaveDialog_Title" xml:space="preserve">
+    <value>Save Route</value>
   </data>
 </root>

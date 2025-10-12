@@ -61,11 +61,29 @@ namespace OffRouteMap.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Select folder.
+        ///   Looks up a localized string similar to Select a cache folder.
         /// </summary>
         public static string FolderDialog_Title {
             get {
                 return ResourceManager.GetString("FolderDialog_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Load Route.
+        /// </summary>
+        public static string LoadDialog_Title {
+            get {
+                return ResourceManager.GetString("LoadDialog_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save Route.
+        /// </summary>
+        public static string SaveDialog_Title {
+            get {
+                return ResourceManager.GetString("SaveDialog_Title", resourceCulture);
             }
         }
     }

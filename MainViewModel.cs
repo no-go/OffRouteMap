@@ -33,6 +33,7 @@ namespace OffRouteMap
         public ICommand ToggleLightCommand => new RelayCommand(ToggleLight);
         public ICommand BeforeClosingCommand => new RelayCommand(BeforeClosing);
         public ICommand SetCacheRootCommand => new RelayCommand(SetCacheRoot);
+        public ICommand RemoveRouteCommand => new RelayCommand(RemoveRoute);
 
         public ProviderCollection Items { get; }
 
@@ -94,7 +95,7 @@ namespace OffRouteMap
 
             WindowTitle = GetType().Namespace;
             _mainWindow = mainWindow;
-            _themeService = new ThemeService(255, 180, 0);
+            _themeService = new ThemeService(140, 220, 178);
             _themeService.ApplyTheme(_mainWindow, Settings.Default.isDark);
             _folderDialogService = new FolderDialogService();
             _cacheRoot = Settings.Default.cacheRoot;
@@ -204,6 +205,17 @@ namespace OffRouteMap
             {
                 StatusLine = $"Lat Lng: {formattedLat} {formattedLng}";
             }
+        }
+
+        private void RemoveRoute()
+        {
+            if (_route != null)
+            {
+                _mainWindow.gmapControl.Markers.Remove(_route);
+                _route = null;
+            }
+            _routePoints = new List<PointLatLng>();
+            StatusLine = "";
         }
 
         private void ShowRoute ()

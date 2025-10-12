@@ -4,6 +4,8 @@ A simple but modern Windows Application in C# and WPF to get and cache free
 map tiles (e.g. OSM or OpenBusMap) and use them offline to draw and measure routes
 in kilometers, save and load them.
 
+![Screenshot](screenshot.png)
+
 ## Creation roadmap and ideas
 
 - make this readme in inital comit and make everything public on github (good idea?!)
@@ -38,19 +40,19 @@ in kilometers, save and load them.
 - route
   - [x] display on map in all zoom states
   - [x] start, end and set a point via double click
-  - [ ] remove route from map
+  - [x] remove route from map
   - [x] display distance in status line
 - settings
   - [x] tiles folder
   - [x] GUI size and dark mode
   - [x] initial/last position
   - [x] initial/last zoom
-- menu
+- menu (or similar)
   - [ ] load route (file window)
   - [ ] save route (file window)
   - [x] set tiles folder ("file" window, suitcase icon)
 
-## Not clear and to late design questions
+## Future tasks
 
 - unit tests
 - something similar to doxygen
