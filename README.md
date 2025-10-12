@@ -8,7 +8,7 @@ in kilometers, save and load them.
 
 - make this readme in inital comit and make everything public on github (good idea?!)
 - cool and easy gui size and dark/light modes via MahApps.Metro
-- store gui size and theme in setting
+- store gui size and dark mode in setting
 - store last map position in settings
 - does a nuget osm package still exist with needful features?
 - design a single window application
@@ -26,20 +26,21 @@ in kilometers, save and load them.
 
 - map
   - [x] given area from window size / region
-  - [ ] load tiles from given folder (settings)
+  - [x] load tiles from given folder
   - [x] load tiles from network if missing 
   - [x] select different maps
-  - [ ] customize differnt map folder and sources
-  - [x] move area (right click)
-  - [x] in/out zoom (mouse wheel)
-  - [x] display position of cursor (status line)
+  - [ ] customize differnt map folder and mapProvider urls (optional)
+  - [x] move area via right click
+  - [x] in/out zoom via mouse wheel
+  - [x] display position of map center in status line
+  - [ ] map dark mode (optional)
 - route
-  - [ ] display (or hide parts) on map in all zoom states
-  - [ ] start, end, remove and set a point/line (left click / context menu)
-  - [ ] display length (status line)
+  - [ ] display on map in all zoom states
+  - [ ] start, end, remove and set a point via left click
+  - [ ] display length in status line
 - settings
   - [ ] tiles folder
-  - [x] GUI size and theme (part of window frame)
+  - [x] GUI size and dark mode
   - [x] initial/last position
   - [x] initial/last zoom
 - menu
@@ -55,3 +56,7 @@ in kilometers, save and load them.
 - something similar to doxygen
 - ci/cd
 - any idea to port it to linux? maybe with glide or something strange like fltk? a hard break between code and gui?
+
+## Known bugs
+
+- caching tiles sometimes stored in a mixed way during the change of MapProvider

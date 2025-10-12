@@ -5,6 +5,7 @@ using OffRouteMap.Properties;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Globalization;
+using System.IO;
 using System.Windows;
 using System.Windows.Input;
 
@@ -74,6 +75,13 @@ namespace OffRouteMap
                 _selectedMap = value;
                 OnPropertyChanged(nameof(SelectedMap));
 
+                string cachePath = Path.Combine(
+                    Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                    "Maps",
+                    _selectedMap
+                );
+                _mainWindow.gmapControl.Manager.PrimaryCache = new FileCacheProvider(cachePath);
+                
                 // @todo not the elegant way
 
                 if (_selectedMap == "Google")
