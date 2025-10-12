@@ -47,14 +47,14 @@ in kilometers, save and load them.
   - [x] initial/last zoom
 - menu (or similar)
   - [x] load route (file window)
-  - [ ] save route (file window)
+  - [x] save route (file window)
   - [x] set tiles folder ("file" window, suitcase icon)
 
 ## Future tasks
 
 - [x] minimal localisation
 - [ ] unit tests
-- [ ] something similar to doxygen
+- [ ] in code documentation and something similar to doxygen
 - [ ] ci/cd
 - [ ] map dark mode (optional, lightbulb icon)
 - Any idea to port it to linux? Maybe with glide or something strange like fltk? A hard break between code and gui?

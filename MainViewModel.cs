@@ -6,9 +6,9 @@ using Ookii.Dialogs.Wpf;
 using System.ComponentModel;
 using System.Globalization;
 using System.IO;
+using System.Text;
 using System.Windows.Input;
 using System.Windows.Media;
-using static GMap.NET.Entity.OpenStreetMapRouteEntity;
 
 namespace OffRouteMap
 {
@@ -36,6 +36,7 @@ namespace OffRouteMap
         public ICommand SetCacheRootCommand => new RelayCommand(SetCacheRoot);
         public ICommand RemoveRouteCommand => new RelayCommand(RemoveRoute);
         public ICommand LoadRouteCommand => new RelayCommand(LoadRoute);
+        public ICommand SaveRouteCommand => new RelayCommand(SaveRoute);
 
         public ProviderCollection Items { get; }
 
@@ -220,6 +221,41 @@ namespace OffRouteMap
             StatusLine = "";
         }
 
+        private void SaveRoute ()
+        {
+            if (_routePoints == null || _routePoints.Count == 0) return;
+
+            var dlg = new VistaSaveFileDialog
+            {
+                Title = Strings.SaveDialog_Title,
+                Filter = Strings.Dialog_Filetype + " (*.txt)|*.txt",
+                DefaultExt = "txt",
+                FileName = "route.txt",
+                OverwritePrompt = true
+            };
+
+            bool? result = dlg.ShowDialog();
+            if (result != true) return;
+
+            var culture = CultureInfo.InvariantCulture;
+
+            var sb = new StringBuilder();
+            double distance = 0.0;
+            for (int i = 0; i < _routePoints.Count; i++)
+            {
+                double lat = _routePoints[i].Lat;
+                double lng = _routePoints[i].Lng;
+                if (i > 0)
+                {
+                    distance += DistanceKm(_routePoints[i - 1], _routePoints[i]);
+                }
+
+                sb.AppendLine(string.Format(culture, "{0:F6},{1:F6},{2:F4}km", lat, lng, distance));
+            }
+
+            File.WriteAllText(dlg.FileName, sb.ToString(), Encoding.UTF8);
+        }
+
         private void LoadRoute ()
         {
             var dialog = new VistaOpenFileDialog
@@ -237,7 +273,6 @@ namespace OffRouteMap
             if (result == true)
             {
                 var culture = CultureInfo.InvariantCulture;
-                string selected = dialog.FileName;
 
                 if (_route != null)
                 {
@@ -245,7 +280,7 @@ namespace OffRouteMap
                 }
                 _routePoints = new List<PointLatLng>();
 
-                foreach (var line in File.ReadLines(selected))
+                foreach (var line in File.ReadLines(dialog.FileName))
                 {
                     if (string.IsNullOrWhiteSpace(line)) continue;
                     var parts = line.Split(new[] { ' ', ',', '\t' }, StringSplitOptions.RemoveEmptyEntries);
@@ -260,6 +295,7 @@ namespace OffRouteMap
                     {
                         _routePoints.Add(new PointLatLng(v1, v2));
                     }
+                    // @todo error handling like a log or StatusLine
                 }
                 if (_routePoints.Count > 1)
                 {
