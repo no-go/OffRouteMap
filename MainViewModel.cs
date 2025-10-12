@@ -194,13 +194,13 @@ namespace OffRouteMap
 
         private void OnPositionChanged (PointLatLng point)
         {
-            string formattedLat = point.Lat.ToString("F10", CultureInfo.InvariantCulture);
-            string formattedLng = point.Lng.ToString("F10", CultureInfo.InvariantCulture);
+            string formattedLat = point.Lat.ToString("F6", CultureInfo.InvariantCulture);
+            string formattedLng = point.Lng.ToString("F6", CultureInfo.InvariantCulture);
 
             double distance = RouteLengthKm();
             if (distance > 0)
             {
-                string formattedDist = distance.ToString("F5", CultureInfo.InvariantCulture);
+                string formattedDist = distance.ToString("F4", CultureInfo.InvariantCulture);
                 StatusLine = $"Lat Lng Route: {formattedLat} {formattedLng} {formattedDist} km";
             }
             else
@@ -248,7 +248,7 @@ namespace OffRouteMap
                 foreach (var line in File.ReadLines(selected))
                 {
                     if (string.IsNullOrWhiteSpace(line)) continue;
-                    var parts = line.Split(new[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
+                    var parts = line.Split(new[] { ' ', ',', '\t' }, StringSplitOptions.RemoveEmptyEntries);
                     if (parts.Length < 2)
                     {
                         continue;
@@ -263,8 +263,8 @@ namespace OffRouteMap
                 }
                 if (_routePoints.Count > 1)
                 {
+                    _mainWindow.gmapControl.Position = _routePoints.Last();
                     ShowRoute();
-                    OnPositionChanged(_routePoints.Last());
                 }
             }
         }
