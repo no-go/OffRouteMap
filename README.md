@@ -1,5 +1,7 @@
 # OffRouteMap
 
+![Dot Net](https://github.com/no-go/OffRouteMap/actions/workflows/dotnet-desktop.yml/badge.svg)
+
 A simple but modern Windows Application in C# and WPF to get and cache free
 map tiles (e.g. OSM or OpenBusMap) and use them offline to draw and measure routes
 in kilometers, save and load them.
@@ -55,7 +57,7 @@ in kilometers, save and load them.
 - [x] minimal localisation
 - [ ] unit tests
 - [ ] in code documentation and something similar to doxygen
-- [ ] ci/cd
+- [x] ci/cd
 - [ ] map dark mode (optional, lightbulb icon)
 - Any idea to port it to linux? Maybe with glide or something strange like fltk? A hard break between code and gui?
 
