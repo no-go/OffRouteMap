@@ -21,8 +21,10 @@ jobs:
         run: dotnet build --configuration Release --no-restore
       - name: Publish
         run: dotnet publish -c Release --self-contained true /p:PublishSingleFile=true /p:IncludeAllContentForSelfExtract=true -o publish
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v4
+      - name: Upload Release
+        uses: softprops/action-gh-release@v1
         with:
-          name: my-app-artifacts
-          path: publish/
+          files: publish/*.exe
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
