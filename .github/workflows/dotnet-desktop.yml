@@ -27,7 +27,7 @@ jobs:
         run: dotnet publish -c Release --self-contained true /p:PublishSingleFile=true /p:IncludeAllContentForSelfExtract=true -o publish
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           files: publish/*
 
@@ -36,22 +36,22 @@ jobs:
     needs: build
     
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
+      - name: Download all workflow run artifacts
+        uses: actions/download-artifact@v5
 
-    - name: Create Release
-      id: create_release
-      uses: softprops/action-gh-release@v1
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        tag_name: ${{ github.ref }}
-        release_name: 'Release ${{ github.ref }}'
-        draft: false
-        prerelease: false
-
-    - name: Upload Artifact to Release
-      uses: softprops/action-gh-release@v1
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        files: publish/*
-        tag_name: ${{ github.ref }}
+      - name: Create Release
+        id: create_release
+        uses: softprops/action-gh-release@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          tag_name: ${{ github.ref }}
+          release_name: 'Release ${{ github.ref }}'
+          draft: false
+          prerelease: false
+      
+      - name: Upload Artifact to Release
+        uses: softprops/action-gh-release@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          files: publish/*
+          tag_name: ${{ github.ref }}
