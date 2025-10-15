@@ -45,7 +45,6 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           name: 'Release ${{ github.ref }}'
-          token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
           draft: false
           prerelease: false
       
@@ -53,5 +52,4 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: publish/*
-          token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
           tag_name: ${{ github.ref }}
