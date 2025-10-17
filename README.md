@@ -27,7 +27,7 @@ in kilometers, save and load them.
   - see https://github.com/ArduPilot/MissionPlanner/blob/master/ExtLibs/Maps/WMSProvider.cs
 - in code docu 
 
-## Features
+## UI Features
 
 - map
   - [x] load tiles from given folder
@@ -58,7 +58,8 @@ in kilometers, save and load them.
 - dark/night mode removed as feature 2025-10-17
 - [x] minimal localisation
 - [x] some unit tests
-- [ ] a lot of code coverage
+- [ ] make model/interface for `GMapControl` and mock it in unit tests!!!!
+- [ ] switch to xUnit and do lot of code coverage
 - [ ] in code documentation and something similar to doxygen
 - [ ] re-add nullable !
 - [x] ci/cd

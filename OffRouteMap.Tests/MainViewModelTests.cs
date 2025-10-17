@@ -1,42 +1,47 @@
-using OffRouteMap;
-using NUnit.Framework;
+using GMap.NET.WindowsPresentation;
+using Xunit;
 
 namespace OffRouteMap.Tests
 {
-    [Apartment(ApartmentState.STA)]
     public class MainViewModelTests
     {
+        public static bool WindowTitle_PropertyChanged_Called;
+        public static bool WindowTitle_PropertyChanged_null_Called;
+        
         private MainViewModel _vm;
 
-        [SetUp]
-        public void Setup ()
+        public MainViewModelTests ()
         {
-            _vm = new MainViewModel(new MainWindow());
+            _vm = new MainViewModel(new GMapControl());
         }
 
-        [Test]
-        public void WindowTitle_SetNonNullValue_SetsFieldAndRaisesPropertyChanged ()
+        [Fact]
+        public void WindowTitle_PropertyChanged ()
         {
+            WindowTitle_PropertyChanged_Called = true;
+
             string? raisedName = null;
             _vm.PropertyChanged += (s, e) => raisedName = e.PropertyName;
 
             _vm.WindowTitle = "New title";
 
-            Assert.That(_vm.WindowTitle, Is.EqualTo("New title"));
-            Assert.That(raisedName, Is.EqualTo(nameof(_vm.WindowTitle)));
+            Assert.Equal("New title", _vm.WindowTitle);
+            Assert.Equal(nameof(_vm.WindowTitle), raisedName);
         }
 
-        [Test]
-        public void WindowTitle_SetNullValue_DoesNotChangeFieldOrRaisePropertyChanged ()
+        [Fact]
+        public void WindowTitle_SetNullValue_PropertyChanged_null ()
         {
+            WindowTitle_PropertyChanged_null_Called = true;
+
             _vm.WindowTitle = "Initial";
             bool eventRaised = false;
             _vm.PropertyChanged += (s, e) => eventRaised = true;
 
             _vm.WindowTitle = null;
 
-            Assert.That(_vm.WindowTitle, Is.EqualTo("Initial"));
-            Assert.That(eventRaised, Is.EqualTo(false));
+            Assert.Equal("Initial", _vm.WindowTitle);
+            Assert.False(eventRaised);
         }
     }
 }

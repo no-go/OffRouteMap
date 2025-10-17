@@ -6,6 +6,8 @@ namespace OffRouteMap
 
     public partial class MainWindow : MetroWindow
     {
+        private readonly ThemeService _themeService;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -15,7 +17,10 @@ namespace OffRouteMap
             btnLoad.ToolTip = Strings.LoadDialog_Title;
             btnSave.ToolTip = Strings.SaveDialog_Title;
 
-            DataContext = new MainViewModel(this);
+            _themeService = new ThemeService(140, 220, 178);
+            _themeService.ApplyTheme(this, Settings.Default.isDark);
+
+            DataContext = new MainViewModel(gmapControl);
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
