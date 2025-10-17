@@ -117,11 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DelCommand_Hint" xml:space="preserve">
+    <value>Strecke von Karte entfernen</value>
+  </data>
   <data name="Dialog_Filetype" xml:space="preserve">
     <value>Steckendateien</value>
   </data>
   <data name="FolderDialog_Title" xml:space="preserve">
-    <value>Bitte Cache-Ordner wählen</value>
+    <value>Cache-Ordner wählen</value>
   </data>
   <data name="LoadDialog_Title" xml:space="preserve">
     <value>Strecke laden</value>

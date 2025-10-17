@@ -9,7 +9,7 @@ in kilometers, save and load them.
 
 ![Screenshot](screenshot.png)
 
-## Creation roadmap and ideas
+## Initial creation roadmap and ideas 
 
 - make this readme in inital comit and make everything public on github (good idea?!)
 - cool and easy gui size and dark/light modes via MahApps.Metro
@@ -30,22 +30,22 @@ in kilometers, save and load them.
 ## Features
 
 - map
-  - [x] given area from window size / region
   - [x] load tiles from given folder
   - [x] load tiles from network if missing 
   - [x] select different maps
   - [ ] add and customize differnt mapProvider urls (optional)
-  - [x] move area via right click
+  - [x] move area via left click
   - [x] in/out zoom via mouse wheel
-  - [x] display position of map center in status line
+  - [x] display position of cursor in status line
 - route
   - [x] display on map in all zoom states
   - [x] start, end and set a point via double click
-  - [x] remove route from map (trash icon)
+  - [x] remove route from map (click on trash icon)
+  - [x] remove last route point via right click
   - [x] display distance in status line
 - settings
   - [x] tiles folder
-  - [x] GUI size and dark mode
+  - [x] GUI size
   - [x] initial/last position
   - [x] initial/last zoom
 - menu (or similar)
@@ -55,14 +55,17 @@ in kilometers, save and load them.
 
 ## Future tasks
 
+- dark/night mode removed as feature 2025-10-17
 - [x] minimal localisation
 - [x] some unit tests
 - [ ] a lot of code coverage
 - [ ] in code documentation and something similar to doxygen
+- [ ] re-add nullable !
 - [x] ci/cd
-- [ ] map dark mode (optional, lightbulb icon)
 - Any idea to port it to linux? Maybe with glide or something strange like fltk? A hard break between code and gui?
 
 ## Known bugs
 
 - caching tiles sometimes stored in a mixed way during the change of MapProvider
+- inital ofline cache not working
+- ... see issue tracker !

@@ -7,19 +7,13 @@
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:gmap="clr-namespace:GMap.NET.WindowsPresentation;assembly=GMap.NET.WindowsPresentation"
         xmlns:local="clr-namespace:OffRouteMap"
-        mc:Ignorable="d"
         Title="{Binding WindowTitle, UpdateSourceTrigger=PropertyChanged}"
         Closing="Window_Closing"
         GlowBrush="{DynamicResource MahApps.Brushes.Accent}"
-        Height="450" Width="660">
+        Height="500" Width="600">
 
     <mah:MetroWindow.LeftWindowCommands>
         <mah:WindowCommands>
-            <Button Command="{Binding ToggleLightCommand}">
-                <iconPacks:PackIconModern Width="22"
-                                  Height="22"
-                                  Kind="Lightbulb" />
-            </Button>
             <Button Command="{Binding GuiZoomOutCommand}">
                 <iconPacks:PackIconModern Width="22"
                                   Height="22"
@@ -36,24 +30,24 @@
 
     <mah:MetroWindow.RightWindowCommands>
         <mah:WindowCommands>
-            <Button Command="{Binding RemoveRouteCommand}">
+            <Button Command="{Binding RemoveRouteCommand}" Name="btnDelete">
                 <iconPacks:PackIconModern Width="22"
                                   Height="22"
                                   Kind="Delete" />
             </Button>
 
-            <Button Command="{Binding LoadRouteCommand}">
+            <Button Command="{Binding LoadRouteCommand}" Name="btnLoad">
                 <iconPacks:PackIconModern Width="22"
                                   Height="22"
                                   Kind="DiskDownload" />
             </Button>
-            <Button Command="{Binding SaveRouteCommand}">
+            <Button Command="{Binding SaveRouteCommand}" Name="btnSave">
                 <iconPacks:PackIconModern Width="22"
                                   Height="22"
                                   Kind="Save" />
             </Button>
 
-            <Button Command="{Binding SetCacheRootCommand}">
+            <Button Command="{Binding SetCacheRootCommand}" Name="btnCacheRoot">
                 <iconPacks:PackIconModern Width="22"
                                   Height="22"
                                   Kind="Suitcase" />

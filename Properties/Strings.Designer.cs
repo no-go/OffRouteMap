@@ -61,6 +61,15 @@ namespace OffRouteMap.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Remove route.
+        /// </summary>
+        public static string DelCommand_Hint {
+            get {
+                return ResourceManager.GetString("DelCommand_Hint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Route files.
         /// </summary>
         public static string Dialog_Filetype {

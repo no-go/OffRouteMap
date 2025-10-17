@@ -4,8 +4,8 @@ using GMap.NET.WindowsPresentation;
 using OffRouteMap.Properties;
 using Ookii.Dialogs.Wpf;
 using System.ComponentModel;
+using System.Drawing;
 using System.Globalization;
-using System.IO;
 using System.Text;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -31,7 +31,6 @@ namespace OffRouteMap
         public event PropertyChangedEventHandler PropertyChanged;
         public ICommand GuiZoomInCommand => new RelayCommand(GuiZoomIn);
         public ICommand GuiZoomOutCommand => new RelayCommand(GuiZoomOut);
-        public ICommand ToggleLightCommand => new RelayCommand(ToggleLight);
         public ICommand BeforeClosingCommand => new RelayCommand(BeforeClosing);
         public ICommand SetCacheRootCommand => new RelayCommand(SetCacheRoot);
         public ICommand RemoveRouteCommand => new RelayCommand(RemoveRoute);
@@ -112,15 +111,19 @@ namespace OffRouteMap
                 new ProviderItem("BingHybrid",   "Bing Hybrid",   GMapProviders.BingHybridMap)
             });
             SelectedMap = Settings.Default.lastMap;
-
-            _mainWindow.gmapControl.MouseDown += OnMouseDownClick;
-            _mainWindow.gmapControl.MouseDoubleClick += OnMouseDoubleDownClick;
+            _mainWindow.gmapControl.Zoom = Settings.Default.lastZoom;
+            _mainWindow.gmapControl.ShowCenter = false;
+            _mainWindow.gmapControl.CanDragMap = true;
+            _mainWindow.gmapControl.DragButton = MouseButton.Left;
 
             _mainWindow.gmapControl.Position = new PointLatLng(
                 Settings.Default.lastLatitude,
                 Settings.Default.lastLongitude
             );
-            _mainWindow.gmapControl.Zoom = Settings.Default.lastZoom;
+
+            _mainWindow.gmapControl.MouseDoubleClick += OnMouseDoubleDownClick;
+            _mainWindow.gmapControl.MouseRightButtonDown += OnMouseRightClick;
+            _mainWindow.gmapControl.MouseMove += OnMouseMove;
             OnPositionChanged(_mainWindow.gmapControl.Position);
         }
 
@@ -141,13 +144,6 @@ namespace OffRouteMap
             GuiZoomFactor /= 1.1;
             Settings.Default.guiSize = _guiZoomFactor;
             Settings.Default.Save();
-        }
-
-        public void ToggleLight ()
-        {
-            Settings.Default.isDark = !Settings.Default.isDark;
-            Settings.Default.Save();
-            _themeService.ApplyTheme(_mainWindow, Settings.Default.isDark);
         }
 
         public void SetCacheRoot ()
@@ -361,17 +357,21 @@ namespace OffRouteMap
             return total;
         }
 
-        private void OnMouseDownClick (object sender, MouseButtonEventArgs e)
+        private void GetMouseLocation (System.Windows.Input.MouseEventArgs e)
         {
             var point = e.GetPosition(_mainWindow.gmapControl);
             _mouseDownPos = _mainWindow.gmapControl.FromLocalToLatLng((int)point.X, (int)point.Y);
+        }
+
+        private void OnMouseMove (object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            GetMouseLocation(e);
             OnPositionChanged(_mouseDownPos);
         }
 
         private void OnMouseDoubleDownClick (object sender, MouseButtonEventArgs e)
         {
-            var point = e.GetPosition(_mainWindow.gmapControl);
-            _mouseDownPos = _mainWindow.gmapControl.FromLocalToLatLng((int)point.X, (int)point.Y);
+            GetMouseLocation(e);
             if (_routePoints == null)
             {
                 _routePoints = new List<PointLatLng>();
@@ -380,5 +380,17 @@ namespace OffRouteMap
             OnPositionChanged(_mouseDownPos);
             ShowRoute();
         }
+
+        private void OnMouseRightClick (object sender, MouseButtonEventArgs e)
+        {
+            GetMouseLocation(e);
+            if ((_routePoints != null) && (_routePoints.Count > 0))
+            {
+                _routePoints.RemoveAt(_routePoints.Count - 1);
+                OnPositionChanged(_mouseDownPos);
+                ShowRoute();
+            }
+        }
+
     }
 }

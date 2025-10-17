@@ -1,4 +1,5 @@
 ﻿using MahApps.Metro.Controls;
+using OffRouteMap.Properties;
 
 namespace OffRouteMap
 {
@@ -8,6 +9,12 @@ namespace OffRouteMap
         public MainWindow()
         {
             InitializeComponent();
+
+            btnCacheRoot.ToolTip = Strings.FolderDialog_Title;
+            btnDelete.ToolTip = Strings.DelCommand_Hint;
+            btnLoad.ToolTip = Strings.LoadDialog_Title;
+            btnSave.ToolTip = Strings.SaveDialog_Title;
+
             DataContext = new MainViewModel(this);
         }
 
