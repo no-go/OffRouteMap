@@ -4,8 +4,8 @@ using GMap.NET.WindowsPresentation;
 using OffRouteMap.Properties;
 using Ookii.Dialogs.Wpf;
 using System.ComponentModel;
-using System.Drawing;
 using System.Globalization;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -14,6 +14,7 @@ namespace OffRouteMap
 {
     public class MainViewModel : INotifyPropertyChanged
     {
+
         private string _windowTitle;
         private double _guiZoomFactor;
         private string _statusLine;
@@ -87,6 +88,10 @@ namespace OffRouteMap
                 HandleMapChanges();
             }
         }
+        protected void OnPropertyChanged (string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
 
         public MainViewModel (GMapControl gmapControl) {
 
@@ -126,11 +131,6 @@ namespace OffRouteMap
             OnPositionChanged(_gmapControl.Position);
         }
 
-        protected void OnPropertyChanged (string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
         public void GuiZoomIn ()
         {
             GuiZoomFactor *= 1.1;
@@ -164,14 +164,22 @@ namespace OffRouteMap
         {
             if (_cacheRoot == "")
             {
-                _cacheRoot = Path.Combine(
+                _cacheRoot = System.IO.Path.Combine(
                     Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
                     "Maps"
                 );
             }
-            string cachePath = Path.Combine(_cacheRoot, _selectedMap);
+            string cachePath = System.IO.Path.Combine(_cacheRoot, _selectedMap);
             _gmapControl.Manager.PrimaryCache = new FileCacheProvider(cachePath);
-            _gmapControl.Manager.Mode = AccessMode.ServerAndCache;
+
+            if (NetworkInterface.GetIsNetworkAvailable())
+            {
+                _gmapControl.Manager.Mode = AccessMode.ServerAndCache;
+            }
+            else
+            {
+                _gmapControl.Manager.Mode = AccessMode.CacheOnly;
+            }
 
             if (Items.TryGet(_selectedMap, out var item))
             {
@@ -248,7 +256,7 @@ namespace OffRouteMap
                 sb.AppendLine(string.Format(culture, "{0:F6},{1:F6},{2:F4}km", lat, lng, distance));
             }
 
-            File.WriteAllText(dlg.FileName, sb.ToString(), Encoding.UTF8);
+            System.IO.File.WriteAllText(dlg.FileName, sb.ToString(), Encoding.UTF8);
         }
 
         private void LoadRoute ()
@@ -275,7 +283,7 @@ namespace OffRouteMap
                 }
                 _routePoints = new List<PointLatLng>();
 
-                foreach (var line in File.ReadLines(dialog.FileName))
+                foreach (var line in System.IO.File.ReadLines(dialog.FileName))
                 {
                     if (string.IsNullOrWhiteSpace(line)) continue;
                     var parts = line.Split(new[] { ' ', ',', '\t' }, StringSplitOptions.RemoveEmptyEntries);
