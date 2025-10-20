@@ -2,6 +2,7 @@
 
 ![Dot Net](https://github.com/no-go/OffRouteMap/actions/workflows/dotnet-desktop.yml/badge.svg)
 ![Tests](https://github.com/no-go/OffRouteMap/actions/workflows/tests.yml/badge.svg)
+[![Download](https://img.shields.io/badge/Download-x64-blue)](https://github.com/no-go/OffRouteMap/releases/latest/download/OffRouteMap.exe)
 
 A simple but modern Windows Application in C# and WPF to get and cache free
 map tiles (e.g. OSM or OpenBusMap) and use them offline to draw and measure routes
@@ -57,16 +58,10 @@ in kilometers, save and load them.
 
 - dark/night mode removed as feature 2025-10-17
 - [x] minimal localization
-- [x] some unit tests
-- [x] make model/interface for `GMapControl` and mock it in unit tests!!!!
-- [x] switch to xUnit
-- [ ] do lot of code coverage
-- [ ] in code documentation and something similar to doxygen/breath
 - [ ] re-add nullable !
 - [x] ci/cd
-
-## Known bugs
-
-- caching tiles sometimes stored in a mixed way during the change of MapProvider
-- inital offline cache not working
-- ... see issue tracker !
+  - [x] some unit tests via xUnit
+    - [x] mock example
+    - [x] code coverage report
+  - [x] build a release executeable
+  - [ ] in code documentation and something similar to doxygen/breath
