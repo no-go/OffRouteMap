@@ -1,4 +1,5 @@
 using GMap.NET.WindowsPresentation;
+using Moq;
 using Xunit;
 
 namespace OffRouteMap.Tests
@@ -12,7 +13,8 @@ namespace OffRouteMap.Tests
 
         public MainViewModelTests ()
         {
-            _vm = new MainViewModel(new GMapControl());
+            var controlMock = new Mock<IGMapControl>();
+            _vm = new MainViewModel(controlMock.Object);
         }
 
         [Fact]

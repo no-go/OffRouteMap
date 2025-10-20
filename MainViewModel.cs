@@ -25,7 +25,7 @@ namespace OffRouteMap
         private List<PointLatLng> _routePoints;
         private GMapRoute _route;
 
-        private readonly GMapControl _gmapControl;
+        private readonly IGMapControl _gmapControl;
         
         private readonly FolderDialogService _folderDialogService;
 
@@ -93,7 +93,7 @@ namespace OffRouteMap
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        public MainViewModel (GMapControl gmapControl) {
+        public MainViewModel (IGMapControl gmapControl) {
 
             // @todo make this init more configurable
 
@@ -125,9 +125,9 @@ namespace OffRouteMap
                 Settings.Default.lastLongitude
             );
 
-            _gmapControl.MouseDoubleClick += OnMouseDoubleDownClick;
-            _gmapControl.MouseRightButtonDown += OnMouseRightClick;
-            _gmapControl.MouseMove += OnMouseMove;
+            //_gmapControl.MouseDoubleClick += OnMouseDoubleDownClick;
+            //_gmapControl.MouseRightButtonDown += OnMouseRightClick;
+            //_gmapControl.MouseMove += OnMouseMove;
             OnPositionChanged(_gmapControl.Position);
         }
 
@@ -170,15 +170,15 @@ namespace OffRouteMap
                 );
             }
             string cachePath = System.IO.Path.Combine(_cacheRoot, _selectedMap);
-            _gmapControl.Manager.PrimaryCache = new FileCacheProvider(cachePath);
+            _gmapControl.PrimaryCache = new FileCacheProvider(cachePath);
 
             if (NetworkInterface.GetIsNetworkAvailable())
             {
-                _gmapControl.Manager.Mode = AccessMode.ServerAndCache;
+                _gmapControl.CacheMode = AccessMode.ServerAndCache;
             }
             else
             {
-                _gmapControl.Manager.Mode = AccessMode.CacheOnly;
+                _gmapControl.CacheMode = AccessMode.CacheOnly;
             }
 
             if (Items.TryGet(_selectedMap, out var item))
@@ -364,37 +364,24 @@ namespace OffRouteMap
             return total;
         }
 
-        private void GetMouseLocation (System.Windows.Input.MouseEventArgs e)
+        public void UpdateMousePositionFrom (System.Windows.Point point)
         {
-            var point = e.GetPosition(_gmapControl);
             _mouseDownPos = _gmapControl.FromLocalToLatLng((int)point.X, (int)point.Y);
-        }
-
-        private void OnMouseMove (object sender, System.Windows.Input.MouseEventArgs e)
-        {
-            GetMouseLocation(e);
             OnPositionChanged(_mouseDownPos);
         }
 
-        private void OnMouseDoubleDownClick (object sender, MouseButtonEventArgs e)
+        public void AddRoutePoint ()
         {
-            GetMouseLocation(e);
-            if (_routePoints == null)
-            {
-                _routePoints = new List<PointLatLng>();
-            }
+            _routePoints ??= new List<PointLatLng>();
             _routePoints.Add(_mouseDownPos);
-            OnPositionChanged(_mouseDownPos);
             ShowRoute();
         }
 
-        private void OnMouseRightClick (object sender, MouseButtonEventArgs e)
+        public void RemoveLastRoutePoint ()
         {
-            GetMouseLocation(e);
-            if ((_routePoints != null) && (_routePoints.Count > 0))
+            if (_routePoints?.Count > 0)
             {
                 _routePoints.RemoveAt(_routePoints.Count - 1);
-                OnPositionChanged(_mouseDownPos);
                 ShowRoute();
             }
         }

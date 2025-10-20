@@ -33,7 +33,7 @@ in kilometers, save and load them.
   - [x] load tiles from given folder
   - [x] load tiles from network if missing 
   - [x] select different maps
-  - [ ] add and customize differnt mapProvider urls (optional)
+  - [ ] add and customize different mapProvider urls (optional)
   - [x] move area via left click
   - [x] in/out zoom via mouse wheel
   - [x] display position of cursor in status line
@@ -56,17 +56,17 @@ in kilometers, save and load them.
 ## Future tasks
 
 - dark/night mode removed as feature 2025-10-17
-- [x] minimal localisation
+- [x] minimal localization
 - [x] some unit tests
-- [ ] make model/interface for `GMapControl` and mock it in unit tests!!!!
-- [ ] switch to xUnit and do lot of code coverage
-- [ ] in code documentation and something similar to doxygen
+- [x] make model/interface for `GMapControl` and mock it in unit tests!!!!
+- [x] switch to xUnit
+- [ ] do lot of code coverage
+- [ ] in code documentation and something similar to doxygen/breath
 - [ ] re-add nullable !
 - [x] ci/cd
-- Any idea to port it to linux? Maybe with glide or something strange like fltk? A hard break between code and gui?
 
 ## Known bugs
 
 - caching tiles sometimes stored in a mixed way during the change of MapProvider
-- inital ofline cache not working
+- inital offline cache not working
 - ... see issue tracker !
