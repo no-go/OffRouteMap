@@ -1,18 +1,17 @@
-name: CI/CD Pipeline
+name: Release Builder
 
 on:
   push:
-    branches:
-      - '**'
     tags:
       - 'v*'
-  pull_request:
   workflow_dispatch:
 
 jobs:
-  tests:
+  test-build-release:
     name: Run Unit Tests with Coverage
     runs-on: windows-latest
+    env:
+      PROJECT_NAME: OffRouteMap
     outputs:
       test_outcome: ${{ steps.tests.outcome }}
     steps:
@@ -35,70 +34,32 @@ jobs:
         run: dotnet test --no-build --configuration Release --logger "trx;LogFileName=test-results.trx" --results-directory ./TestResults --collect:"XPlat Code Coverage"
 
       - name: Publish Test Report to GitHub UI
-        uses: dorny/test-reporter@v1
         if: always()
+        uses: dorny/test-reporter@v1
         with:
           name: Unit Tests
           path: ./TestResults/test-results.trx
           reporter: dotnet-trx
 
       - name: Generate HTML Coverage Report
+        if: success()
         uses: danielpalme/ReportGenerator-GitHub-Action@5.2.5
         with:
           reports: 'TestResults/**/coverage.cobertura.xml'
           targetdir: 'coveragereport'
           reporttypes: 'HtmlInline;Cobertura'
 
-      - name: Upload Coverage Report as Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: Code-Coverage-Report
-          path: coveragereport
-
-      - name: Upload Test Results as Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: TestResults
-          path: ./TestResults
-
-  build-and-release:
-    name: Build and Release (only for tags)
-    runs-on: windows-latest
-    needs: tests
-    if: startsWith(github.ref, 'refs/tags/v')
-    env:
-      PROJECT_NAME: OffRouteMap
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: '8.0.x'
-
-      - name: Restore dependencies
-        run: dotnet restore
-
-      - name: Build
-        run: dotnet build --configuration Release --no-restore
+      - name: Zip Coverage Report
+        if: success()
+        run: |
+          powershell Compress-Archive -Path coveragereport\* -DestinationPath coverage-report.zip
 
       - name: Publish
+        if: success()
         run: dotnet publish ${env.PROJECT_NAME}.csproj -c Release --self-contained true -r win-x64 /p:PublishSingleFile=true /p:IncludeAllContentForSelfExtract=true -o publish
 
-      - name: Download Test Results
-        uses: actions/download-artifact@v4
-        with:
-          name: TestResults
-          path: ./TestResults
-
-      - name: Download Coverage Report
-        uses: actions/download-artifact@v4
-        with:
-          name: Code-Coverage-Report
-          path: coveragereport
-
       - name: Create GitHub Release and Upload Files
+        if: success()
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.ref }}
@@ -107,5 +68,5 @@ jobs:
           prerelease: false
           files: |
             publish/${{ env.PROJECT_NAME }}.exe
-            TestResults/**
-            coveragereport/**
+            coverage-report.zip
+            TestResults/test-results.trx
