@@ -13,18 +13,22 @@
   "build": {
     "content": [
       {
-        "files": ["api/**.yml", "docs/articles/**.md", "README.md"],
+        "files": [
+          "docs/toc.yml",
+          "api/**.yml",
+          "docs/articles/**.md",
+          "index.md"
+        ],
         "src": "."
       }
+    ],
+    "resource": [
+      "docs/**/*.png",
+      "docs/**/*.svg"
     ],
     "dest": "{{DOC_OUTPUT_DIR}}",
     "globalMetadata": {
       "_appTitle": "{{PROJECT_NAME}}"
-    },
-    "fileMetadata": {
-      "nav_path": {
-        "README.md": "index.md"
-      }
     }
   }
 }

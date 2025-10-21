@@ -2,13 +2,15 @@
 
 ![Dot Net](https://github.com/no-go/OffRouteMap/actions/workflows/dotnet-desktop.yml/badge.svg)
 ![Tests](https://github.com/no-go/OffRouteMap/actions/workflows/tests.yml/badge.svg)
+[![API docu](https://github.com/no-go/OffRouteMap/actions/workflows/docs.yml/badge.svg](https://no-go.github.io/OffRouteMap/)
 [![Download](https://img.shields.io/badge/Download-x64-blue)](https://github.com/no-go/OffRouteMap/releases/latest/download/OffRouteMap.exe)
+![Windows badge](docs/badge-windows.svg)
 
 A simple but modern Windows Application in C# and WPF to get and cache free
 map tiles (e.g. OSM or OpenBusMap) and use them offline to draw and measure routes
 in kilometers, save and load them.
 
-![Screenshot](screenshot.png)
+![Screenshot](docs/screenshot.png)
 
 ## Initial creation roadmap and ideas 
 
