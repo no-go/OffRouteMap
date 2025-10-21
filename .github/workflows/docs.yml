@@ -6,12 +6,12 @@ on:
     branches: [ dev ]
   workflow_dispatch:
 
+env:
+  PROJECT_NAME: OffRouteMap
+
 jobs:
   docs:
     runs-on: ubuntu-latest
-
-    env:
-      PROJECT_NAME: OffRouteMap
     
     defaults:
       run:
@@ -21,50 +21,44 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Mono (provides mcs/csc)
-        run: |
-           sudo apt-get update
-           sudo apt-get install -y mono-devel
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
 
       - name: Install Doxygen and graphviz
         run: |
            sudo apt-get install -y doxygen graphviz zip
 
-      - name: Set variables
-        run: |
-           BUILD_DIR=build_docs
-           SRC_DIR=.
-           DOC_XML="$BUILD_DIR/${PROJECT_NAME}.xml"
-           OUTPUT_DIR="$BUILD_DIR/doxygen_html"
-           echo "BUILD_DIR=$BUILD_DIR" >> $GITHUB_ENV
-           echo "SRC_DIR=$SRC_DIR" >> $GITHUB_ENV
-           echo "DOC_XML=$DOC_XML" >> $GITHUB_ENV
-           echo "OUTPUT_DIR=$OUTPUT_DIR" >> $GITHUB_ENV
+      - name: Restore dependencies
+        run: dotnet restore
 
-      - name: Create build dirs
+      - name: Find Roslyn csc.dll
+        id: find-csc
         run: |
-           mkdir -p "$BUILD_DIR"
-           mkdir -p "$OUTPUT_DIR"
+           CSC_PATH=$(find /usr/share/dotnet/sdk/ -path '*/Roslyn/bincore/csc.dll' | head -n 1)
+           echo "csc-path=$CSC_PATH" >> $GITHUB_OUTPUT
 
-      - name: Compile C# sources with XML documentation (csc/mcs)
-        # adjust the wildcard or explicit file list if needed
+      - name: Compile only code parts to generate XML
         run: |
-           set -e
-           # collect .cs files (change pattern if sources are in subfolders)
-           CSFILES=$(find $SRC_DIR -name '*.cs' -print | tr '\n' ' ')
-           if [ -z "$CSFILES" ]; then
-             echo "No .cs files found in $SRC_DIR"
-             exit 1
-           fi
-           echo "Compiling: $CSFILES"
-           # Use mcs (mono C# compiler). Use csc if you prefer and it's available.
-           mcs -target:library -doc:"$DOC_XML" -out:"$BUILD_DIR/${PROJECT_NAME}.dll" $CSFILES
+           mkdir out
+           FILES=$(find . -name "*.cs" ! -name "*.g.cs" ! -name "*.Designer.cs")
+           dotnet "${{ steps.find-csc.outputs.csc-path }}" \
+            -target:library \
+            -nologo \
+            -warn:0 \
+            -doc:out/docs.xml \
+            -out:out/${{ env.PROJECT_NAME }}.dll \
+            $FILES
 
-      - name: Create Doxyfile (minimal)
+      - name: Build with XML docs
+        run: dotnet build -c Release /p:DocumentationFile=bin/Release/docs.xml
+
+      - name: Create Doxyfile
         run: |
-           cat > "$BUILD_DIR/Doxyfile" <<DOXY
-           PROJECT_NAME           = "${PROJECT_NAME}"
-           OUTPUT_DIRECTORY       = $OUTPUT_DIR
+           cat > Doxyfile <<DOXY
+           PROJECT_NAME           = "${{ env.PROJECT_NAME }}"
+           OUTPUT_DIRECTORY       = html
            GENERATE_HTML          = YES
            GENERATE_LATEX         = NO
            RECURSIVE              = YES
@@ -73,31 +67,19 @@ jobs:
            EXTRACT_ALL            = YES
            ENABLE_PREPROCESSING   = YES
            MACRO_EXPANSION        = NO
-           XML_INPUT              = $DOC_XML
+           XML_INPUT              = out/docs.xml
            DOXY
 
       - name: Run Doxygen
-        working-directory: ${{ github.workspace }}
         run: |
-           set -e
-           DOXYFILE="$BUILD_DIR/Doxyfile"
-           doxygen "$DOXYFILE"
+           doxygen Doxyfile
 
       - name: Zip generated HTML
         run: |
-           set -e
-           HTML_DIR="$OUTPUT_DIR/html"
-           if [ ! -d "$HTML_DIR" ]; then
-             echo "Doxygen HTML output not found at $HTML_DIR"
-             ls -R "$OUTPUT_DIR" || true
-             exit 1
-           fi
-           ZIPFILE="$BUILD_DIR/${PROJECT_NAME}_docs_html.zip"
-           cd "$OUTPUT_DIR"
-           zip -r "$GITHUB_WORKSPACE/$ZIPFILE" html
+           zip -r ${{ env.PROJECT_NAME }}_docs_html.zip html
 
       - name: Upload docs artifact
         uses: actions/upload-artifact@v4
         with:
           name: docs-html
-          path: build_docs/${PROJECT_NAME}_docs_html.zip
+          path: ${PROJECT_NAME}_docs_html.zip

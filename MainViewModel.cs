@@ -436,7 +436,7 @@ namespace OffRouteMap
         {
             // to modern for mono csc
             //_routePoints ??= new List<PointLatLng>();
-            if (_routePoints == null) _routePoints = new List();
+            if (_routePoints == null) _routePoints = new List<PointLatLng>();
             _routePoints.Add(_mouseDownPos);
             ShowRoute();
         }
