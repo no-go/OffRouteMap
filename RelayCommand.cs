@@ -3,6 +3,9 @@ using System.Windows.Input;
 
 namespace OffRouteMap
 {
+    /// <summary>
+    /// A Helper class to bind UI Events to simple Map methods.
+    /// </summary>
     public class RelayCommand : ICommand
     {
         private readonly Action _execute;

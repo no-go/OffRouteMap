@@ -1,0 +1,30 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": ["**/*.csproj"],
+          "exclude": ["**/bin/**", "**/obj/**"]
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": ["api/**.yml", "docs/articles/**.md", "README.md"],
+        "src": "."
+      }
+    ],
+    "dest": "{{DOC_OUTPUT_DIR}}",
+    "globalMetadata": {
+      "_appTitle": "{{PROJECT_NAME}}"
+    },
+    "fileMetadata": {
+      "nav_path": {
+        "README.md": "index.md"
+      }
+    }
+  }
+}

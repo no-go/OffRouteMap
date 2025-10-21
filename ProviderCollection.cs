@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace OffRouteMap
 {
+    /// <summary>
+    /// A class to store many provider details as item.
+    /// </summary>
     public class ProviderCollection : ObservableCollection<ProviderItem>
     {
         private readonly Dictionary<string, ProviderItem> _byKey;
