@@ -7,38 +7,6 @@ references:
   commentId: N:OffRouteMap
   fullName: OffRouteMap
   nameWithType: OffRouteMap
-- uid: OffRouteMap.App
-  name: App
-  href: api/OffRouteMap.App.html
-  commentId: T:OffRouteMap.App
-  fullName: OffRouteMap.App
-  nameWithType: App
-- uid: OffRouteMap.App.InitializeComponent
-  name: InitializeComponent()
-  href: api/OffRouteMap.App.html#OffRouteMap_App_InitializeComponent
-  commentId: M:OffRouteMap.App.InitializeComponent
-  fullName: OffRouteMap.App.InitializeComponent()
-  nameWithType: App.InitializeComponent()
-- uid: OffRouteMap.App.InitializeComponent*
-  name: InitializeComponent
-  href: api/OffRouteMap.App.html#OffRouteMap_App_InitializeComponent_
-  commentId: Overload:OffRouteMap.App.InitializeComponent
-  isSpec: "True"
-  fullName: OffRouteMap.App.InitializeComponent
-  nameWithType: App.InitializeComponent
-- uid: OffRouteMap.App.Main
-  name: Main()
-  href: api/OffRouteMap.App.html#OffRouteMap_App_Main
-  commentId: M:OffRouteMap.App.Main
-  fullName: OffRouteMap.App.Main()
-  nameWithType: App.Main()
-- uid: OffRouteMap.App.Main*
-  name: Main
-  href: api/OffRouteMap.App.html#OffRouteMap_App_Main_
-  commentId: Overload:OffRouteMap.App.Main
-  isSpec: "True"
-  fullName: OffRouteMap.App.Main
-  nameWithType: App.Main
 - uid: OffRouteMap.FileCacheProvider
   name: FileCacheProvider
   href: api/OffRouteMap.FileCacheProvider.html
