@@ -1,0 +1,103 @@
+---
+name: Docs
+
+on:
+  push:
+    branches: [ dev ]
+  workflow_dispatch:
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+
+    env:
+      PROJECT_NAME: OffRouteMap
+    
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Mono (provides mcs/csc)
+        run: |
+           sudo apt-get update
+           sudo apt-get install -y mono-devel
+
+      - name: Install Doxygen and graphviz
+        run: |
+           sudo apt-get install -y doxygen graphviz zip
+
+      - name: Set variables
+        run: |
+           BUILD_DIR=build_docs
+           SRC_DIR=.
+           DOC_XML="$BUILD_DIR/${PROJECT_NAME}.xml"
+           OUTPUT_DIR="$BUILD_DIR/doxygen_html"
+           echo "BUILD_DIR=$BUILD_DIR" >> $GITHUB_ENV
+           echo "SRC_DIR=$SRC_DIR" >> $GITHUB_ENV
+           echo "DOC_XML=$DOC_XML" >> $GITHUB_ENV
+           echo "OUTPUT_DIR=$OUTPUT_DIR" >> $GITHUB_ENV
+
+      - name: Create build dirs
+        run: |
+           mkdir -p "$BUILD_DIR"
+           mkdir -p "$OUTPUT_DIR"
+
+      - name: Compile C# sources with XML documentation (csc/mcs)
+        # adjust the wildcard or explicit file list if needed
+        run: |
+           set -e
+           # collect .cs files (change pattern if sources are in subfolders)
+           CSFILES=$(find $SRC_DIR -name '*.cs' -print | tr '\n' ' ')
+           if [ -z "$CSFILES" ]; then
+             echo "No .cs files found in $SRC_DIR"
+             exit 1
+           fi
+           echo "Compiling: $CSFILES"
+           # Use mcs (mono C# compiler). Use csc if you prefer and it's available.
+           mcs -target:library -doc:"$DOC_XML" -out:"$BUILD_DIR/${PROJECT_NAME}.dll" $CSFILES
+
+      - name: Create Doxyfile (minimal)
+        run: |
+           cat > "$BUILD_DIR/Doxyfile" <<DOXY
+           PROJECT_NAME           = "${PROJECT_NAME}"
+           OUTPUT_DIRECTORY       = $OUTPUT_DIR
+           GENERATE_HTML          = YES
+           GENERATE_LATEX         = NO
+           RECURSIVE              = YES
+           INPUT                  = .
+           FILE_PATTERNS          = *.cs
+           EXTRACT_ALL            = YES
+           ENABLE_PREPROCESSING   = YES
+           MACRO_EXPANSION        = NO
+           XML_INPUT              = $DOC_XML
+           DOXY
+
+      - name: Run Doxygen
+        working-directory: ${{ github.workspace }}
+        run: |
+           set -e
+           DOXYFILE="$BUILD_DIR/Doxyfile"
+           doxygen "$DOXYFILE"
+
+      - name: Zip generated HTML
+        run: |
+           set -e
+           HTML_DIR="$OUTPUT_DIR/html"
+           if [ ! -d "$HTML_DIR" ]; then
+             echo "Doxygen HTML output not found at $HTML_DIR"
+             ls -R "$OUTPUT_DIR" || true
+             exit 1
+           fi
+           ZIPFILE="$BUILD_DIR/${PROJECT_NAME}_docs_html.zip"
+           cd "$OUTPUT_DIR"
+           zip -r "$GITHUB_WORKSPACE/$ZIPFILE" html
+
+      - name: Upload docs artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: docs-html
+          path: build_docs/${PROJECT_NAME}_docs_html.zip

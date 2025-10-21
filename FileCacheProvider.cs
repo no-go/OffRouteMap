@@ -30,8 +30,14 @@ namespace OffRouteMap
             }
         }
 
-        // tile: raw image bytes (png/jpg).
-        // type: provider-specific type (can be ignored or used to subfolder)
+        /// <summary>
+        /// Store map tile as file.
+        /// </summary>
+        /// <param name="tile">raw image bytes (png/jpg)</param>
+        /// <param name="type">provider-specific type (can be ignored or used to subfolder)</param>
+        /// <param name="pos"></param>
+        /// <param name="zoom"></param>
+        /// <returns>false on error</returns>
         public bool PutImageToCache (byte[] tile, int type, GPoint pos, int zoom)
         {
             try
@@ -44,6 +50,7 @@ namespace OffRouteMap
                 //var baseDir = string.IsNullOrEmpty(folder) ? root : Path.Combine(root, folder);
                 Directory.CreateDirectory(baseDir);
 
+                // @todo .png always?!
                 var path = Path.Combine(baseDir, zoom.ToString(), x.ToString(), y + ".png");
                 Directory.CreateDirectory(Path.GetDirectoryName(path));
 
@@ -65,7 +72,13 @@ namespace OffRouteMap
             }
         }
 
-        // returns PureImage or null
+        /// <summary>
+        /// Load map tile from file cache.
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="pos"></param>
+        /// <param name="zoom"></param>
+        /// <returns>tile as pureImage or null on fail</returns>
         public PureImage GetImageFromCache (int type, GPoint pos, int zoom)
         {
             try
@@ -74,8 +87,11 @@ namespace OffRouteMap
                 long y = pos.Y;
 
                 string baseDir = root;
+
                 //string folder = (type == 0) ? "" : GMapProviders.TryGetProvider(type).Name;
                 //var baseDir = string.IsNullOrEmpty(folder) ? root : Path.Combine(root, folder);
+
+                // @todo .png always?!
                 var path = Path.Combine(baseDir, zoom.ToString(), x.ToString(), y + ".png");
 
                 if (!File.Exists(path)) return null;
@@ -105,8 +121,10 @@ namespace OffRouteMap
             }
         }
 
-        // delete files older than date; if type != null, limit to that subfolder
-        // returns number of deleted tiles
+        /// <summary>
+        /// delete files older than date; if type != null, limit to that subfolder
+        /// returns number of deleted tiles
+        /// </summary>
         public int DeleteOlderThan (DateTime date, int? type)
         {
             int deleted = 0;
@@ -141,7 +159,9 @@ namespace OffRouteMap
             return deleted;
         }
 
-        // Background cleanup: enforce maxCacheBytes using LRU
+        /// <summary>
+        /// Background cleanup: enforce maxCacheBytes using LRU
+        /// </summary>
         void BackgroundCleanup ()
         {
             while (!disposed)

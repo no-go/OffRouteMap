@@ -4,6 +4,9 @@ using System.Windows.Media;
 
 namespace OffRouteMap
 {
+    /// <summary>
+    /// A helper class to handle different UI themes comming from MahApps.
+    /// </summary>
     class ThemeService
     {
         private Color _color;

@@ -15,11 +15,13 @@ namespace OffRouteMap
         {
             InitializeComponent();
 
+            // A primitve way for localisations.
             btnCacheRoot.ToolTip = Strings.FolderDialog_Title;
             btnDelete.ToolTip = Strings.DelCommand_Hint;
             btnLoad.ToolTip = Strings.LoadDialog_Title;
             btnSave.ToolTip = Strings.SaveDialog_Title;
 
+            // set the UI theme
             _themeService = new ThemeService(140, 220, 178);
             _themeService.ApplyTheme(this, Settings.Default.isDark);
 
@@ -48,12 +50,22 @@ namespace OffRouteMap
             //this.Close();
         }
 
+        /// <summary>
+        /// The event of mouse movement on the map forward to the DataModel.
+        /// </summary>
+        /// <param name="sender">sending ui element</param>
+        /// <param name="e">mouse event. we need its position here</param>
         private void GMapControl_MouseMove (object sender, MouseEventArgs e)
         {
             var point = e.GetPosition(gmapControl);
             _viewModel.UpdateMousePositionFrom(point);
         }
 
+        /// <summary>
+        /// The event of mouse double click on the map forward to the DataModel.
+        /// </summary>
+        /// <param name="sender">sending ui element</param>
+        /// <param name="e">mouse event. we need its position here</param>
         private void GMapControl_MouseDoubleClick (object sender, MouseButtonEventArgs e)
         {
             var point = e.GetPosition(gmapControl);
@@ -61,6 +73,11 @@ namespace OffRouteMap
             _viewModel.AddRoutePoint();
         }
 
+        /// <summary>
+        /// The event of mouse click on the map forward to the DataModel.
+        /// </summary>
+        /// <param name="sender">sending ui element</param>
+        /// <param name="e">mouse event. we need its position here</param>
         private void GMapControl_MouseRightButtonDown (object sender, MouseButtonEventArgs e)
         {
             var point = e.GetPosition(gmapControl);

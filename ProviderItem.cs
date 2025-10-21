@@ -2,6 +2,9 @@
 
 namespace OffRouteMap
 {
+    /// <summary>
+    /// A class to store details of a map provider.
+    /// </summary>
     public sealed class ProviderItem
     {
         public string Key { get; }

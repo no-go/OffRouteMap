@@ -12,6 +12,9 @@ using System.Windows.Media;
 
 namespace OffRouteMap
 {
+    /// <summary>
+    /// MainViewModel implements the UI functions joins them with data and files. 
+    /// </summary>
     public class MainViewModel : INotifyPropertyChanged
     {
 
@@ -93,6 +96,10 @@ namespace OffRouteMap
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
+        /// <summary>
+        /// The Model Constructor needs the map control object.
+        /// </summary>
+        /// <param name="gmapControl">most functions of the UI are focused on the MapControl</param>
         public MainViewModel (IGMapControl gmapControl) {
 
             // @todo make this init more configurable
@@ -131,6 +138,9 @@ namespace OffRouteMap
             OnPositionChanged(_gmapControl.Position);
         }
 
+        /// <summary>
+        /// UI Button function to make the UI bigger.
+        /// </summary>
         public void GuiZoomIn ()
         {
             GuiZoomFactor *= 1.1;
@@ -138,6 +148,9 @@ namespace OffRouteMap
             Settings.Default.Save();
         }
 
+        /// <summary>
+        /// UI Button function to make the UI smaller.
+        /// </summary>
         public void GuiZoomOut ()
         {
             GuiZoomFactor /= 1.1;
@@ -145,6 +158,9 @@ namespace OffRouteMap
             Settings.Default.Save();
         }
 
+        /// <summary>
+        /// UI Button function to set the path, where the map tile cache has to store the tiles for each map provider.
+        /// </summary>
         public void SetCacheRoot ()
         {
             var path = _folderDialogService.ShowSelectFolderDialog(
@@ -160,6 +176,9 @@ namespace OffRouteMap
             }
         }
 
+        /// <summary>
+        /// This method sets map provider and cache based on the _selectedMap and settings.
+        /// </summary>
         private void HandleMapChanges ()
         {
             if (_cacheRoot == "")
@@ -187,6 +206,10 @@ namespace OffRouteMap
             }
         }
 
+        /// <summary>
+        /// Store position, map zoom and map provider before closing the application.
+        /// This method is called by the UI in the OnClose Event.
+        /// </summary>
         private void BeforeClosing ()
         {
             Settings.Default.lastLatitude = _gmapControl.Position.Lat;
@@ -196,6 +219,11 @@ namespace OffRouteMap
             Settings.Default.Save();
         }
 
+        /// <summary>
+        /// This method refreshs the statusline with coordinates and route length.
+        /// It is called by mouse events, which occurs on the mapControl object.
+        /// </summary>
+        /// <param name="point">the latitude and longitude calculated by the UI event.</param>
         private void OnPositionChanged (PointLatLng point)
         {
             string formattedLat = point.Lat.ToString("F6", CultureInfo.InvariantCulture);
@@ -213,6 +241,9 @@ namespace OffRouteMap
             }
         }
 
+        /// <summary>
+        /// UI Button function to delete the route from the map.
+        /// </summary>
         private void RemoveRoute()
         {
             if (_route != null)
@@ -224,6 +255,9 @@ namespace OffRouteMap
             StatusLine = "";
         }
 
+        /// <summary>
+        /// UI Button function to open a save dialog.
+        /// </summary>
         private void SaveRoute ()
         {
             if (_routePoints == null || _routePoints.Count == 0) return;
@@ -259,6 +293,9 @@ namespace OffRouteMap
             System.IO.File.WriteAllText(dlg.FileName, sb.ToString(), Encoding.UTF8);
         }
 
+        /// <summary>
+        /// UI Button function to open a file-open dialog to load a route.
+        /// </summary>
         private void LoadRoute ()
         {
             var dialog = new VistaOpenFileDialog
@@ -308,6 +345,9 @@ namespace OffRouteMap
             }
         }
 
+        /// <summary>
+        /// This method is called on load route or if a new point is added to the route or a point is removed.
+        /// </summary>
         private void ShowRoute ()
         {
             if (_routePoints == null)
@@ -333,6 +373,12 @@ namespace OffRouteMap
             }
         }
 
+        /// <summary>
+        /// Primitive methode to calculate the distance between to positions on the earth.
+        /// </summary>
+        /// <param name="p1">position 1</param>
+        /// <param name="p2">position 2</param>
+        /// <returns></returns>
         private double DistanceKm (PointLatLng p1, PointLatLng p2)
         {
             const double R = 6371.0; // Erdradius in km
@@ -348,11 +394,20 @@ namespace OffRouteMap
             return R * c;
         }
 
+        /// <summary>
+        /// converter used by DistanceKm() to get positions in radians and not degrees
+        /// </summary>
+        /// <param name="deg">angle by degrees</param>
+        /// <returns>the angle in radians</returns>
         private double DegreesToRadians (double deg)
         {
             return deg * (Math.PI / 180.0);
         }
 
+        /// <summary>
+        /// method loops through _routePoints and calculate + sum the route distance.
+        /// </summary>
+        /// <returns>the complete distance of the route stored in _routePoints</returns>
         private double RouteLengthKm ()
         {
             if (_routePoints == null || _routePoints.Count < 2) return 0.0;
@@ -364,22 +419,34 @@ namespace OffRouteMap
             return total;
         }
 
+        /// <summary>
+        /// Used by UI events to store the map positon on earth in _mouseDownPos
+        /// </summary>
+        /// <param name="point"></param>
         public void UpdateMousePositionFrom (System.Windows.Point point)
         {
             _mouseDownPos = _gmapControl.FromLocalToLatLng((int)point.X, (int)point.Y);
             OnPositionChanged(_mouseDownPos);
         }
 
+        /// <summary>
+        /// Used by UI event on mapControl object and add a point in _routePoints
+        /// </summary>
         public void AddRoutePoint ()
         {
-            _routePoints ??= new List<PointLatLng>();
+            // to modern for mono csc
+            //_routePoints ??= new List<PointLatLng>();
+            if (_routePoints == null) _routePoints = new List();
             _routePoints.Add(_mouseDownPos);
             ShowRoute();
         }
 
+        /// <summary>
+        /// Used by UI event on mapControl object and remove a point in _routePoints
+        /// </summary>
         public void RemoveLastRoutePoint ()
         {
-            if (_routePoints?.Count > 0)
+            if (_routePoints != null && _routePoints.Count > 0)
             {
                 _routePoints.RemoveAt(_routePoints.Count - 1);
                 ShowRoute();
