@@ -1,10 +1,12 @@
 # OffRouteMap
 
+![Windows badge](docs/badge-windows.svg)
 ![Dot Net](https://github.com/no-go/OffRouteMap/actions/workflows/dotnet-desktop.yml/badge.svg)
 ![Tests](https://github.com/no-go/OffRouteMap/actions/workflows/tests.yml/badge.svg)
-[![API docu](https://github.com/no-go/OffRouteMap/actions/workflows/docs.yml/badge.svg](https://no-go.github.io/OffRouteMap/)
 [![Download](https://img.shields.io/badge/Download-x64-blue)](https://github.com/no-go/OffRouteMap/releases/latest/download/OffRouteMap.exe)
-![Windows badge](docs/badge-windows.svg)
+[![API docu](https://github.com/no-go/OffRouteMap/actions/workflows/docs.yml/badge.svg)](https://no-go.github.io/OffRouteMap/)
+[![License](https://img.shields.io/badge/license-BSD%202-yellowgreen)](https://github.com/no-go/OffRouteMap/blob/main/LICENSE.txt)
+[![Source Code](https://img.shields.io/badge/source%20code-github-orange)](https://github.com/no-go/OffRouteMap/)
 
 A simple but modern Windows Application in C# and WPF to get and cache free
 map tiles (e.g. OSM or OpenBusMap) and use them offline to draw and measure routes
@@ -66,4 +68,4 @@ in kilometers, save and load them.
     - [x] mock example
     - [x] code coverage report
   - [x] build a release executeable
-  - [ ] in code documentation and something similar to doxygen/breath
+  - [x] in code documentation and something similar to doxygen/breath
