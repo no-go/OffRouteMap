@@ -1,4 +1,4 @@
-name: Generate Docs
+name: Dev Docs
 
 on:
   push:
@@ -25,14 +25,12 @@ jobs:
       - name: Install DocFX
         run: dotnet tool install -g docfx
 
-      - name: Generate basics from README and templates
+      - name: Generate basics from README and template
         run: |
            mv README.md index.md
            cp docs/docfx.json.tmpl docfx.json
            sed -i "s|{{PROJECT_NAME}}|${{ env.PROJECT_NAME }}|g" docfx.json
            sed -i "s|{{DOC_OUTPUT_DIR}}|${{ env.DOC_OUTPUT_DIR }}|g" docfx.json
-           cp docs/toc.yml.tmpl docs/toc.yml
-           sed -i "s|{{PROJECT_NAME}}|${{ env.PROJECT_NAME }}|g" docs/toc.yml
  
       - name: Generate docs
         run: |

@@ -4,8 +4,8 @@
 ![Dot Net](https://github.com/no-go/OffRouteMap/actions/workflows/dotnet-desktop.yml/badge.svg)
 ![Tests](https://github.com/no-go/OffRouteMap/actions/workflows/tests.yml/badge.svg)
 [![Download](https://img.shields.io/badge/Download-x64-blue)](https://github.com/no-go/OffRouteMap/releases/latest/download/OffRouteMap.exe)
-[![API docu](https://github.com/no-go/OffRouteMap/actions/workflows/docs.yml/badge.svg)](https://no-go.github.io/OffRouteMap/)
 [![License](https://img.shields.io/badge/license-BSD%202-yellowgreen)](https://github.com/no-go/OffRouteMap/blob/main/LICENSE.txt)
+[![Dev docs](https://github.com/no-go/OffRouteMap/actions/workflows/docs.yml/badge.svg)](https://no-go.github.io/OffRouteMap/api/OffRouteMap.html)
 [![Source Code](https://img.shields.io/badge/source%20code-github-orange)](https://github.com/no-go/OffRouteMap/)
 
 A simple but modern Windows Application in C# and WPF to get and cache free
@@ -57,6 +57,10 @@ in kilometers, save and load them.
   - [x] load route (file window)
   - [x] save route (file window)
   - [x] set tiles folder ("file" window, suitcase icon)
+
+## Dev Docs
+
+See [here](https://no-go.github.io/OffRouteMap/api/OffRouteMap.html)!
 
 ## Future tasks
 
