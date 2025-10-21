@@ -1,24 +1,18 @@
----
-name: Docs
+name: Generate Docs
 
 on:
   push:
-    branches: [ main ]
   workflow_dispatch:
 
-env:
-  PROJECT_NAME: OffRouteMap
-  DOC_OUTPUT_DIR: _site
-
 jobs:
-  docs:
+  doc-build:
+    name: Build Docs and Publish on Pages
     runs-on: ubuntu-latest
-    
-    defaults:
-      run:
-        shell: bash
-
+    env:
+      PROJECT_NAME: OffRouteMap
+      DOC_OUTPUT_DIR: _site
     steps:
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Setup .NET
