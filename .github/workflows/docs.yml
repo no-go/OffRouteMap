@@ -3,11 +3,12 @@ name: Docs
 
 on:
   push:
-    branches: [ dev ]
+    branches: [ main ]
   workflow_dispatch:
 
 env:
   PROJECT_NAME: OffRouteMap
+  DOC_OUTPUT_DIR: _site
 
 jobs:
   docs:
@@ -18,7 +19,6 @@ jobs:
         shell: bash
 
     steps:
-      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup .NET
@@ -26,60 +26,30 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
-      - name: Install Doxygen and graphviz
+      - name: Install DocFX
+        run: dotnet tool install -g docfx
+
+      - name: Generate docfx.json from template
         run: |
-           sudo apt-get install -y doxygen graphviz zip
-
-      - name: Restore dependencies
-        run: dotnet restore
-
-      - name: Find Roslyn csc.dll
-        id: find-csc
+           cp docs/docfx.json.tmpl docfx.json
+           sed -i "s|{{PROJECT_NAME}}|${{ env.PROJECT_NAME }}|g" docfx.json
+           sed -i "s|{{DOC_OUTPUT_DIR}}|${{ env.DOC_OUTPUT_DIR }}|g" docfx.json
+           
+      - name: Generate docs
         run: |
-           CSC_PATH=$(find /usr/share/dotnet/sdk/ -path '*/Roslyn/bincore/csc.dll' | head -n 1)
-           echo "csc-path=$CSC_PATH" >> $GITHUB_OUTPUT
+           docfx metadata
+           docfx build
+           zip -r docs.zip ${{ env.DOC_OUTPUT_DIR }}
 
-      - name: Compile only code parts to generate XML
-        run: |
-           mkdir out
-           FILES=$(find . -name "*.cs" ! -name "*.g.cs" ! -name "*.Designer.cs")
-           dotnet "${{ steps.find-csc.outputs.csc-path }}" \
-            -target:library \
-            -nologo \
-            -warn:0 \
-            -doc:out/docs.xml \
-            -out:out/${{ env.PROJECT_NAME }}.dll \
-            $FILES
-
-      - name: Build with XML docs
-        run: dotnet build -c Release /p:DocumentationFile=bin/Release/docs.xml
-
-      - name: Create Doxyfile
-        run: |
-           cat > Doxyfile <<DOXY
-           PROJECT_NAME           = "${{ env.PROJECT_NAME }}"
-           OUTPUT_DIRECTORY       = html
-           GENERATE_HTML          = YES
-           GENERATE_LATEX         = NO
-           RECURSIVE              = YES
-           INPUT                  = .
-           FILE_PATTERNS          = *.cs
-           EXTRACT_ALL            = YES
-           ENABLE_PREPROCESSING   = YES
-           MACRO_EXPANSION        = NO
-           XML_INPUT              = out/docs.xml
-           DOXY
-
-      - name: Run Doxygen
-        run: |
-           doxygen Doxyfile
-
-      - name: Zip generated HTML
-        run: |
-           zip -r ${{ env.PROJECT_NAME }}_docs_html.zip html
-
-      - name: Upload docs artifact
+      - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: docs-html
-          path: ${PROJECT_NAME}_docs_html.zip
+          name: documentation
+          path: docs.zip
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ${{ env.DOC_OUTPUT_DIR }}
+          
