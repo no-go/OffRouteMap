@@ -4,6 +4,20 @@
   "files": [
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/OffRouteMap.App.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OffRouteMap.App.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OffRouteMap.App",
+      "Summary": "<p sourcefile=\"api/OffRouteMap.App.yml\" sourcestartlinenumber=\"1\">Interaction logic for App.xaml</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/OffRouteMap.FileCacheProvider.yml",
       "output": {
         ".html": {
