@@ -21,13 +21,13 @@ jobs:
       - name: Download Coverage Reports
         uses: actions/download-artifact@v4
         with:
-          name: coverage-reports
+          name: Code-Coverage-Report
           path: ${{ env.COVERAGE_OUTPUT_DIR }}
 
       - name: Download Doc Output
         uses: actions/download-artifact@v4
         with:
-          name: doc-output
+          name: documentation
           path: ${{ env.DOC_OUTPUT_DIR }}
 
       - name: Merge Coverage and Doc files
