@@ -1,0 +1,47 @@
+name: Deploy Documentation
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows:
+      - Tests
+      - Dev Docs
+    types:
+      - completed
+
+jobs:
+  deploy:
+    name: Join artifacts and publish
+    runs-on: ubuntu-latest
+    env:
+      PROJECT_NAME: OffRouteMap
+      DOC_OUTPUT_DIR: _site
+      COVERAGE_OUTPUT_DIR: coveragereport
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Download Coverage Reports
+        uses: actions/download-artifact@v2
+        with:
+          name: coverage-reports
+          path: ${{ env.COVERAGE_OUTPUT_DIR }}
+
+      - name: Download Doc Output
+        uses: actions/download-artifact@v2
+        with:
+          name: doc-output
+          path: ${{ env.DOC_OUTPUT_DIR }}
+
+      - name: Merge Coverage and Doc files
+        run: |
+          mkdir combined_output
+          cp -R ${{ env.COVERAGE_OUTPUT_DIR }}/* combined_output/
+          cp -R ${{ env.DOC_OUTPUT_DIR }}/* combined_output/
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: combined_output

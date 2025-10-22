@@ -8,6 +8,9 @@ jobs:
   tests:
     name: Tests and Coverage
     runs-on: windows-latest
+    env:
+      PROJECT_NAME: OffRouteMap
+      COVERAGE_OUTPUT_DIR: coveragereport
 
     steps:
       - name: Checkout code
@@ -39,11 +42,11 @@ jobs:
         uses: danielpalme/ReportGenerator-GitHub-Action@5.2.5
         with:
           reports: 'TestResults/**/coverage.cobertura.xml'
-          targetdir: 'coveragereport'
+          targetdir: '${{ env.DOC_OUTPUT_DIR }}'
           reporttypes: 'HtmlInline;Cobertura'
 
       - name: Upload Coverage Report as Artifact
         uses: actions/upload-artifact@v4
         with:
           name: Code-Coverage-Report
-          path: coveragereport
+          path: ${{ env.DOC_OUTPUT_DIR }}
