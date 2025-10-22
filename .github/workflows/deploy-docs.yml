@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   workflow_run:
     workflows:
-      - Tests
+      - Tests & Coverage
       - Dev Docs
     types:
       - completed
@@ -23,13 +23,13 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Download Coverage Reports
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: coverage-reports
           path: ${{ env.COVERAGE_OUTPUT_DIR }}
 
       - name: Download Doc Output
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: doc-output
           path: ${{ env.DOC_OUTPUT_DIR }}
@@ -37,8 +37,8 @@ jobs:
       - name: Merge Coverage and Doc files
         run: |
           mkdir combined_output
-          cp -R ${{ env.COVERAGE_OUTPUT_DIR }}/* combined_output/
-          cp -R ${{ env.DOC_OUTPUT_DIR }}/* combined_output/
+          cp -fR ${{ env.DOC_OUTPUT_DIR }}/* combined_output/
+          cp -fR ${{ env.COVERAGE_OUTPUT_DIR }}/* combined_output/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
