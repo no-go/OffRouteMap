@@ -1,18 +1,99 @@
-name: Deploy Documentation
+name: Dev Docs
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
-  repository_dispatch:
-    types: [docs-complete, tests-complete]
+
+env:
+  PROJECT_NAME: OffRouteMap
+  COVERAGE_OUTPUT_DIR: coveragereport
+  DOC_OUTPUT_DIR: _site
 
 jobs:
+  tests:
+    name: Build Tests and Coverage
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --no-restore --configuration Release
+
+      - name: Run Tests and collect Coverage
+        run: dotnet test --no-build --configuration Release --logger "trx;LogFileName=test-results.trx" --results-directory ./TestResults --collect:"XPlat Code Coverage"
+
+      - name: Publish Test Report to GitHub UI
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: Unit Tests
+          path: ./TestResults/test-results.trx
+          reporter: dotnet-trx
+
+      - name: Generate HTML Coverage Report
+        uses: danielpalme/ReportGenerator-GitHub-Action@5.2.5
+        with:
+          reports: 'TestResults/**/coverage.cobertura.xml'
+          targetdir: '${{ env.COVERAGE_OUTPUT_DIR }}'
+          reporttypes: 'HtmlInline;Cobertura'
+
+      - name: Upload Coverage Report as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Code-Coverage-Report
+          path: ${{ env.COVERAGE_OUTPUT_DIR }}
+
+  docs:
+    name: Build Docs
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Install DocFX
+        run: dotnet tool install -g docfx
+
+      - name: Generate basics from README and templates
+        run: |
+           cp docs/docfx.json.tmpl docfx.json
+           sed -i "s|{{PROJECT_NAME}}|${{ env.PROJECT_NAME }}|g" docfx.json
+           sed -i "s|{{DOC_OUTPUT_DIR}}|${{ env.DOC_OUTPUT_DIR }}|g" docfx.json
+           cp docs/filterConfig.yml.tmpl filterConfig.yml
+           sed -i "s|{{PROJECT_NAME}}|${{ env.PROJECT_NAME }}|g" filterConfig.yml
+
+      - name: Generate docs
+        run: |
+           docfx metadata
+           docfx build
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Documentation
+          path: ${{ env.DOC_OUTPUT_DIR }}
+
   deploy:
     name: Join artifacts and publish
+    needs: [docs, tests]
     runs-on: ubuntu-latest
-    env:
-      PROJECT_NAME: OffRouteMap
-      DOC_OUTPUT_DIR: _site
-      COVERAGE_OUTPUT_DIR: coveragereport
 
     steps:
       - name: Checkout code
@@ -27,7 +108,7 @@ jobs:
       - name: Download Doc Output
         uses: actions/download-artifact@v4
         with:
-          name: documentation
+          name: Documentation
           path: ${{ env.DOC_OUTPUT_DIR }}
 
       - name: Merge Coverage and Doc files

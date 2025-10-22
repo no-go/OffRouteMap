@@ -2,7 +2,7 @@
 
 [![Windows x64](docs/badge-windows.svg)](https://github.com/no-go/OffRouteMap/releases/latest/download/OffRouteMap.exe)
 ![Dot Net](https://github.com/no-go/OffRouteMap/actions/workflows/build.yml/badge.svg)
-[![Tests](https://github.com/no-go/OffRouteMap/actions/workflows/tests.yml/badge.svg)](https://no-go.github.io/OffRouteMap/index.html)
+[![Tests](https://img.shields.io/badge/tests%20and%20coverage-exists-green)](https://no-go.github.io/OffRouteMap/index.html)
 [![License](https://img.shields.io/badge/license-BSD%202-yellowgreen)](https://github.com/no-go/OffRouteMap/blob/main/LICENSE.txt)
 [![Dev docs](https://github.com/no-go/OffRouteMap/actions/workflows/deploy.yml/badge.svg)](https://no-go.github.io/OffRouteMap/api/OffRouteMap.html)
 [![Source Code](https://img.shields.io/badge/source%20code-github-orange)](https://github.com/no-go/OffRouteMap/)
