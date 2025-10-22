@@ -3,6 +3,16 @@
   "xrefmap": "xrefmap.yml",
   "files": [
     {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "ManagedReference",
       "source_relative_path": "api/OffRouteMap.FileCacheProvider.yml",
       "output": {
@@ -227,16 +237,6 @@
       "output": {
         "resource": {
           "relative_path": "docs/screenshot.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "index.md",
-      "output": {
-        ".html": {
-          "relative_path": "index.html"
         }
       },
       "version": ""
