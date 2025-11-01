@@ -13,15 +13,15 @@ references:
   commentId: T:OffRouteMap.FileCacheProvider
   fullName: OffRouteMap.FileCacheProvider
   nameWithType: FileCacheProvider
-- uid: OffRouteMap.FileCacheProvider.#ctor(System.String,System.Int64)
-  name: FileCacheProvider(string, long)
-  href: api/OffRouteMap.FileCacheProvider.html#OffRouteMap_FileCacheProvider__ctor_System_String_System_Int64_
-  commentId: M:OffRouteMap.FileCacheProvider.#ctor(System.String,System.Int64)
-  name.vb: New(String, Long)
-  fullName: OffRouteMap.FileCacheProvider.FileCacheProvider(string, long)
-  fullName.vb: OffRouteMap.FileCacheProvider.New(String, Long)
-  nameWithType: FileCacheProvider.FileCacheProvider(string, long)
-  nameWithType.vb: FileCacheProvider.New(String, Long)
+- uid: OffRouteMap.FileCacheProvider.#ctor(System.String)
+  name: FileCacheProvider(string)
+  href: api/OffRouteMap.FileCacheProvider.html#OffRouteMap_FileCacheProvider__ctor_System_String_
+  commentId: M:OffRouteMap.FileCacheProvider.#ctor(System.String)
+  name.vb: New(String)
+  fullName: OffRouteMap.FileCacheProvider.FileCacheProvider(string)
+  fullName.vb: OffRouteMap.FileCacheProvider.New(String)
+  nameWithType: FileCacheProvider.FileCacheProvider(string)
+  nameWithType.vb: FileCacheProvider.New(String)
 - uid: OffRouteMap.FileCacheProvider.#ctor*
   name: FileCacheProvider
   href: api/OffRouteMap.FileCacheProvider.html#OffRouteMap_FileCacheProvider__ctor_
@@ -717,6 +717,19 @@ references:
   commentId: T:OffRouteMap.Properties.Strings
   fullName: OffRouteMap.Properties.Strings
   nameWithType: Strings
+- uid: OffRouteMap.Properties.Strings.CacheFolderHint
+  name: CacheFolderHint
+  href: api/OffRouteMap.Properties.Strings.html#OffRouteMap_Properties_Strings_CacheFolderHint
+  commentId: P:OffRouteMap.Properties.Strings.CacheFolderHint
+  fullName: OffRouteMap.Properties.Strings.CacheFolderHint
+  nameWithType: Strings.CacheFolderHint
+- uid: OffRouteMap.Properties.Strings.CacheFolderHint*
+  name: CacheFolderHint
+  href: api/OffRouteMap.Properties.Strings.html#OffRouteMap_Properties_Strings_CacheFolderHint_
+  commentId: Overload:OffRouteMap.Properties.Strings.CacheFolderHint
+  isSpec: "True"
+  fullName: OffRouteMap.Properties.Strings.CacheFolderHint
+  nameWithType: Strings.CacheFolderHint
 - uid: OffRouteMap.Properties.Strings.Culture
   name: Culture
   href: api/OffRouteMap.Properties.Strings.html#OffRouteMap_Properties_Strings_Culture
@@ -874,15 +887,15 @@ references:
   commentId: T:OffRouteMap.ProviderItem
   fullName: OffRouteMap.ProviderItem
   nameWithType: ProviderItem
-- uid: OffRouteMap.ProviderItem.#ctor(System.String,System.String,GMap.NET.MapProviders.GMapProvider)
-  name: ProviderItem(string, string, GMapProvider)
-  href: api/OffRouteMap.ProviderItem.html#OffRouteMap_ProviderItem__ctor_System_String_System_String_GMap_NET_MapProviders_GMapProvider_
-  commentId: M:OffRouteMap.ProviderItem.#ctor(System.String,System.String,GMap.NET.MapProviders.GMapProvider)
-  name.vb: New(String, String, GMapProvider)
-  fullName: OffRouteMap.ProviderItem.ProviderItem(string, string, GMap.NET.MapProviders.GMapProvider)
-  fullName.vb: OffRouteMap.ProviderItem.New(String, String, GMap.NET.MapProviders.GMapProvider)
-  nameWithType: ProviderItem.ProviderItem(string, string, GMapProvider)
-  nameWithType.vb: ProviderItem.New(String, String, GMapProvider)
+- uid: OffRouteMap.ProviderItem.#ctor(System.String,System.String,GMap.NET.MapProviders.GMapProvider,System.String)
+  name: ProviderItem(string, string, GMapProvider, string)
+  href: api/OffRouteMap.ProviderItem.html#OffRouteMap_ProviderItem__ctor_System_String_System_String_GMap_NET_MapProviders_GMapProvider_System_String_
+  commentId: M:OffRouteMap.ProviderItem.#ctor(System.String,System.String,GMap.NET.MapProviders.GMapProvider,System.String)
+  name.vb: New(String, String, GMapProvider, String)
+  fullName: OffRouteMap.ProviderItem.ProviderItem(string, string, GMap.NET.MapProviders.GMapProvider, string)
+  fullName.vb: OffRouteMap.ProviderItem.New(String, String, GMap.NET.MapProviders.GMapProvider, String)
+  nameWithType: ProviderItem.ProviderItem(string, string, GMapProvider, string)
+  nameWithType.vb: ProviderItem.New(String, String, GMapProvider, String)
 - uid: OffRouteMap.ProviderItem.#ctor*
   name: ProviderItem
   href: api/OffRouteMap.ProviderItem.html#OffRouteMap_ProviderItem__ctor_
@@ -906,6 +919,19 @@ references:
   isSpec: "True"
   fullName: OffRouteMap.ProviderItem.DisplayName
   nameWithType: ProviderItem.DisplayName
+- uid: OffRouteMap.ProviderItem.FileCache
+  name: FileCache
+  href: api/OffRouteMap.ProviderItem.html#OffRouteMap_ProviderItem_FileCache
+  commentId: P:OffRouteMap.ProviderItem.FileCache
+  fullName: OffRouteMap.ProviderItem.FileCache
+  nameWithType: ProviderItem.FileCache
+- uid: OffRouteMap.ProviderItem.FileCache*
+  name: FileCache
+  href: api/OffRouteMap.ProviderItem.html#OffRouteMap_ProviderItem_FileCache_
+  commentId: Overload:OffRouteMap.ProviderItem.FileCache
+  isSpec: "True"
+  fullName: OffRouteMap.ProviderItem.FileCache
+  nameWithType: ProviderItem.FileCache
 - uid: OffRouteMap.ProviderItem.Key
   name: Key
   href: api/OffRouteMap.ProviderItem.html#OffRouteMap_ProviderItem_Key
