@@ -61,6 +61,15 @@ namespace OffRouteMap.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to To use the new cache folder, you have to resart the application..
+        /// </summary>
+        public static string CacheFolderHint {
+            get {
+                return ResourceManager.GetString("CacheFolderHint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Remove route.
         /// </summary>
         public static string DelCommand_Hint {

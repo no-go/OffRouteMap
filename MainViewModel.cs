@@ -1,4 +1,4 @@
-﻿using GMap.NET;
+using GMap.NET;
 using GMap.NET.MapProviders;
 using GMap.NET.WindowsPresentation;
 using OffRouteMap.Properties;
@@ -111,15 +111,43 @@ namespace OffRouteMap
             _gmapControl = gmapControl;
 
             _folderDialogService = new FolderDialogService();
-            _cacheRoot = Settings.Default.cacheRoot;
             GuiZoomFactor = Settings.Default.guiSize;
+
+            _cacheRoot = Settings.Default.cacheRoot;
+            if (_cacheRoot == "")
+            {
+                _cacheRoot = System.IO.Path.Combine(
+                    Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                    "Maps"
+                );
+            }
 
             Items = new ProviderCollection(new[]
             {
-                new ProviderItem("OSM",          "OpenStreetMap", OpenStreetMapProvider.Instance),
-                new ProviderItem("googlemaps",   "Google Maps",   GMapProviders.GoogleMap),
-                new ProviderItem("opencyclemap", "Cycle Maps",    GMapProviders.OpenCycleMap),
-                new ProviderItem("BingHybrid",   "Bing Hybrid",   GMapProviders.BingHybridMap)
+                new ProviderItem(
+                    "OSM",
+                    "OpenStreetMap",
+                    OpenStreetMapProvider.Instance,
+                    _cacheRoot
+                ),
+                new ProviderItem(
+                    "googlemaps",
+                    "Google Maps",
+                    GMapProviders.GoogleMap,
+                    _cacheRoot
+                ),
+                new ProviderItem(
+                    "opencyclemap",
+                    "Cycle Maps",
+                    GMapProviders.OpenCycleMap,
+                    _cacheRoot
+                ),
+                new ProviderItem(
+                    "BingHybrid",
+                    "Bing Hybrid",
+                    GMapProviders.BingHybridMap,
+                    _cacheRoot
+                )
             });
             SelectedMap = Settings.Default.lastMap;
             _gmapControl.Zoom = Settings.Default.lastZoom;
@@ -132,9 +160,6 @@ namespace OffRouteMap
                 Settings.Default.lastLongitude
             );
 
-            //_gmapControl.MouseDoubleClick += OnMouseDoubleDownClick;
-            //_gmapControl.MouseRightButtonDown += OnMouseRightClick;
-            //_gmapControl.MouseMove += OnMouseMove;
             OnPositionChanged(_gmapControl.Position);
         }
 
@@ -189,7 +214,6 @@ namespace OffRouteMap
                 );
             }
             string cachePath = System.IO.Path.Combine(_cacheRoot, _selectedMap);
-            _gmapControl.PrimaryCache = new FileCacheProvider(cachePath);
 
             if (NetworkInterface.GetIsNetworkAvailable())
             {
@@ -203,6 +227,7 @@ namespace OffRouteMap
             if (Items.TryGet(_selectedMap, out var item))
             {
                 _gmapControl.MapProvider = item.Provider;
+                _gmapControl.PrimaryCache = item.FileCache;
             }
         }
 
@@ -228,16 +253,17 @@ namespace OffRouteMap
         {
             string formattedLat = point.Lat.ToString("F6", CultureInfo.InvariantCulture);
             string formattedLng = point.Lng.ToString("F6", CultureInfo.InvariantCulture);
+            string zoom = _gmapControl.Zoom.ToString("F1", CultureInfo.InvariantCulture);
 
             double distance = RouteLengthKm();
             if (distance > 0)
             {
                 string formattedDist = distance.ToString("F4", CultureInfo.InvariantCulture);
-                StatusLine = $"Lat Lng Route: {formattedLat} {formattedLng} {formattedDist} km";
+                StatusLine = $"Lat Lng [Zoom] Route: {formattedLat} {formattedLng} [{zoom}] {formattedDist} km";
             }
             else
             {
-                StatusLine = $"Lat Lng: {formattedLat} {formattedLng}";
+                StatusLine = $"Lat Lng [Zoom]: {formattedLat} {formattedLng} [{zoom}]";
             }
         }
 

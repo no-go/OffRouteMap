@@ -1,4 +1,4 @@
-﻿using GMap.NET;
+using GMap.NET;
 using GMap.NET.WindowsPresentation;
 using System.Collections.Concurrent;
 using System.IO;
@@ -11,23 +11,14 @@ namespace OffRouteMap
     public class FileCacheProvider : PureImageCache, IDisposable
     {
         readonly string root;
-        readonly long maxCacheBytes;
         readonly ReaderWriterLockSlim rw = new ReaderWriterLockSlim();
-        readonly ConcurrentQueue<string> cleanupQueue = new ConcurrentQueue<string>();
         readonly Thread cleanupThread;
         bool disposed;
 
-        public FileCacheProvider (string rootPath, long maxCacheBytes = 0)
+        public FileCacheProvider (string rootPath)
         {
             root = rootPath ?? throw new ArgumentNullException(nameof(rootPath));
-            this.maxCacheBytes = maxCacheBytes;
             Directory.CreateDirectory(root);
-
-            if (maxCacheBytes > 0)
-            {
-                cleanupThread = new Thread(BackgroundCleanup) { IsBackground = true };
-                cleanupThread.Start();
-            }
         }
 
         /// <summary>
@@ -46,8 +37,6 @@ namespace OffRouteMap
                 long y = pos.Y;
 
                 string baseDir = root;
-                //string folder = (type == 0) ? "" : GMapProviders.TryGetProvider(type).Name;
-                //var baseDir = string.IsNullOrEmpty(folder) ? root : Path.Combine(root, folder);
                 Directory.CreateDirectory(baseDir);
 
                 // @todo .png always?!
@@ -58,11 +47,8 @@ namespace OffRouteMap
                 try
                 {
                     File.WriteAllBytes(path, tile);
-                    File.SetLastWriteTimeUtc(path, DateTime.UtcNow);
                 }
                 finally { rw.ExitWriteLock(); }
-
-                if (maxCacheBytes > 0) cleanupQueue.Enqueue(path);
 
                 return true;
             }
@@ -88,9 +74,6 @@ namespace OffRouteMap
 
                 string baseDir = root;
 
-                //string folder = (type == 0) ? "" : GMapProviders.TryGetProvider(type).Name;
-                //var baseDir = string.IsNullOrEmpty(folder) ? root : Path.Combine(root, folder);
-
                 // @todo .png always?!
                 var path = Path.Combine(baseDir, zoom.ToString(), x.ToString(), y + ".png");
 
@@ -101,17 +84,15 @@ namespace OffRouteMap
                 try
                 {
                     bytes = File.ReadAllBytes(path);
-                    File.SetLastWriteTimeUtc(path, DateTime.UtcNow);
                 }
                 finally { rw.ExitReadLock(); }
 
-                MemoryStream stm = new MemoryStream(bytes, 0, bytes.Length, false, true);
+
+                using var stm = new MemoryStream(bytes, 0, bytes.Length, writable: false, publiclyVisible: true);
 
                 var img = GMapImageProxy.Instance.FromStream(stm);
-                if (img != null)
-                {
-                    img.Data = stm;
-                }
+
+                if (img != null) img.Data = stm;
 
                 return img;
             }
@@ -127,90 +108,7 @@ namespace OffRouteMap
         /// </summary>
         public int DeleteOlderThan (DateTime date, int? type)
         {
-            int deleted = 0;
-            try
-            {
-                string baseDir = root;
-                //if (type.HasValue && type.Value != 0)
-                //    baseDir = Path.Combine(root, GMapProviders.TryGetProvider((int)type).Name);
-
-                if (!Directory.Exists(baseDir)) return 0;
-
-                rw.EnterWriteLock();
-                try
-                {
-                    var files = Directory.EnumerateFiles(baseDir, "*.png", SearchOption.AllDirectories)
-                        .Where(f => File.GetLastWriteTimeUtc(f) < date)
-                        .ToList();
-
-                    foreach (var f in files)
-                    {
-                        try
-                        {
-                            File.Delete(f);
-                            deleted++;
-                        }
-                        catch { }
-                    }
-                }
-                finally { rw.ExitWriteLock(); }
-            }
-            catch { }
-            return deleted;
-        }
-
-        /// <summary>
-        /// Background cleanup: enforce maxCacheBytes using LRU
-        /// </summary>
-        void BackgroundCleanup ()
-        {
-            while (!disposed)
-            {
-                try
-                {
-                    Thread.Sleep(TimeSpan.FromSeconds(10));
-                    if (cleanupQueue.IsEmpty && GetCacheSizeBytes() <= maxCacheBytes) continue;
-
-                    rw.EnterWriteLock();
-                    try
-                    {
-                        var files = Directory.EnumerateFiles(root, "*.png", SearchOption.AllDirectories)
-                            .Select(p => new FileInfo(p))
-                            .OrderBy(fi => fi.LastWriteTimeUtc)
-                            .ToList();
-
-                        long total = files.Sum(f => f.Length);
-                        foreach (var fi in files)
-                        {
-                            if (total <= maxCacheBytes) break;
-                            try
-                            {
-                                total -= fi.Length;
-                                fi.Delete();
-                            }
-                            catch { }
-                        }
-                    }
-                    finally { rw.ExitWriteLock(); }
-                }
-                catch { Thread.Sleep(1000); }
-            }
-        }
-
-        long GetCacheSizeBytes ()
-        {
-            try
-            {
-                rw.EnterReadLock();
-                try
-                {
-                    if (!Directory.Exists(root)) return 0;
-                    return Directory.EnumerateFiles(root, "*.png", SearchOption.AllDirectories)
-                        .Sum(f => new FileInfo(f).Length);
-                }
-                finally { rw.ExitReadLock(); }
-            }
-            catch { return 0; }
+            return 0;
         }
 
         public void Dispose ()

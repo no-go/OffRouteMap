@@ -1,4 +1,4 @@
-﻿using GMap.NET.MapProviders;
+using GMap.NET.MapProviders;
 
 namespace OffRouteMap
 {
@@ -11,11 +11,14 @@ namespace OffRouteMap
         public string DisplayName { get; }
         public GMapProvider Provider { get; }
 
-        public ProviderItem (string key, string displayName, GMapProvider provider)
+        public FileCacheProvider FileCache { get; }
+
+        public ProviderItem (string key, string displayName, GMapProvider provider, string cacheRoot)
         {
             Key = key ?? throw new ArgumentNullException(nameof(key));
             DisplayName = displayName ?? key;
             Provider = provider ?? throw new ArgumentNullException(nameof(provider));
+            FileCache = new FileCacheProvider(System.IO.Path.Combine(cacheRoot, Key));
         }
     }
 }
