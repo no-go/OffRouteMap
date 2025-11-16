@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.27680798004987534" branch-rate="0.2018348623853211" lines-covered="111" lines-valid="401" branches-covered="22" branches-valid="109" complexity="190" version="0" timestamp="1762005091">
+<coverage line-rate="0.27680798004987534" branch-rate="0.2018348623853211" lines-covered="111" lines-valid="401" branches-covered="22" branches-valid="109" complexity="190" version="0" timestamp="1763289678">
   <sources>
-    <source>D:\a\OffRouteMap\OffRouteMap\</source>
+    <source>D:\a\RouteEditorCS\RouteEditorCS\</source>
   </sources>
   <packages>
     <package name="OffRouteMap" line-rate="0.27680798004987534" branch-rate="0.2018348623853211" complexity="190">
       <classes>
-        <class name="OffRouteMap.App" filename="D:\a\OffRouteMap\OffRouteMap\App.xaml" line-rate="0" branch-rate="1" complexity="1">
+        <class name="OffRouteMap.App" filename="D:\a\RouteEditorCS\RouteEditorCS\App.xaml" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name="InitializeComponent" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -21,7 +21,7 @@
             <line number="5" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="OffRouteMap.App" filename="D:\a\OffRouteMap\OffRouteMap\obj\Release\net8.0-windows\App.g.cs" line-rate="0" branch-rate="0" complexity="2">
+        <class name="OffRouteMap.App" filename="D:\a\RouteEditorCS\RouteEditorCS\obj\Release\net8.0-windows\App.g.cs" line-rate="0" branch-rate="0" complexity="2">
           <methods>
             <method name="InitializeComponent" signature="()" line-rate="0" branch-rate="0" complexity="2">
               <lines>
@@ -37,7 +37,7 @@
             <line number="55" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="OffRouteMap.FileCacheProvider" filename="D:\a\OffRouteMap\OffRouteMap\FileCacheProvider.cs" line-rate="0.125" branch-rate="0.1" complexity="12">
+        <class name="OffRouteMap.FileCacheProvider" filename="D:\a\RouteEditorCS\RouteEditorCS\FileCacheProvider.cs" line-rate="0.125" branch-rate="0.1" complexity="12">
           <methods>
             <method name="PutImageToCache" signature="(System.Byte[],System.Int32,GMap.NET.GPoint,System.Int32)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -143,7 +143,7 @@
             <line number="119" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="OffRouteMap.FolderDialogService" filename="D:\a\OffRouteMap\OffRouteMap\FolderDialogService.cs" line-rate="0" branch-rate="0" complexity="4">
+        <class name="OffRouteMap.FolderDialogService" filename="D:\a\RouteEditorCS\RouteEditorCS\FolderDialogService.cs" line-rate="0" branch-rate="0" complexity="4">
           <methods>
             <method name="ShowSelectFolderDialog" signature="(System.String,System.String)" line-rate="0" branch-rate="0" complexity="4">
               <lines>
@@ -171,7 +171,7 @@
             <line number="18" hits="0" branch="true" condition-coverage="0% (0/2)" />
           </lines>
         </class>
-        <class name="OffRouteMap.GMapControlWrapper" filename="D:\a\OffRouteMap\OffRouteMap\GMapControlWrapper.cs" line-rate="0" branch-rate="1" complexity="19">
+        <class name="OffRouteMap.GMapControlWrapper" filename="D:\a\RouteEditorCS\RouteEditorCS\GMapControlWrapper.cs" line-rate="0" branch-rate="1" complexity="19">
           <methods>
             <method name="get_Zoom" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -295,7 +295,7 @@
             <line number="69" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="OffRouteMap.MainViewModel" filename="D:\a\OffRouteMap\OffRouteMap\MainViewModel.cs" line-rate="0.38636363636363635" branch-rate="0.25" complexity="87">
+        <class name="OffRouteMap.MainViewModel" filename="D:\a\RouteEditorCS\RouteEditorCS\MainViewModel.cs" line-rate="0.38636363636363635" branch-rate="0.25" complexity="87">
           <methods>
             <method name="get_GuiZoomInCommand" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -877,7 +877,7 @@
             <line number="480" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="OffRouteMap.MainWindow" filename="D:\a\OffRouteMap\OffRouteMap\MainWindow.xaml" line-rate="0" branch-rate="0" complexity="9">
+        <class name="OffRouteMap.MainWindow" filename="D:\a\RouteEditorCS\RouteEditorCS\MainWindow.xaml" line-rate="0" branch-rate="0" complexity="9">
           <methods>
             <method name="InitializeComponent" signature="()" line-rate="0" branch-rate="0" complexity="2">
               <lines>
@@ -895,7 +895,7 @@
             <line number="11" hits="0" branch="true" condition-coverage="0% (0/7)" />
           </lines>
         </class>
-        <class name="OffRouteMap.MainWindow" filename="D:\a\OffRouteMap\OffRouteMap\MainWindow.xaml.cs" line-rate="0" branch-rate="0" complexity="6">
+        <class name="OffRouteMap.MainWindow" filename="D:\a\RouteEditorCS\RouteEditorCS\MainWindow.xaml.cs" line-rate="0" branch-rate="0" complexity="6">
           <methods>
             <method name="Window_Closing" signature="(System.Object,System.ComponentModel.CancelEventArgs)" line-rate="0" branch-rate="0" complexity="2">
               <lines>
@@ -985,7 +985,7 @@
             <line number="86" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="OffRouteMap.Properties.Settings" filename="D:\a\OffRouteMap\OffRouteMap\Properties\Settings.Designer.cs" line-rate="0.34782608695652173" branch-rate="1" complexity="16">
+        <class name="OffRouteMap.Properties.Settings" filename="D:\a\RouteEditorCS\RouteEditorCS\Properties\Settings.Designer.cs" line-rate="0.34782608695652173" branch-rate="1" complexity="16">
           <methods>
             <method name="get_Default" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -1101,7 +1101,7 @@
             <line number="107" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="OffRouteMap.Properties.Strings" filename="D:\a\OffRouteMap\OffRouteMap\Properties\Strings.Designer.cs" line-rate="0" branch-rate="0" complexity="11">
+        <class name="OffRouteMap.Properties.Strings" filename="D:\a\RouteEditorCS\RouteEditorCS\Properties\Strings.Designer.cs" line-rate="0" branch-rate="0" complexity="11">
           <methods>
             <method name="get_ResourceManager" signature="()" line-rate="0" branch-rate="0" complexity="2">
               <lines>
@@ -1177,7 +1177,7 @@
             <line number="113" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="OffRouteMap.ProviderCollection" filename="D:\a\OffRouteMap\OffRouteMap\ProviderCollection.cs" line-rate="0.8" branch-rate="0.5" complexity="4">
+        <class name="OffRouteMap.ProviderCollection" filename="D:\a\RouteEditorCS\RouteEditorCS\ProviderCollection.cs" line-rate="0.8" branch-rate="0.5" complexity="4">
           <methods>
             <method name="get_Item" signature="(System.String)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -1205,7 +1205,7 @@
             <line number="29" hits="4" branch="true" condition-coverage="50% (1/2)" />
           </lines>
         </class>
-        <class name="OffRouteMap.ProviderItem" filename="D:\a\OffRouteMap\OffRouteMap\ProviderItem.cs" line-rate="0.9" branch-rate="0.5" complexity="10">
+        <class name="OffRouteMap.ProviderItem" filename="D:\a\RouteEditorCS\RouteEditorCS\ProviderItem.cs" line-rate="0.9" branch-rate="0.5" complexity="10">
           <methods>
             <method name="get_Key" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -1251,7 +1251,7 @@
             <line number="22" hits="16" branch="false" />
           </lines>
         </class>
-        <class name="OffRouteMap.RelayCommand" filename="D:\a\OffRouteMap\OffRouteMap\RelayCommand.cs" line-rate="0" branch-rate="0" complexity="6">
+        <class name="OffRouteMap.RelayCommand" filename="D:\a\RouteEditorCS\RouteEditorCS\RelayCommand.cs" line-rate="0" branch-rate="0" complexity="6">
           <methods>
             <method name="add_CanExecuteChanged" signature="(System.EventHandler)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -1293,7 +1293,7 @@
             <line number="28" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="OffRouteMap.ThemeService" filename="D:\a\OffRouteMap\OffRouteMap\ThemeService.cs" line-rate="0" branch-rate="0" complexity="3">
+        <class name="OffRouteMap.ThemeService" filename="D:\a\RouteEditorCS\RouteEditorCS\ThemeService.cs" line-rate="0" branch-rate="0" complexity="3">
           <methods>
             <method name="ApplyTheme" signature="(System.Windows.FrameworkElement,System.Boolean)" line-rate="0" branch-rate="0" complexity="2">
               <lines>
