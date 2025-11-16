@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.28253968253968254" branch-rate="0.20930232558139536" lines-covered="89" lines-valid="315" branches-covered="18" branches-valid="86" complexity="160" version="0" timestamp="1763292651">
+<coverage line-rate="0.28253968253968254" branch-rate="0.20930232558139536" lines-covered="89" lines-valid="315" branches-covered="18" branches-valid="86" complexity="160" version="0" timestamp="1763293097">
   <sources>
     <source>D:\a\RouteEditorCS\RouteEditorCS\</source>
   </sources>
