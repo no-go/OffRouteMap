@@ -1,1092 +1,919 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
-- uid: OffRouteMap
-  name: OffRouteMap
-  href: api/OffRouteMap.html
-  commentId: N:OffRouteMap
-  fullName: OffRouteMap
-  nameWithType: OffRouteMap
-- uid: OffRouteMap.FileCacheProvider
-  name: FileCacheProvider
-  href: api/OffRouteMap.FileCacheProvider.html
-  commentId: T:OffRouteMap.FileCacheProvider
-  fullName: OffRouteMap.FileCacheProvider
-  nameWithType: FileCacheProvider
-- uid: OffRouteMap.FileCacheProvider.#ctor(System.String)
-  name: FileCacheProvider(string)
-  href: api/OffRouteMap.FileCacheProvider.html#OffRouteMap_FileCacheProvider__ctor_System_String_
-  commentId: M:OffRouteMap.FileCacheProvider.#ctor(System.String)
-  name.vb: New(String)
-  fullName: OffRouteMap.FileCacheProvider.FileCacheProvider(string)
-  fullName.vb: OffRouteMap.FileCacheProvider.New(String)
-  nameWithType: FileCacheProvider.FileCacheProvider(string)
-  nameWithType.vb: FileCacheProvider.New(String)
-- uid: OffRouteMap.FileCacheProvider.#ctor*
-  name: FileCacheProvider
-  href: api/OffRouteMap.FileCacheProvider.html#OffRouteMap_FileCacheProvider__ctor_
-  commentId: Overload:OffRouteMap.FileCacheProvider.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: OffRouteMap.FileCacheProvider.FileCacheProvider
-  fullName.vb: OffRouteMap.FileCacheProvider.New
-  nameWithType: FileCacheProvider.FileCacheProvider
-  nameWithType.vb: FileCacheProvider.New
-- uid: OffRouteMap.FileCacheProvider.DeleteOlderThan(System.DateTime,System.Nullable{System.Int32})
-  name: DeleteOlderThan(DateTime, int?)
-  href: api/OffRouteMap.FileCacheProvider.html#OffRouteMap_FileCacheProvider_DeleteOlderThan_System_DateTime_System_Nullable_System_Int32__
-  commentId: M:OffRouteMap.FileCacheProvider.DeleteOlderThan(System.DateTime,System.Nullable{System.Int32})
-  name.vb: DeleteOlderThan(Date, Integer?)
-  fullName: OffRouteMap.FileCacheProvider.DeleteOlderThan(System.DateTime, int?)
-  fullName.vb: OffRouteMap.FileCacheProvider.DeleteOlderThan(Date, Integer?)
-  nameWithType: FileCacheProvider.DeleteOlderThan(DateTime, int?)
-  nameWithType.vb: FileCacheProvider.DeleteOlderThan(Date, Integer?)
-- uid: OffRouteMap.FileCacheProvider.DeleteOlderThan*
-  name: DeleteOlderThan
-  href: api/OffRouteMap.FileCacheProvider.html#OffRouteMap_FileCacheProvider_DeleteOlderThan_
-  commentId: Overload:OffRouteMap.FileCacheProvider.DeleteOlderThan
-  isSpec: "True"
-  fullName: OffRouteMap.FileCacheProvider.DeleteOlderThan
-  nameWithType: FileCacheProvider.DeleteOlderThan
-- uid: OffRouteMap.FileCacheProvider.Dispose
-  name: Dispose()
-  href: api/OffRouteMap.FileCacheProvider.html#OffRouteMap_FileCacheProvider_Dispose
-  commentId: M:OffRouteMap.FileCacheProvider.Dispose
-  fullName: OffRouteMap.FileCacheProvider.Dispose()
-  nameWithType: FileCacheProvider.Dispose()
-- uid: OffRouteMap.FileCacheProvider.Dispose*
-  name: Dispose
-  href: api/OffRouteMap.FileCacheProvider.html#OffRouteMap_FileCacheProvider_Dispose_
-  commentId: Overload:OffRouteMap.FileCacheProvider.Dispose
-  isSpec: "True"
-  fullName: OffRouteMap.FileCacheProvider.Dispose
-  nameWithType: FileCacheProvider.Dispose
-- uid: OffRouteMap.FileCacheProvider.GetImageFromCache(System.Int32,GMap.NET.GPoint,System.Int32)
-  name: GetImageFromCache(int, GPoint, int)
-  href: api/OffRouteMap.FileCacheProvider.html#OffRouteMap_FileCacheProvider_GetImageFromCache_System_Int32_GMap_NET_GPoint_System_Int32_
-  commentId: M:OffRouteMap.FileCacheProvider.GetImageFromCache(System.Int32,GMap.NET.GPoint,System.Int32)
-  name.vb: GetImageFromCache(Integer, GPoint, Integer)
-  fullName: OffRouteMap.FileCacheProvider.GetImageFromCache(int, GMap.NET.GPoint, int)
-  fullName.vb: OffRouteMap.FileCacheProvider.GetImageFromCache(Integer, GMap.NET.GPoint, Integer)
-  nameWithType: FileCacheProvider.GetImageFromCache(int, GPoint, int)
-  nameWithType.vb: FileCacheProvider.GetImageFromCache(Integer, GPoint, Integer)
-- uid: OffRouteMap.FileCacheProvider.GetImageFromCache*
-  name: GetImageFromCache
-  href: api/OffRouteMap.FileCacheProvider.html#OffRouteMap_FileCacheProvider_GetImageFromCache_
-  commentId: Overload:OffRouteMap.FileCacheProvider.GetImageFromCache
-  isSpec: "True"
-  fullName: OffRouteMap.FileCacheProvider.GetImageFromCache
-  nameWithType: FileCacheProvider.GetImageFromCache
-- uid: OffRouteMap.FileCacheProvider.PutImageToCache(System.Byte[],System.Int32,GMap.NET.GPoint,System.Int32)
-  name: PutImageToCache(byte[], int, GPoint, int)
-  href: api/OffRouteMap.FileCacheProvider.html#OffRouteMap_FileCacheProvider_PutImageToCache_System_Byte___System_Int32_GMap_NET_GPoint_System_Int32_
-  commentId: M:OffRouteMap.FileCacheProvider.PutImageToCache(System.Byte[],System.Int32,GMap.NET.GPoint,System.Int32)
-  name.vb: PutImageToCache(Byte(), Integer, GPoint, Integer)
-  fullName: OffRouteMap.FileCacheProvider.PutImageToCache(byte[], int, GMap.NET.GPoint, int)
-  fullName.vb: OffRouteMap.FileCacheProvider.PutImageToCache(Byte(), Integer, GMap.NET.GPoint, Integer)
-  nameWithType: FileCacheProvider.PutImageToCache(byte[], int, GPoint, int)
-  nameWithType.vb: FileCacheProvider.PutImageToCache(Byte(), Integer, GPoint, Integer)
-- uid: OffRouteMap.FileCacheProvider.PutImageToCache*
-  name: PutImageToCache
-  href: api/OffRouteMap.FileCacheProvider.html#OffRouteMap_FileCacheProvider_PutImageToCache_
-  commentId: Overload:OffRouteMap.FileCacheProvider.PutImageToCache
-  isSpec: "True"
-  fullName: OffRouteMap.FileCacheProvider.PutImageToCache
-  nameWithType: FileCacheProvider.PutImageToCache
-- uid: OffRouteMap.FolderDialogService
-  name: FolderDialogService
-  href: api/OffRouteMap.FolderDialogService.html
-  commentId: T:OffRouteMap.FolderDialogService
-  fullName: OffRouteMap.FolderDialogService
-  nameWithType: FolderDialogService
-- uid: OffRouteMap.FolderDialogService.ShowSelectFolderDialog(System.String,System.String)
-  name: ShowSelectFolderDialog(string, string)
-  href: api/OffRouteMap.FolderDialogService.html#OffRouteMap_FolderDialogService_ShowSelectFolderDialog_System_String_System_String_
-  commentId: M:OffRouteMap.FolderDialogService.ShowSelectFolderDialog(System.String,System.String)
-  name.vb: ShowSelectFolderDialog(String, String)
-  fullName: OffRouteMap.FolderDialogService.ShowSelectFolderDialog(string, string)
-  fullName.vb: OffRouteMap.FolderDialogService.ShowSelectFolderDialog(String, String)
-  nameWithType: FolderDialogService.ShowSelectFolderDialog(string, string)
-  nameWithType.vb: FolderDialogService.ShowSelectFolderDialog(String, String)
-- uid: OffRouteMap.FolderDialogService.ShowSelectFolderDialog*
-  name: ShowSelectFolderDialog
-  href: api/OffRouteMap.FolderDialogService.html#OffRouteMap_FolderDialogService_ShowSelectFolderDialog_
-  commentId: Overload:OffRouteMap.FolderDialogService.ShowSelectFolderDialog
-  isSpec: "True"
-  fullName: OffRouteMap.FolderDialogService.ShowSelectFolderDialog
-  nameWithType: FolderDialogService.ShowSelectFolderDialog
-- uid: OffRouteMap.GMapControlWrapper
+- uid: RouteEditorCS
+  name: RouteEditorCS
+  href: api/RouteEditorCS.html
+  commentId: N:RouteEditorCS
+  fullName: RouteEditorCS
+  nameWithType: RouteEditorCS
+- uid: RouteEditorCS.GMapControlWrapper
   name: GMapControlWrapper
-  href: api/OffRouteMap.GMapControlWrapper.html
-  commentId: T:OffRouteMap.GMapControlWrapper
-  fullName: OffRouteMap.GMapControlWrapper
+  href: api/RouteEditorCS.GMapControlWrapper.html
+  commentId: T:RouteEditorCS.GMapControlWrapper
+  fullName: RouteEditorCS.GMapControlWrapper
   nameWithType: GMapControlWrapper
-- uid: OffRouteMap.GMapControlWrapper.#ctor(GMap.NET.WindowsPresentation.GMapControl)
+- uid: RouteEditorCS.GMapControlWrapper.#ctor(GMap.NET.WindowsPresentation.GMapControl)
   name: GMapControlWrapper(GMapControl)
-  href: api/OffRouteMap.GMapControlWrapper.html#OffRouteMap_GMapControlWrapper__ctor_GMap_NET_WindowsPresentation_GMapControl_
-  commentId: M:OffRouteMap.GMapControlWrapper.#ctor(GMap.NET.WindowsPresentation.GMapControl)
+  href: api/RouteEditorCS.GMapControlWrapper.html#RouteEditorCS_GMapControlWrapper__ctor_GMap_NET_WindowsPresentation_GMapControl_
+  commentId: M:RouteEditorCS.GMapControlWrapper.#ctor(GMap.NET.WindowsPresentation.GMapControl)
   name.vb: New(GMapControl)
-  fullName: OffRouteMap.GMapControlWrapper.GMapControlWrapper(GMap.NET.WindowsPresentation.GMapControl)
-  fullName.vb: OffRouteMap.GMapControlWrapper.New(GMap.NET.WindowsPresentation.GMapControl)
+  fullName: RouteEditorCS.GMapControlWrapper.GMapControlWrapper(GMap.NET.WindowsPresentation.GMapControl)
+  fullName.vb: RouteEditorCS.GMapControlWrapper.New(GMap.NET.WindowsPresentation.GMapControl)
   nameWithType: GMapControlWrapper.GMapControlWrapper(GMapControl)
   nameWithType.vb: GMapControlWrapper.New(GMapControl)
-- uid: OffRouteMap.GMapControlWrapper.#ctor*
+- uid: RouteEditorCS.GMapControlWrapper.#ctor*
   name: GMapControlWrapper
-  href: api/OffRouteMap.GMapControlWrapper.html#OffRouteMap_GMapControlWrapper__ctor_
-  commentId: Overload:OffRouteMap.GMapControlWrapper.#ctor
+  href: api/RouteEditorCS.GMapControlWrapper.html#RouteEditorCS_GMapControlWrapper__ctor_
+  commentId: Overload:RouteEditorCS.GMapControlWrapper.#ctor
   isSpec: "True"
   name.vb: New
-  fullName: OffRouteMap.GMapControlWrapper.GMapControlWrapper
-  fullName.vb: OffRouteMap.GMapControlWrapper.New
+  fullName: RouteEditorCS.GMapControlWrapper.GMapControlWrapper
+  fullName.vb: RouteEditorCS.GMapControlWrapper.New
   nameWithType: GMapControlWrapper.GMapControlWrapper
   nameWithType.vb: GMapControlWrapper.New
-- uid: OffRouteMap.GMapControlWrapper.CanDragMap
+- uid: RouteEditorCS.GMapControlWrapper.CanDragMap
   name: CanDragMap
-  href: api/OffRouteMap.GMapControlWrapper.html#OffRouteMap_GMapControlWrapper_CanDragMap
-  commentId: P:OffRouteMap.GMapControlWrapper.CanDragMap
-  fullName: OffRouteMap.GMapControlWrapper.CanDragMap
+  href: api/RouteEditorCS.GMapControlWrapper.html#RouteEditorCS_GMapControlWrapper_CanDragMap
+  commentId: P:RouteEditorCS.GMapControlWrapper.CanDragMap
+  fullName: RouteEditorCS.GMapControlWrapper.CanDragMap
   nameWithType: GMapControlWrapper.CanDragMap
-- uid: OffRouteMap.GMapControlWrapper.CanDragMap*
+- uid: RouteEditorCS.GMapControlWrapper.CanDragMap*
   name: CanDragMap
-  href: api/OffRouteMap.GMapControlWrapper.html#OffRouteMap_GMapControlWrapper_CanDragMap_
-  commentId: Overload:OffRouteMap.GMapControlWrapper.CanDragMap
+  href: api/RouteEditorCS.GMapControlWrapper.html#RouteEditorCS_GMapControlWrapper_CanDragMap_
+  commentId: Overload:RouteEditorCS.GMapControlWrapper.CanDragMap
   isSpec: "True"
-  fullName: OffRouteMap.GMapControlWrapper.CanDragMap
+  fullName: RouteEditorCS.GMapControlWrapper.CanDragMap
   nameWithType: GMapControlWrapper.CanDragMap
-- uid: OffRouteMap.GMapControlWrapper.DragButton
+- uid: RouteEditorCS.GMapControlWrapper.DragButton
   name: DragButton
-  href: api/OffRouteMap.GMapControlWrapper.html#OffRouteMap_GMapControlWrapper_DragButton
-  commentId: P:OffRouteMap.GMapControlWrapper.DragButton
-  fullName: OffRouteMap.GMapControlWrapper.DragButton
+  href: api/RouteEditorCS.GMapControlWrapper.html#RouteEditorCS_GMapControlWrapper_DragButton
+  commentId: P:RouteEditorCS.GMapControlWrapper.DragButton
+  fullName: RouteEditorCS.GMapControlWrapper.DragButton
   nameWithType: GMapControlWrapper.DragButton
-- uid: OffRouteMap.GMapControlWrapper.DragButton*
+- uid: RouteEditorCS.GMapControlWrapper.DragButton*
   name: DragButton
-  href: api/OffRouteMap.GMapControlWrapper.html#OffRouteMap_GMapControlWrapper_DragButton_
-  commentId: Overload:OffRouteMap.GMapControlWrapper.DragButton
+  href: api/RouteEditorCS.GMapControlWrapper.html#RouteEditorCS_GMapControlWrapper_DragButton_
+  commentId: Overload:RouteEditorCS.GMapControlWrapper.DragButton
   isSpec: "True"
-  fullName: OffRouteMap.GMapControlWrapper.DragButton
+  fullName: RouteEditorCS.GMapControlWrapper.DragButton
   nameWithType: GMapControlWrapper.DragButton
-- uid: OffRouteMap.GMapControlWrapper.FromLocalToLatLng(System.Int32,System.Int32)
+- uid: RouteEditorCS.GMapControlWrapper.FromLocalToLatLng(System.Int32,System.Int32)
   name: FromLocalToLatLng(int, int)
-  href: api/OffRouteMap.GMapControlWrapper.html#OffRouteMap_GMapControlWrapper_FromLocalToLatLng_System_Int32_System_Int32_
-  commentId: M:OffRouteMap.GMapControlWrapper.FromLocalToLatLng(System.Int32,System.Int32)
+  href: api/RouteEditorCS.GMapControlWrapper.html#RouteEditorCS_GMapControlWrapper_FromLocalToLatLng_System_Int32_System_Int32_
+  commentId: M:RouteEditorCS.GMapControlWrapper.FromLocalToLatLng(System.Int32,System.Int32)
   name.vb: FromLocalToLatLng(Integer, Integer)
-  fullName: OffRouteMap.GMapControlWrapper.FromLocalToLatLng(int, int)
-  fullName.vb: OffRouteMap.GMapControlWrapper.FromLocalToLatLng(Integer, Integer)
+  fullName: RouteEditorCS.GMapControlWrapper.FromLocalToLatLng(int, int)
+  fullName.vb: RouteEditorCS.GMapControlWrapper.FromLocalToLatLng(Integer, Integer)
   nameWithType: GMapControlWrapper.FromLocalToLatLng(int, int)
   nameWithType.vb: GMapControlWrapper.FromLocalToLatLng(Integer, Integer)
-- uid: OffRouteMap.GMapControlWrapper.FromLocalToLatLng*
+- uid: RouteEditorCS.GMapControlWrapper.FromLocalToLatLng*
   name: FromLocalToLatLng
-  href: api/OffRouteMap.GMapControlWrapper.html#OffRouteMap_GMapControlWrapper_FromLocalToLatLng_
-  commentId: Overload:OffRouteMap.GMapControlWrapper.FromLocalToLatLng
+  href: api/RouteEditorCS.GMapControlWrapper.html#RouteEditorCS_GMapControlWrapper_FromLocalToLatLng_
+  commentId: Overload:RouteEditorCS.GMapControlWrapper.FromLocalToLatLng
   isSpec: "True"
-  fullName: OffRouteMap.GMapControlWrapper.FromLocalToLatLng
+  fullName: RouteEditorCS.GMapControlWrapper.FromLocalToLatLng
   nameWithType: GMapControlWrapper.FromLocalToLatLng
-- uid: OffRouteMap.GMapControlWrapper.MapProvider
+- uid: RouteEditorCS.GMapControlWrapper.MapProvider
   name: MapProvider
-  href: api/OffRouteMap.GMapControlWrapper.html#OffRouteMap_GMapControlWrapper_MapProvider
-  commentId: P:OffRouteMap.GMapControlWrapper.MapProvider
-  fullName: OffRouteMap.GMapControlWrapper.MapProvider
+  href: api/RouteEditorCS.GMapControlWrapper.html#RouteEditorCS_GMapControlWrapper_MapProvider
+  commentId: P:RouteEditorCS.GMapControlWrapper.MapProvider
+  fullName: RouteEditorCS.GMapControlWrapper.MapProvider
   nameWithType: GMapControlWrapper.MapProvider
-- uid: OffRouteMap.GMapControlWrapper.MapProvider*
+- uid: RouteEditorCS.GMapControlWrapper.MapProvider*
   name: MapProvider
-  href: api/OffRouteMap.GMapControlWrapper.html#OffRouteMap_GMapControlWrapper_MapProvider_
-  commentId: Overload:OffRouteMap.GMapControlWrapper.MapProvider
+  href: api/RouteEditorCS.GMapControlWrapper.html#RouteEditorCS_GMapControlWrapper_MapProvider_
+  commentId: Overload:RouteEditorCS.GMapControlWrapper.MapProvider
   isSpec: "True"
-  fullName: OffRouteMap.GMapControlWrapper.MapProvider
+  fullName: RouteEditorCS.GMapControlWrapper.MapProvider
   nameWithType: GMapControlWrapper.MapProvider
-- uid: OffRouteMap.GMapControlWrapper.Markers
+- uid: RouteEditorCS.GMapControlWrapper.Markers
   name: Markers
-  href: api/OffRouteMap.GMapControlWrapper.html#OffRouteMap_GMapControlWrapper_Markers
-  commentId: P:OffRouteMap.GMapControlWrapper.Markers
-  fullName: OffRouteMap.GMapControlWrapper.Markers
+  href: api/RouteEditorCS.GMapControlWrapper.html#RouteEditorCS_GMapControlWrapper_Markers
+  commentId: P:RouteEditorCS.GMapControlWrapper.Markers
+  fullName: RouteEditorCS.GMapControlWrapper.Markers
   nameWithType: GMapControlWrapper.Markers
-- uid: OffRouteMap.GMapControlWrapper.Markers*
+- uid: RouteEditorCS.GMapControlWrapper.Markers*
   name: Markers
-  href: api/OffRouteMap.GMapControlWrapper.html#OffRouteMap_GMapControlWrapper_Markers_
-  commentId: Overload:OffRouteMap.GMapControlWrapper.Markers
+  href: api/RouteEditorCS.GMapControlWrapper.html#RouteEditorCS_GMapControlWrapper_Markers_
+  commentId: Overload:RouteEditorCS.GMapControlWrapper.Markers
   isSpec: "True"
-  fullName: OffRouteMap.GMapControlWrapper.Markers
+  fullName: RouteEditorCS.GMapControlWrapper.Markers
   nameWithType: GMapControlWrapper.Markers
-- uid: OffRouteMap.GMapControlWrapper.Position
+- uid: RouteEditorCS.GMapControlWrapper.Position
   name: Position
-  href: api/OffRouteMap.GMapControlWrapper.html#OffRouteMap_GMapControlWrapper_Position
-  commentId: P:OffRouteMap.GMapControlWrapper.Position
-  fullName: OffRouteMap.GMapControlWrapper.Position
+  href: api/RouteEditorCS.GMapControlWrapper.html#RouteEditorCS_GMapControlWrapper_Position
+  commentId: P:RouteEditorCS.GMapControlWrapper.Position
+  fullName: RouteEditorCS.GMapControlWrapper.Position
   nameWithType: GMapControlWrapper.Position
-- uid: OffRouteMap.GMapControlWrapper.Position*
+- uid: RouteEditorCS.GMapControlWrapper.Position*
   name: Position
-  href: api/OffRouteMap.GMapControlWrapper.html#OffRouteMap_GMapControlWrapper_Position_
-  commentId: Overload:OffRouteMap.GMapControlWrapper.Position
+  href: api/RouteEditorCS.GMapControlWrapper.html#RouteEditorCS_GMapControlWrapper_Position_
+  commentId: Overload:RouteEditorCS.GMapControlWrapper.Position
   isSpec: "True"
-  fullName: OffRouteMap.GMapControlWrapper.Position
+  fullName: RouteEditorCS.GMapControlWrapper.Position
   nameWithType: GMapControlWrapper.Position
-- uid: OffRouteMap.GMapControlWrapper.ShowCenter
+- uid: RouteEditorCS.GMapControlWrapper.ShowCenter
   name: ShowCenter
-  href: api/OffRouteMap.GMapControlWrapper.html#OffRouteMap_GMapControlWrapper_ShowCenter
-  commentId: P:OffRouteMap.GMapControlWrapper.ShowCenter
-  fullName: OffRouteMap.GMapControlWrapper.ShowCenter
+  href: api/RouteEditorCS.GMapControlWrapper.html#RouteEditorCS_GMapControlWrapper_ShowCenter
+  commentId: P:RouteEditorCS.GMapControlWrapper.ShowCenter
+  fullName: RouteEditorCS.GMapControlWrapper.ShowCenter
   nameWithType: GMapControlWrapper.ShowCenter
-- uid: OffRouteMap.GMapControlWrapper.ShowCenter*
+- uid: RouteEditorCS.GMapControlWrapper.ShowCenter*
   name: ShowCenter
-  href: api/OffRouteMap.GMapControlWrapper.html#OffRouteMap_GMapControlWrapper_ShowCenter_
-  commentId: Overload:OffRouteMap.GMapControlWrapper.ShowCenter
+  href: api/RouteEditorCS.GMapControlWrapper.html#RouteEditorCS_GMapControlWrapper_ShowCenter_
+  commentId: Overload:RouteEditorCS.GMapControlWrapper.ShowCenter
   isSpec: "True"
-  fullName: OffRouteMap.GMapControlWrapper.ShowCenter
+  fullName: RouteEditorCS.GMapControlWrapper.ShowCenter
   nameWithType: GMapControlWrapper.ShowCenter
-- uid: OffRouteMap.GMapControlWrapper.Zoom
+- uid: RouteEditorCS.GMapControlWrapper.Zoom
   name: Zoom
-  href: api/OffRouteMap.GMapControlWrapper.html#OffRouteMap_GMapControlWrapper_Zoom
-  commentId: P:OffRouteMap.GMapControlWrapper.Zoom
-  fullName: OffRouteMap.GMapControlWrapper.Zoom
+  href: api/RouteEditorCS.GMapControlWrapper.html#RouteEditorCS_GMapControlWrapper_Zoom
+  commentId: P:RouteEditorCS.GMapControlWrapper.Zoom
+  fullName: RouteEditorCS.GMapControlWrapper.Zoom
   nameWithType: GMapControlWrapper.Zoom
-- uid: OffRouteMap.GMapControlWrapper.Zoom*
+- uid: RouteEditorCS.GMapControlWrapper.Zoom*
   name: Zoom
-  href: api/OffRouteMap.GMapControlWrapper.html#OffRouteMap_GMapControlWrapper_Zoom_
-  commentId: Overload:OffRouteMap.GMapControlWrapper.Zoom
+  href: api/RouteEditorCS.GMapControlWrapper.html#RouteEditorCS_GMapControlWrapper_Zoom_
+  commentId: Overload:RouteEditorCS.GMapControlWrapper.Zoom
   isSpec: "True"
-  fullName: OffRouteMap.GMapControlWrapper.Zoom
+  fullName: RouteEditorCS.GMapControlWrapper.Zoom
   nameWithType: GMapControlWrapper.Zoom
-- uid: OffRouteMap.IGMapControl
+- uid: RouteEditorCS.IGMapControl
   name: IGMapControl
-  href: api/OffRouteMap.IGMapControl.html
-  commentId: T:OffRouteMap.IGMapControl
-  fullName: OffRouteMap.IGMapControl
+  href: api/RouteEditorCS.IGMapControl.html
+  commentId: T:RouteEditorCS.IGMapControl
+  fullName: RouteEditorCS.IGMapControl
   nameWithType: IGMapControl
-- uid: OffRouteMap.IGMapControl.CacheMode
+- uid: RouteEditorCS.IGMapControl.CacheMode
   name: CacheMode
-  href: api/OffRouteMap.IGMapControl.html#OffRouteMap_IGMapControl_CacheMode
-  commentId: P:OffRouteMap.IGMapControl.CacheMode
-  fullName: OffRouteMap.IGMapControl.CacheMode
+  href: api/RouteEditorCS.IGMapControl.html#RouteEditorCS_IGMapControl_CacheMode
+  commentId: P:RouteEditorCS.IGMapControl.CacheMode
+  fullName: RouteEditorCS.IGMapControl.CacheMode
   nameWithType: IGMapControl.CacheMode
-- uid: OffRouteMap.IGMapControl.CacheMode*
+- uid: RouteEditorCS.IGMapControl.CacheMode*
   name: CacheMode
-  href: api/OffRouteMap.IGMapControl.html#OffRouteMap_IGMapControl_CacheMode_
-  commentId: Overload:OffRouteMap.IGMapControl.CacheMode
+  href: api/RouteEditorCS.IGMapControl.html#RouteEditorCS_IGMapControl_CacheMode_
+  commentId: Overload:RouteEditorCS.IGMapControl.CacheMode
   isSpec: "True"
-  fullName: OffRouteMap.IGMapControl.CacheMode
+  fullName: RouteEditorCS.IGMapControl.CacheMode
   nameWithType: IGMapControl.CacheMode
-- uid: OffRouteMap.IGMapControl.CanDragMap
+- uid: RouteEditorCS.IGMapControl.CanDragMap
   name: CanDragMap
-  href: api/OffRouteMap.IGMapControl.html#OffRouteMap_IGMapControl_CanDragMap
-  commentId: P:OffRouteMap.IGMapControl.CanDragMap
-  fullName: OffRouteMap.IGMapControl.CanDragMap
+  href: api/RouteEditorCS.IGMapControl.html#RouteEditorCS_IGMapControl_CanDragMap
+  commentId: P:RouteEditorCS.IGMapControl.CanDragMap
+  fullName: RouteEditorCS.IGMapControl.CanDragMap
   nameWithType: IGMapControl.CanDragMap
-- uid: OffRouteMap.IGMapControl.CanDragMap*
+- uid: RouteEditorCS.IGMapControl.CanDragMap*
   name: CanDragMap
-  href: api/OffRouteMap.IGMapControl.html#OffRouteMap_IGMapControl_CanDragMap_
-  commentId: Overload:OffRouteMap.IGMapControl.CanDragMap
+  href: api/RouteEditorCS.IGMapControl.html#RouteEditorCS_IGMapControl_CanDragMap_
+  commentId: Overload:RouteEditorCS.IGMapControl.CanDragMap
   isSpec: "True"
-  fullName: OffRouteMap.IGMapControl.CanDragMap
+  fullName: RouteEditorCS.IGMapControl.CanDragMap
   nameWithType: IGMapControl.CanDragMap
-- uid: OffRouteMap.IGMapControl.DragButton
+- uid: RouteEditorCS.IGMapControl.DragButton
   name: DragButton
-  href: api/OffRouteMap.IGMapControl.html#OffRouteMap_IGMapControl_DragButton
-  commentId: P:OffRouteMap.IGMapControl.DragButton
-  fullName: OffRouteMap.IGMapControl.DragButton
+  href: api/RouteEditorCS.IGMapControl.html#RouteEditorCS_IGMapControl_DragButton
+  commentId: P:RouteEditorCS.IGMapControl.DragButton
+  fullName: RouteEditorCS.IGMapControl.DragButton
   nameWithType: IGMapControl.DragButton
-- uid: OffRouteMap.IGMapControl.DragButton*
+- uid: RouteEditorCS.IGMapControl.DragButton*
   name: DragButton
-  href: api/OffRouteMap.IGMapControl.html#OffRouteMap_IGMapControl_DragButton_
-  commentId: Overload:OffRouteMap.IGMapControl.DragButton
+  href: api/RouteEditorCS.IGMapControl.html#RouteEditorCS_IGMapControl_DragButton_
+  commentId: Overload:RouteEditorCS.IGMapControl.DragButton
   isSpec: "True"
-  fullName: OffRouteMap.IGMapControl.DragButton
+  fullName: RouteEditorCS.IGMapControl.DragButton
   nameWithType: IGMapControl.DragButton
-- uid: OffRouteMap.IGMapControl.FromLocalToLatLng(System.Int32,System.Int32)
+- uid: RouteEditorCS.IGMapControl.FromLocalToLatLng(System.Int32,System.Int32)
   name: FromLocalToLatLng(int, int)
-  href: api/OffRouteMap.IGMapControl.html#OffRouteMap_IGMapControl_FromLocalToLatLng_System_Int32_System_Int32_
-  commentId: M:OffRouteMap.IGMapControl.FromLocalToLatLng(System.Int32,System.Int32)
+  href: api/RouteEditorCS.IGMapControl.html#RouteEditorCS_IGMapControl_FromLocalToLatLng_System_Int32_System_Int32_
+  commentId: M:RouteEditorCS.IGMapControl.FromLocalToLatLng(System.Int32,System.Int32)
   name.vb: FromLocalToLatLng(Integer, Integer)
-  fullName: OffRouteMap.IGMapControl.FromLocalToLatLng(int, int)
-  fullName.vb: OffRouteMap.IGMapControl.FromLocalToLatLng(Integer, Integer)
+  fullName: RouteEditorCS.IGMapControl.FromLocalToLatLng(int, int)
+  fullName.vb: RouteEditorCS.IGMapControl.FromLocalToLatLng(Integer, Integer)
   nameWithType: IGMapControl.FromLocalToLatLng(int, int)
   nameWithType.vb: IGMapControl.FromLocalToLatLng(Integer, Integer)
-- uid: OffRouteMap.IGMapControl.FromLocalToLatLng*
+- uid: RouteEditorCS.IGMapControl.FromLocalToLatLng*
   name: FromLocalToLatLng
-  href: api/OffRouteMap.IGMapControl.html#OffRouteMap_IGMapControl_FromLocalToLatLng_
-  commentId: Overload:OffRouteMap.IGMapControl.FromLocalToLatLng
+  href: api/RouteEditorCS.IGMapControl.html#RouteEditorCS_IGMapControl_FromLocalToLatLng_
+  commentId: Overload:RouteEditorCS.IGMapControl.FromLocalToLatLng
   isSpec: "True"
-  fullName: OffRouteMap.IGMapControl.FromLocalToLatLng
+  fullName: RouteEditorCS.IGMapControl.FromLocalToLatLng
   nameWithType: IGMapControl.FromLocalToLatLng
-- uid: OffRouteMap.IGMapControl.MapProvider
+- uid: RouteEditorCS.IGMapControl.MapProvider
   name: MapProvider
-  href: api/OffRouteMap.IGMapControl.html#OffRouteMap_IGMapControl_MapProvider
-  commentId: P:OffRouteMap.IGMapControl.MapProvider
-  fullName: OffRouteMap.IGMapControl.MapProvider
+  href: api/RouteEditorCS.IGMapControl.html#RouteEditorCS_IGMapControl_MapProvider
+  commentId: P:RouteEditorCS.IGMapControl.MapProvider
+  fullName: RouteEditorCS.IGMapControl.MapProvider
   nameWithType: IGMapControl.MapProvider
-- uid: OffRouteMap.IGMapControl.MapProvider*
+- uid: RouteEditorCS.IGMapControl.MapProvider*
   name: MapProvider
-  href: api/OffRouteMap.IGMapControl.html#OffRouteMap_IGMapControl_MapProvider_
-  commentId: Overload:OffRouteMap.IGMapControl.MapProvider
+  href: api/RouteEditorCS.IGMapControl.html#RouteEditorCS_IGMapControl_MapProvider_
+  commentId: Overload:RouteEditorCS.IGMapControl.MapProvider
   isSpec: "True"
-  fullName: OffRouteMap.IGMapControl.MapProvider
+  fullName: RouteEditorCS.IGMapControl.MapProvider
   nameWithType: IGMapControl.MapProvider
-- uid: OffRouteMap.IGMapControl.Markers
+- uid: RouteEditorCS.IGMapControl.Markers
   name: Markers
-  href: api/OffRouteMap.IGMapControl.html#OffRouteMap_IGMapControl_Markers
-  commentId: P:OffRouteMap.IGMapControl.Markers
-  fullName: OffRouteMap.IGMapControl.Markers
+  href: api/RouteEditorCS.IGMapControl.html#RouteEditorCS_IGMapControl_Markers
+  commentId: P:RouteEditorCS.IGMapControl.Markers
+  fullName: RouteEditorCS.IGMapControl.Markers
   nameWithType: IGMapControl.Markers
-- uid: OffRouteMap.IGMapControl.Markers*
+- uid: RouteEditorCS.IGMapControl.Markers*
   name: Markers
-  href: api/OffRouteMap.IGMapControl.html#OffRouteMap_IGMapControl_Markers_
-  commentId: Overload:OffRouteMap.IGMapControl.Markers
+  href: api/RouteEditorCS.IGMapControl.html#RouteEditorCS_IGMapControl_Markers_
+  commentId: Overload:RouteEditorCS.IGMapControl.Markers
   isSpec: "True"
-  fullName: OffRouteMap.IGMapControl.Markers
+  fullName: RouteEditorCS.IGMapControl.Markers
   nameWithType: IGMapControl.Markers
-- uid: OffRouteMap.IGMapControl.Position
+- uid: RouteEditorCS.IGMapControl.Position
   name: Position
-  href: api/OffRouteMap.IGMapControl.html#OffRouteMap_IGMapControl_Position
-  commentId: P:OffRouteMap.IGMapControl.Position
-  fullName: OffRouteMap.IGMapControl.Position
+  href: api/RouteEditorCS.IGMapControl.html#RouteEditorCS_IGMapControl_Position
+  commentId: P:RouteEditorCS.IGMapControl.Position
+  fullName: RouteEditorCS.IGMapControl.Position
   nameWithType: IGMapControl.Position
-- uid: OffRouteMap.IGMapControl.Position*
+- uid: RouteEditorCS.IGMapControl.Position*
   name: Position
-  href: api/OffRouteMap.IGMapControl.html#OffRouteMap_IGMapControl_Position_
-  commentId: Overload:OffRouteMap.IGMapControl.Position
+  href: api/RouteEditorCS.IGMapControl.html#RouteEditorCS_IGMapControl_Position_
+  commentId: Overload:RouteEditorCS.IGMapControl.Position
   isSpec: "True"
-  fullName: OffRouteMap.IGMapControl.Position
+  fullName: RouteEditorCS.IGMapControl.Position
   nameWithType: IGMapControl.Position
-- uid: OffRouteMap.IGMapControl.PrimaryCache
+- uid: RouteEditorCS.IGMapControl.PrimaryCache
   name: PrimaryCache
-  href: api/OffRouteMap.IGMapControl.html#OffRouteMap_IGMapControl_PrimaryCache
-  commentId: P:OffRouteMap.IGMapControl.PrimaryCache
-  fullName: OffRouteMap.IGMapControl.PrimaryCache
+  href: api/RouteEditorCS.IGMapControl.html#RouteEditorCS_IGMapControl_PrimaryCache
+  commentId: P:RouteEditorCS.IGMapControl.PrimaryCache
+  fullName: RouteEditorCS.IGMapControl.PrimaryCache
   nameWithType: IGMapControl.PrimaryCache
-- uid: OffRouteMap.IGMapControl.PrimaryCache*
+- uid: RouteEditorCS.IGMapControl.PrimaryCache*
   name: PrimaryCache
-  href: api/OffRouteMap.IGMapControl.html#OffRouteMap_IGMapControl_PrimaryCache_
-  commentId: Overload:OffRouteMap.IGMapControl.PrimaryCache
+  href: api/RouteEditorCS.IGMapControl.html#RouteEditorCS_IGMapControl_PrimaryCache_
+  commentId: Overload:RouteEditorCS.IGMapControl.PrimaryCache
   isSpec: "True"
-  fullName: OffRouteMap.IGMapControl.PrimaryCache
+  fullName: RouteEditorCS.IGMapControl.PrimaryCache
   nameWithType: IGMapControl.PrimaryCache
-- uid: OffRouteMap.IGMapControl.ShowCenter
+- uid: RouteEditorCS.IGMapControl.ShowCenter
   name: ShowCenter
-  href: api/OffRouteMap.IGMapControl.html#OffRouteMap_IGMapControl_ShowCenter
-  commentId: P:OffRouteMap.IGMapControl.ShowCenter
-  fullName: OffRouteMap.IGMapControl.ShowCenter
+  href: api/RouteEditorCS.IGMapControl.html#RouteEditorCS_IGMapControl_ShowCenter
+  commentId: P:RouteEditorCS.IGMapControl.ShowCenter
+  fullName: RouteEditorCS.IGMapControl.ShowCenter
   nameWithType: IGMapControl.ShowCenter
-- uid: OffRouteMap.IGMapControl.ShowCenter*
+- uid: RouteEditorCS.IGMapControl.ShowCenter*
   name: ShowCenter
-  href: api/OffRouteMap.IGMapControl.html#OffRouteMap_IGMapControl_ShowCenter_
-  commentId: Overload:OffRouteMap.IGMapControl.ShowCenter
+  href: api/RouteEditorCS.IGMapControl.html#RouteEditorCS_IGMapControl_ShowCenter_
+  commentId: Overload:RouteEditorCS.IGMapControl.ShowCenter
   isSpec: "True"
-  fullName: OffRouteMap.IGMapControl.ShowCenter
+  fullName: RouteEditorCS.IGMapControl.ShowCenter
   nameWithType: IGMapControl.ShowCenter
-- uid: OffRouteMap.IGMapControl.Zoom
+- uid: RouteEditorCS.IGMapControl.Zoom
   name: Zoom
-  href: api/OffRouteMap.IGMapControl.html#OffRouteMap_IGMapControl_Zoom
-  commentId: P:OffRouteMap.IGMapControl.Zoom
-  fullName: OffRouteMap.IGMapControl.Zoom
+  href: api/RouteEditorCS.IGMapControl.html#RouteEditorCS_IGMapControl_Zoom
+  commentId: P:RouteEditorCS.IGMapControl.Zoom
+  fullName: RouteEditorCS.IGMapControl.Zoom
   nameWithType: IGMapControl.Zoom
-- uid: OffRouteMap.IGMapControl.Zoom*
+- uid: RouteEditorCS.IGMapControl.Zoom*
   name: Zoom
-  href: api/OffRouteMap.IGMapControl.html#OffRouteMap_IGMapControl_Zoom_
-  commentId: Overload:OffRouteMap.IGMapControl.Zoom
+  href: api/RouteEditorCS.IGMapControl.html#RouteEditorCS_IGMapControl_Zoom_
+  commentId: Overload:RouteEditorCS.IGMapControl.Zoom
   isSpec: "True"
-  fullName: OffRouteMap.IGMapControl.Zoom
+  fullName: RouteEditorCS.IGMapControl.Zoom
   nameWithType: IGMapControl.Zoom
-- uid: OffRouteMap.MainViewModel
+- uid: RouteEditorCS.MainViewModel
   name: MainViewModel
-  href: api/OffRouteMap.MainViewModel.html
-  commentId: T:OffRouteMap.MainViewModel
-  fullName: OffRouteMap.MainViewModel
+  href: api/RouteEditorCS.MainViewModel.html
+  commentId: T:RouteEditorCS.MainViewModel
+  fullName: RouteEditorCS.MainViewModel
   nameWithType: MainViewModel
-- uid: OffRouteMap.MainViewModel.#ctor(OffRouteMap.IGMapControl)
+- uid: RouteEditorCS.MainViewModel.#ctor(RouteEditorCS.IGMapControl)
   name: MainViewModel(IGMapControl)
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel__ctor_OffRouteMap_IGMapControl_
-  commentId: M:OffRouteMap.MainViewModel.#ctor(OffRouteMap.IGMapControl)
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel__ctor_RouteEditorCS_IGMapControl_
+  commentId: M:RouteEditorCS.MainViewModel.#ctor(RouteEditorCS.IGMapControl)
   name.vb: New(IGMapControl)
-  fullName: OffRouteMap.MainViewModel.MainViewModel(OffRouteMap.IGMapControl)
-  fullName.vb: OffRouteMap.MainViewModel.New(OffRouteMap.IGMapControl)
+  fullName: RouteEditorCS.MainViewModel.MainViewModel(RouteEditorCS.IGMapControl)
+  fullName.vb: RouteEditorCS.MainViewModel.New(RouteEditorCS.IGMapControl)
   nameWithType: MainViewModel.MainViewModel(IGMapControl)
   nameWithType.vb: MainViewModel.New(IGMapControl)
-- uid: OffRouteMap.MainViewModel.#ctor*
+- uid: RouteEditorCS.MainViewModel.#ctor*
   name: MainViewModel
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel__ctor_
-  commentId: Overload:OffRouteMap.MainViewModel.#ctor
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel__ctor_
+  commentId: Overload:RouteEditorCS.MainViewModel.#ctor
   isSpec: "True"
   name.vb: New
-  fullName: OffRouteMap.MainViewModel.MainViewModel
-  fullName.vb: OffRouteMap.MainViewModel.New
+  fullName: RouteEditorCS.MainViewModel.MainViewModel
+  fullName.vb: RouteEditorCS.MainViewModel.New
   nameWithType: MainViewModel.MainViewModel
   nameWithType.vb: MainViewModel.New
-- uid: OffRouteMap.MainViewModel.AddRoutePoint
+- uid: RouteEditorCS.MainViewModel.AddRoutePoint
   name: AddRoutePoint()
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_AddRoutePoint
-  commentId: M:OffRouteMap.MainViewModel.AddRoutePoint
-  fullName: OffRouteMap.MainViewModel.AddRoutePoint()
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_AddRoutePoint
+  commentId: M:RouteEditorCS.MainViewModel.AddRoutePoint
+  fullName: RouteEditorCS.MainViewModel.AddRoutePoint()
   nameWithType: MainViewModel.AddRoutePoint()
-- uid: OffRouteMap.MainViewModel.AddRoutePoint*
+- uid: RouteEditorCS.MainViewModel.AddRoutePoint*
   name: AddRoutePoint
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_AddRoutePoint_
-  commentId: Overload:OffRouteMap.MainViewModel.AddRoutePoint
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_AddRoutePoint_
+  commentId: Overload:RouteEditorCS.MainViewModel.AddRoutePoint
   isSpec: "True"
-  fullName: OffRouteMap.MainViewModel.AddRoutePoint
+  fullName: RouteEditorCS.MainViewModel.AddRoutePoint
   nameWithType: MainViewModel.AddRoutePoint
-- uid: OffRouteMap.MainViewModel.BeforeClosingCommand
+- uid: RouteEditorCS.MainViewModel.BeforeClosingCommand
   name: BeforeClosingCommand
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_BeforeClosingCommand
-  commentId: P:OffRouteMap.MainViewModel.BeforeClosingCommand
-  fullName: OffRouteMap.MainViewModel.BeforeClosingCommand
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_BeforeClosingCommand
+  commentId: P:RouteEditorCS.MainViewModel.BeforeClosingCommand
+  fullName: RouteEditorCS.MainViewModel.BeforeClosingCommand
   nameWithType: MainViewModel.BeforeClosingCommand
-- uid: OffRouteMap.MainViewModel.BeforeClosingCommand*
+- uid: RouteEditorCS.MainViewModel.BeforeClosingCommand*
   name: BeforeClosingCommand
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_BeforeClosingCommand_
-  commentId: Overload:OffRouteMap.MainViewModel.BeforeClosingCommand
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_BeforeClosingCommand_
+  commentId: Overload:RouteEditorCS.MainViewModel.BeforeClosingCommand
   isSpec: "True"
-  fullName: OffRouteMap.MainViewModel.BeforeClosingCommand
+  fullName: RouteEditorCS.MainViewModel.BeforeClosingCommand
   nameWithType: MainViewModel.BeforeClosingCommand
-- uid: OffRouteMap.MainViewModel.GuiZoomFactor
+- uid: RouteEditorCS.MainViewModel.GuiZoomFactor
   name: GuiZoomFactor
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_GuiZoomFactor
-  commentId: P:OffRouteMap.MainViewModel.GuiZoomFactor
-  fullName: OffRouteMap.MainViewModel.GuiZoomFactor
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_GuiZoomFactor
+  commentId: P:RouteEditorCS.MainViewModel.GuiZoomFactor
+  fullName: RouteEditorCS.MainViewModel.GuiZoomFactor
   nameWithType: MainViewModel.GuiZoomFactor
-- uid: OffRouteMap.MainViewModel.GuiZoomFactor*
+- uid: RouteEditorCS.MainViewModel.GuiZoomFactor*
   name: GuiZoomFactor
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_GuiZoomFactor_
-  commentId: Overload:OffRouteMap.MainViewModel.GuiZoomFactor
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_GuiZoomFactor_
+  commentId: Overload:RouteEditorCS.MainViewModel.GuiZoomFactor
   isSpec: "True"
-  fullName: OffRouteMap.MainViewModel.GuiZoomFactor
+  fullName: RouteEditorCS.MainViewModel.GuiZoomFactor
   nameWithType: MainViewModel.GuiZoomFactor
-- uid: OffRouteMap.MainViewModel.GuiZoomIn
+- uid: RouteEditorCS.MainViewModel.GuiZoomIn
   name: GuiZoomIn()
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_GuiZoomIn
-  commentId: M:OffRouteMap.MainViewModel.GuiZoomIn
-  fullName: OffRouteMap.MainViewModel.GuiZoomIn()
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_GuiZoomIn
+  commentId: M:RouteEditorCS.MainViewModel.GuiZoomIn
+  fullName: RouteEditorCS.MainViewModel.GuiZoomIn()
   nameWithType: MainViewModel.GuiZoomIn()
-- uid: OffRouteMap.MainViewModel.GuiZoomIn*
+- uid: RouteEditorCS.MainViewModel.GuiZoomIn*
   name: GuiZoomIn
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_GuiZoomIn_
-  commentId: Overload:OffRouteMap.MainViewModel.GuiZoomIn
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_GuiZoomIn_
+  commentId: Overload:RouteEditorCS.MainViewModel.GuiZoomIn
   isSpec: "True"
-  fullName: OffRouteMap.MainViewModel.GuiZoomIn
+  fullName: RouteEditorCS.MainViewModel.GuiZoomIn
   nameWithType: MainViewModel.GuiZoomIn
-- uid: OffRouteMap.MainViewModel.GuiZoomInCommand
+- uid: RouteEditorCS.MainViewModel.GuiZoomInCommand
   name: GuiZoomInCommand
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_GuiZoomInCommand
-  commentId: P:OffRouteMap.MainViewModel.GuiZoomInCommand
-  fullName: OffRouteMap.MainViewModel.GuiZoomInCommand
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_GuiZoomInCommand
+  commentId: P:RouteEditorCS.MainViewModel.GuiZoomInCommand
+  fullName: RouteEditorCS.MainViewModel.GuiZoomInCommand
   nameWithType: MainViewModel.GuiZoomInCommand
-- uid: OffRouteMap.MainViewModel.GuiZoomInCommand*
+- uid: RouteEditorCS.MainViewModel.GuiZoomInCommand*
   name: GuiZoomInCommand
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_GuiZoomInCommand_
-  commentId: Overload:OffRouteMap.MainViewModel.GuiZoomInCommand
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_GuiZoomInCommand_
+  commentId: Overload:RouteEditorCS.MainViewModel.GuiZoomInCommand
   isSpec: "True"
-  fullName: OffRouteMap.MainViewModel.GuiZoomInCommand
+  fullName: RouteEditorCS.MainViewModel.GuiZoomInCommand
   nameWithType: MainViewModel.GuiZoomInCommand
-- uid: OffRouteMap.MainViewModel.GuiZoomOut
+- uid: RouteEditorCS.MainViewModel.GuiZoomOut
   name: GuiZoomOut()
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_GuiZoomOut
-  commentId: M:OffRouteMap.MainViewModel.GuiZoomOut
-  fullName: OffRouteMap.MainViewModel.GuiZoomOut()
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_GuiZoomOut
+  commentId: M:RouteEditorCS.MainViewModel.GuiZoomOut
+  fullName: RouteEditorCS.MainViewModel.GuiZoomOut()
   nameWithType: MainViewModel.GuiZoomOut()
-- uid: OffRouteMap.MainViewModel.GuiZoomOut*
+- uid: RouteEditorCS.MainViewModel.GuiZoomOut*
   name: GuiZoomOut
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_GuiZoomOut_
-  commentId: Overload:OffRouteMap.MainViewModel.GuiZoomOut
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_GuiZoomOut_
+  commentId: Overload:RouteEditorCS.MainViewModel.GuiZoomOut
   isSpec: "True"
-  fullName: OffRouteMap.MainViewModel.GuiZoomOut
+  fullName: RouteEditorCS.MainViewModel.GuiZoomOut
   nameWithType: MainViewModel.GuiZoomOut
-- uid: OffRouteMap.MainViewModel.GuiZoomOutCommand
+- uid: RouteEditorCS.MainViewModel.GuiZoomOutCommand
   name: GuiZoomOutCommand
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_GuiZoomOutCommand
-  commentId: P:OffRouteMap.MainViewModel.GuiZoomOutCommand
-  fullName: OffRouteMap.MainViewModel.GuiZoomOutCommand
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_GuiZoomOutCommand
+  commentId: P:RouteEditorCS.MainViewModel.GuiZoomOutCommand
+  fullName: RouteEditorCS.MainViewModel.GuiZoomOutCommand
   nameWithType: MainViewModel.GuiZoomOutCommand
-- uid: OffRouteMap.MainViewModel.GuiZoomOutCommand*
+- uid: RouteEditorCS.MainViewModel.GuiZoomOutCommand*
   name: GuiZoomOutCommand
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_GuiZoomOutCommand_
-  commentId: Overload:OffRouteMap.MainViewModel.GuiZoomOutCommand
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_GuiZoomOutCommand_
+  commentId: Overload:RouteEditorCS.MainViewModel.GuiZoomOutCommand
   isSpec: "True"
-  fullName: OffRouteMap.MainViewModel.GuiZoomOutCommand
+  fullName: RouteEditorCS.MainViewModel.GuiZoomOutCommand
   nameWithType: MainViewModel.GuiZoomOutCommand
-- uid: OffRouteMap.MainViewModel.Items
+- uid: RouteEditorCS.MainViewModel.Items
   name: Items
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_Items
-  commentId: P:OffRouteMap.MainViewModel.Items
-  fullName: OffRouteMap.MainViewModel.Items
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_Items
+  commentId: P:RouteEditorCS.MainViewModel.Items
+  fullName: RouteEditorCS.MainViewModel.Items
   nameWithType: MainViewModel.Items
-- uid: OffRouteMap.MainViewModel.Items*
+- uid: RouteEditorCS.MainViewModel.Items*
   name: Items
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_Items_
-  commentId: Overload:OffRouteMap.MainViewModel.Items
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_Items_
+  commentId: Overload:RouteEditorCS.MainViewModel.Items
   isSpec: "True"
-  fullName: OffRouteMap.MainViewModel.Items
+  fullName: RouteEditorCS.MainViewModel.Items
   nameWithType: MainViewModel.Items
-- uid: OffRouteMap.MainViewModel.LoadRouteCommand
+- uid: RouteEditorCS.MainViewModel.LoadRouteCommand
   name: LoadRouteCommand
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_LoadRouteCommand
-  commentId: P:OffRouteMap.MainViewModel.LoadRouteCommand
-  fullName: OffRouteMap.MainViewModel.LoadRouteCommand
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_LoadRouteCommand
+  commentId: P:RouteEditorCS.MainViewModel.LoadRouteCommand
+  fullName: RouteEditorCS.MainViewModel.LoadRouteCommand
   nameWithType: MainViewModel.LoadRouteCommand
-- uid: OffRouteMap.MainViewModel.LoadRouteCommand*
+- uid: RouteEditorCS.MainViewModel.LoadRouteCommand*
   name: LoadRouteCommand
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_LoadRouteCommand_
-  commentId: Overload:OffRouteMap.MainViewModel.LoadRouteCommand
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_LoadRouteCommand_
+  commentId: Overload:RouteEditorCS.MainViewModel.LoadRouteCommand
   isSpec: "True"
-  fullName: OffRouteMap.MainViewModel.LoadRouteCommand
+  fullName: RouteEditorCS.MainViewModel.LoadRouteCommand
   nameWithType: MainViewModel.LoadRouteCommand
-- uid: OffRouteMap.MainViewModel.OnPropertyChanged(System.String)
+- uid: RouteEditorCS.MainViewModel.OnPropertyChanged(System.String)
   name: OnPropertyChanged(string)
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_OnPropertyChanged_System_String_
-  commentId: M:OffRouteMap.MainViewModel.OnPropertyChanged(System.String)
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_OnPropertyChanged_System_String_
+  commentId: M:RouteEditorCS.MainViewModel.OnPropertyChanged(System.String)
   name.vb: OnPropertyChanged(String)
-  fullName: OffRouteMap.MainViewModel.OnPropertyChanged(string)
-  fullName.vb: OffRouteMap.MainViewModel.OnPropertyChanged(String)
+  fullName: RouteEditorCS.MainViewModel.OnPropertyChanged(string)
+  fullName.vb: RouteEditorCS.MainViewModel.OnPropertyChanged(String)
   nameWithType: MainViewModel.OnPropertyChanged(string)
   nameWithType.vb: MainViewModel.OnPropertyChanged(String)
-- uid: OffRouteMap.MainViewModel.OnPropertyChanged*
+- uid: RouteEditorCS.MainViewModel.OnPropertyChanged*
   name: OnPropertyChanged
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_OnPropertyChanged_
-  commentId: Overload:OffRouteMap.MainViewModel.OnPropertyChanged
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_OnPropertyChanged_
+  commentId: Overload:RouteEditorCS.MainViewModel.OnPropertyChanged
   isSpec: "True"
-  fullName: OffRouteMap.MainViewModel.OnPropertyChanged
+  fullName: RouteEditorCS.MainViewModel.OnPropertyChanged
   nameWithType: MainViewModel.OnPropertyChanged
-- uid: OffRouteMap.MainViewModel.PropertyChanged
+- uid: RouteEditorCS.MainViewModel.PropertyChanged
   name: PropertyChanged
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_PropertyChanged
-  commentId: E:OffRouteMap.MainViewModel.PropertyChanged
-  fullName: OffRouteMap.MainViewModel.PropertyChanged
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_PropertyChanged
+  commentId: E:RouteEditorCS.MainViewModel.PropertyChanged
+  fullName: RouteEditorCS.MainViewModel.PropertyChanged
   nameWithType: MainViewModel.PropertyChanged
-- uid: OffRouteMap.MainViewModel.RemoveLastRoutePoint
+- uid: RouteEditorCS.MainViewModel.RemoveLastRoutePoint
   name: RemoveLastRoutePoint()
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_RemoveLastRoutePoint
-  commentId: M:OffRouteMap.MainViewModel.RemoveLastRoutePoint
-  fullName: OffRouteMap.MainViewModel.RemoveLastRoutePoint()
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_RemoveLastRoutePoint
+  commentId: M:RouteEditorCS.MainViewModel.RemoveLastRoutePoint
+  fullName: RouteEditorCS.MainViewModel.RemoveLastRoutePoint()
   nameWithType: MainViewModel.RemoveLastRoutePoint()
-- uid: OffRouteMap.MainViewModel.RemoveLastRoutePoint*
+- uid: RouteEditorCS.MainViewModel.RemoveLastRoutePoint*
   name: RemoveLastRoutePoint
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_RemoveLastRoutePoint_
-  commentId: Overload:OffRouteMap.MainViewModel.RemoveLastRoutePoint
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_RemoveLastRoutePoint_
+  commentId: Overload:RouteEditorCS.MainViewModel.RemoveLastRoutePoint
   isSpec: "True"
-  fullName: OffRouteMap.MainViewModel.RemoveLastRoutePoint
+  fullName: RouteEditorCS.MainViewModel.RemoveLastRoutePoint
   nameWithType: MainViewModel.RemoveLastRoutePoint
-- uid: OffRouteMap.MainViewModel.RemoveRouteCommand
+- uid: RouteEditorCS.MainViewModel.RemoveRouteCommand
   name: RemoveRouteCommand
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_RemoveRouteCommand
-  commentId: P:OffRouteMap.MainViewModel.RemoveRouteCommand
-  fullName: OffRouteMap.MainViewModel.RemoveRouteCommand
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_RemoveRouteCommand
+  commentId: P:RouteEditorCS.MainViewModel.RemoveRouteCommand
+  fullName: RouteEditorCS.MainViewModel.RemoveRouteCommand
   nameWithType: MainViewModel.RemoveRouteCommand
-- uid: OffRouteMap.MainViewModel.RemoveRouteCommand*
+- uid: RouteEditorCS.MainViewModel.RemoveRouteCommand*
   name: RemoveRouteCommand
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_RemoveRouteCommand_
-  commentId: Overload:OffRouteMap.MainViewModel.RemoveRouteCommand
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_RemoveRouteCommand_
+  commentId: Overload:RouteEditorCS.MainViewModel.RemoveRouteCommand
   isSpec: "True"
-  fullName: OffRouteMap.MainViewModel.RemoveRouteCommand
+  fullName: RouteEditorCS.MainViewModel.RemoveRouteCommand
   nameWithType: MainViewModel.RemoveRouteCommand
-- uid: OffRouteMap.MainViewModel.SaveRouteCommand
+- uid: RouteEditorCS.MainViewModel.SaveRouteCommand
   name: SaveRouteCommand
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_SaveRouteCommand
-  commentId: P:OffRouteMap.MainViewModel.SaveRouteCommand
-  fullName: OffRouteMap.MainViewModel.SaveRouteCommand
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_SaveRouteCommand
+  commentId: P:RouteEditorCS.MainViewModel.SaveRouteCommand
+  fullName: RouteEditorCS.MainViewModel.SaveRouteCommand
   nameWithType: MainViewModel.SaveRouteCommand
-- uid: OffRouteMap.MainViewModel.SaveRouteCommand*
+- uid: RouteEditorCS.MainViewModel.SaveRouteCommand*
   name: SaveRouteCommand
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_SaveRouteCommand_
-  commentId: Overload:OffRouteMap.MainViewModel.SaveRouteCommand
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_SaveRouteCommand_
+  commentId: Overload:RouteEditorCS.MainViewModel.SaveRouteCommand
   isSpec: "True"
-  fullName: OffRouteMap.MainViewModel.SaveRouteCommand
+  fullName: RouteEditorCS.MainViewModel.SaveRouteCommand
   nameWithType: MainViewModel.SaveRouteCommand
-- uid: OffRouteMap.MainViewModel.SelectedMap
+- uid: RouteEditorCS.MainViewModel.SelectedMap
   name: SelectedMap
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_SelectedMap
-  commentId: P:OffRouteMap.MainViewModel.SelectedMap
-  fullName: OffRouteMap.MainViewModel.SelectedMap
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_SelectedMap
+  commentId: P:RouteEditorCS.MainViewModel.SelectedMap
+  fullName: RouteEditorCS.MainViewModel.SelectedMap
   nameWithType: MainViewModel.SelectedMap
-- uid: OffRouteMap.MainViewModel.SelectedMap*
+- uid: RouteEditorCS.MainViewModel.SelectedMap*
   name: SelectedMap
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_SelectedMap_
-  commentId: Overload:OffRouteMap.MainViewModel.SelectedMap
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_SelectedMap_
+  commentId: Overload:RouteEditorCS.MainViewModel.SelectedMap
   isSpec: "True"
-  fullName: OffRouteMap.MainViewModel.SelectedMap
+  fullName: RouteEditorCS.MainViewModel.SelectedMap
   nameWithType: MainViewModel.SelectedMap
-- uid: OffRouteMap.MainViewModel.SetCacheRoot
-  name: SetCacheRoot()
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_SetCacheRoot
-  commentId: M:OffRouteMap.MainViewModel.SetCacheRoot
-  fullName: OffRouteMap.MainViewModel.SetCacheRoot()
-  nameWithType: MainViewModel.SetCacheRoot()
-- uid: OffRouteMap.MainViewModel.SetCacheRoot*
-  name: SetCacheRoot
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_SetCacheRoot_
-  commentId: Overload:OffRouteMap.MainViewModel.SetCacheRoot
-  isSpec: "True"
-  fullName: OffRouteMap.MainViewModel.SetCacheRoot
-  nameWithType: MainViewModel.SetCacheRoot
-- uid: OffRouteMap.MainViewModel.SetCacheRootCommand
-  name: SetCacheRootCommand
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_SetCacheRootCommand
-  commentId: P:OffRouteMap.MainViewModel.SetCacheRootCommand
-  fullName: OffRouteMap.MainViewModel.SetCacheRootCommand
-  nameWithType: MainViewModel.SetCacheRootCommand
-- uid: OffRouteMap.MainViewModel.SetCacheRootCommand*
-  name: SetCacheRootCommand
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_SetCacheRootCommand_
-  commentId: Overload:OffRouteMap.MainViewModel.SetCacheRootCommand
-  isSpec: "True"
-  fullName: OffRouteMap.MainViewModel.SetCacheRootCommand
-  nameWithType: MainViewModel.SetCacheRootCommand
-- uid: OffRouteMap.MainViewModel.StatusLine
+- uid: RouteEditorCS.MainViewModel.StatusLine
   name: StatusLine
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_StatusLine
-  commentId: P:OffRouteMap.MainViewModel.StatusLine
-  fullName: OffRouteMap.MainViewModel.StatusLine
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_StatusLine
+  commentId: P:RouteEditorCS.MainViewModel.StatusLine
+  fullName: RouteEditorCS.MainViewModel.StatusLine
   nameWithType: MainViewModel.StatusLine
-- uid: OffRouteMap.MainViewModel.StatusLine*
+- uid: RouteEditorCS.MainViewModel.StatusLine*
   name: StatusLine
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_StatusLine_
-  commentId: Overload:OffRouteMap.MainViewModel.StatusLine
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_StatusLine_
+  commentId: Overload:RouteEditorCS.MainViewModel.StatusLine
   isSpec: "True"
-  fullName: OffRouteMap.MainViewModel.StatusLine
+  fullName: RouteEditorCS.MainViewModel.StatusLine
   nameWithType: MainViewModel.StatusLine
-- uid: OffRouteMap.MainViewModel.UpdateMousePositionFrom(System.Windows.Point)
+- uid: RouteEditorCS.MainViewModel.UpdateMousePositionFrom(System.Windows.Point)
   name: UpdateMousePositionFrom(Point)
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_UpdateMousePositionFrom_System_Windows_Point_
-  commentId: M:OffRouteMap.MainViewModel.UpdateMousePositionFrom(System.Windows.Point)
-  fullName: OffRouteMap.MainViewModel.UpdateMousePositionFrom(System.Windows.Point)
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_UpdateMousePositionFrom_System_Windows_Point_
+  commentId: M:RouteEditorCS.MainViewModel.UpdateMousePositionFrom(System.Windows.Point)
+  fullName: RouteEditorCS.MainViewModel.UpdateMousePositionFrom(System.Windows.Point)
   nameWithType: MainViewModel.UpdateMousePositionFrom(Point)
-- uid: OffRouteMap.MainViewModel.UpdateMousePositionFrom*
+- uid: RouteEditorCS.MainViewModel.UpdateMousePositionFrom*
   name: UpdateMousePositionFrom
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_UpdateMousePositionFrom_
-  commentId: Overload:OffRouteMap.MainViewModel.UpdateMousePositionFrom
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_UpdateMousePositionFrom_
+  commentId: Overload:RouteEditorCS.MainViewModel.UpdateMousePositionFrom
   isSpec: "True"
-  fullName: OffRouteMap.MainViewModel.UpdateMousePositionFrom
+  fullName: RouteEditorCS.MainViewModel.UpdateMousePositionFrom
   nameWithType: MainViewModel.UpdateMousePositionFrom
-- uid: OffRouteMap.MainViewModel.WindowTitle
+- uid: RouteEditorCS.MainViewModel.WindowTitle
   name: WindowTitle
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_WindowTitle
-  commentId: P:OffRouteMap.MainViewModel.WindowTitle
-  fullName: OffRouteMap.MainViewModel.WindowTitle
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_WindowTitle
+  commentId: P:RouteEditorCS.MainViewModel.WindowTitle
+  fullName: RouteEditorCS.MainViewModel.WindowTitle
   nameWithType: MainViewModel.WindowTitle
-- uid: OffRouteMap.MainViewModel.WindowTitle*
+- uid: RouteEditorCS.MainViewModel.WindowTitle*
   name: WindowTitle
-  href: api/OffRouteMap.MainViewModel.html#OffRouteMap_MainViewModel_WindowTitle_
-  commentId: Overload:OffRouteMap.MainViewModel.WindowTitle
+  href: api/RouteEditorCS.MainViewModel.html#RouteEditorCS_MainViewModel_WindowTitle_
+  commentId: Overload:RouteEditorCS.MainViewModel.WindowTitle
   isSpec: "True"
-  fullName: OffRouteMap.MainViewModel.WindowTitle
+  fullName: RouteEditorCS.MainViewModel.WindowTitle
   nameWithType: MainViewModel.WindowTitle
-- uid: OffRouteMap.MainWindow
+- uid: RouteEditorCS.MainWindow
   name: MainWindow
-  href: api/OffRouteMap.MainWindow.html
-  commentId: T:OffRouteMap.MainWindow
-  fullName: OffRouteMap.MainWindow
+  href: api/RouteEditorCS.MainWindow.html
+  commentId: T:RouteEditorCS.MainWindow
+  fullName: RouteEditorCS.MainWindow
   nameWithType: MainWindow
-- uid: OffRouteMap.MainWindow.#ctor
+- uid: RouteEditorCS.MainWindow.#ctor
   name: MainWindow()
-  href: api/OffRouteMap.MainWindow.html#OffRouteMap_MainWindow__ctor
-  commentId: M:OffRouteMap.MainWindow.#ctor
+  href: api/RouteEditorCS.MainWindow.html#RouteEditorCS_MainWindow__ctor
+  commentId: M:RouteEditorCS.MainWindow.#ctor
   name.vb: New()
-  fullName: OffRouteMap.MainWindow.MainWindow()
-  fullName.vb: OffRouteMap.MainWindow.New()
+  fullName: RouteEditorCS.MainWindow.MainWindow()
+  fullName.vb: RouteEditorCS.MainWindow.New()
   nameWithType: MainWindow.MainWindow()
   nameWithType.vb: MainWindow.New()
-- uid: OffRouteMap.MainWindow.#ctor*
+- uid: RouteEditorCS.MainWindow.#ctor*
   name: MainWindow
-  href: api/OffRouteMap.MainWindow.html#OffRouteMap_MainWindow__ctor_
-  commentId: Overload:OffRouteMap.MainWindow.#ctor
+  href: api/RouteEditorCS.MainWindow.html#RouteEditorCS_MainWindow__ctor_
+  commentId: Overload:RouteEditorCS.MainWindow.#ctor
   isSpec: "True"
   name.vb: New
-  fullName: OffRouteMap.MainWindow.MainWindow
-  fullName.vb: OffRouteMap.MainWindow.New
+  fullName: RouteEditorCS.MainWindow.MainWindow
+  fullName.vb: RouteEditorCS.MainWindow.New
   nameWithType: MainWindow.MainWindow
   nameWithType.vb: MainWindow.New
-- uid: OffRouteMap.MainWindow.InitializeComponent
+- uid: RouteEditorCS.MainWindow.InitializeComponent
   name: InitializeComponent()
-  href: api/OffRouteMap.MainWindow.html#OffRouteMap_MainWindow_InitializeComponent
-  commentId: M:OffRouteMap.MainWindow.InitializeComponent
-  fullName: OffRouteMap.MainWindow.InitializeComponent()
+  href: api/RouteEditorCS.MainWindow.html#RouteEditorCS_MainWindow_InitializeComponent
+  commentId: M:RouteEditorCS.MainWindow.InitializeComponent
+  fullName: RouteEditorCS.MainWindow.InitializeComponent()
   nameWithType: MainWindow.InitializeComponent()
-- uid: OffRouteMap.MainWindow.InitializeComponent*
+- uid: RouteEditorCS.MainWindow.InitializeComponent*
   name: InitializeComponent
-  href: api/OffRouteMap.MainWindow.html#OffRouteMap_MainWindow_InitializeComponent_
-  commentId: Overload:OffRouteMap.MainWindow.InitializeComponent
+  href: api/RouteEditorCS.MainWindow.html#RouteEditorCS_MainWindow_InitializeComponent_
+  commentId: Overload:RouteEditorCS.MainWindow.InitializeComponent
   isSpec: "True"
-  fullName: OffRouteMap.MainWindow.InitializeComponent
+  fullName: RouteEditorCS.MainWindow.InitializeComponent
   nameWithType: MainWindow.InitializeComponent
-- uid: OffRouteMap.Properties
-  name: OffRouteMap.Properties
-  href: api/OffRouteMap.Properties.html
-  commentId: N:OffRouteMap.Properties
-  fullName: OffRouteMap.Properties
-  nameWithType: OffRouteMap.Properties
-- uid: OffRouteMap.Properties.Strings
+- uid: RouteEditorCS.Properties
+  name: RouteEditorCS.Properties
+  href: api/RouteEditorCS.Properties.html
+  commentId: N:RouteEditorCS.Properties
+  fullName: RouteEditorCS.Properties
+  nameWithType: RouteEditorCS.Properties
+- uid: RouteEditorCS.Properties.Strings
   name: Strings
-  href: api/OffRouteMap.Properties.Strings.html
-  commentId: T:OffRouteMap.Properties.Strings
-  fullName: OffRouteMap.Properties.Strings
+  href: api/RouteEditorCS.Properties.Strings.html
+  commentId: T:RouteEditorCS.Properties.Strings
+  fullName: RouteEditorCS.Properties.Strings
   nameWithType: Strings
-- uid: OffRouteMap.Properties.Strings.CacheFolderHint
-  name: CacheFolderHint
-  href: api/OffRouteMap.Properties.Strings.html#OffRouteMap_Properties_Strings_CacheFolderHint
-  commentId: P:OffRouteMap.Properties.Strings.CacheFolderHint
-  fullName: OffRouteMap.Properties.Strings.CacheFolderHint
-  nameWithType: Strings.CacheFolderHint
-- uid: OffRouteMap.Properties.Strings.CacheFolderHint*
-  name: CacheFolderHint
-  href: api/OffRouteMap.Properties.Strings.html#OffRouteMap_Properties_Strings_CacheFolderHint_
-  commentId: Overload:OffRouteMap.Properties.Strings.CacheFolderHint
-  isSpec: "True"
-  fullName: OffRouteMap.Properties.Strings.CacheFolderHint
-  nameWithType: Strings.CacheFolderHint
-- uid: OffRouteMap.Properties.Strings.Culture
+- uid: RouteEditorCS.Properties.Strings.Culture
   name: Culture
-  href: api/OffRouteMap.Properties.Strings.html#OffRouteMap_Properties_Strings_Culture
-  commentId: P:OffRouteMap.Properties.Strings.Culture
-  fullName: OffRouteMap.Properties.Strings.Culture
+  href: api/RouteEditorCS.Properties.Strings.html#RouteEditorCS_Properties_Strings_Culture
+  commentId: P:RouteEditorCS.Properties.Strings.Culture
+  fullName: RouteEditorCS.Properties.Strings.Culture
   nameWithType: Strings.Culture
-- uid: OffRouteMap.Properties.Strings.Culture*
+- uid: RouteEditorCS.Properties.Strings.Culture*
   name: Culture
-  href: api/OffRouteMap.Properties.Strings.html#OffRouteMap_Properties_Strings_Culture_
-  commentId: Overload:OffRouteMap.Properties.Strings.Culture
+  href: api/RouteEditorCS.Properties.Strings.html#RouteEditorCS_Properties_Strings_Culture_
+  commentId: Overload:RouteEditorCS.Properties.Strings.Culture
   isSpec: "True"
-  fullName: OffRouteMap.Properties.Strings.Culture
+  fullName: RouteEditorCS.Properties.Strings.Culture
   nameWithType: Strings.Culture
-- uid: OffRouteMap.Properties.Strings.DelCommand_Hint
+- uid: RouteEditorCS.Properties.Strings.DelCommand_Hint
   name: DelCommand_Hint
-  href: api/OffRouteMap.Properties.Strings.html#OffRouteMap_Properties_Strings_DelCommand_Hint
-  commentId: P:OffRouteMap.Properties.Strings.DelCommand_Hint
-  fullName: OffRouteMap.Properties.Strings.DelCommand_Hint
+  href: api/RouteEditorCS.Properties.Strings.html#RouteEditorCS_Properties_Strings_DelCommand_Hint
+  commentId: P:RouteEditorCS.Properties.Strings.DelCommand_Hint
+  fullName: RouteEditorCS.Properties.Strings.DelCommand_Hint
   nameWithType: Strings.DelCommand_Hint
-- uid: OffRouteMap.Properties.Strings.DelCommand_Hint*
+- uid: RouteEditorCS.Properties.Strings.DelCommand_Hint*
   name: DelCommand_Hint
-  href: api/OffRouteMap.Properties.Strings.html#OffRouteMap_Properties_Strings_DelCommand_Hint_
-  commentId: Overload:OffRouteMap.Properties.Strings.DelCommand_Hint
+  href: api/RouteEditorCS.Properties.Strings.html#RouteEditorCS_Properties_Strings_DelCommand_Hint_
+  commentId: Overload:RouteEditorCS.Properties.Strings.DelCommand_Hint
   isSpec: "True"
-  fullName: OffRouteMap.Properties.Strings.DelCommand_Hint
+  fullName: RouteEditorCS.Properties.Strings.DelCommand_Hint
   nameWithType: Strings.DelCommand_Hint
-- uid: OffRouteMap.Properties.Strings.Dialog_Filetype
+- uid: RouteEditorCS.Properties.Strings.Dialog_Filetype
   name: Dialog_Filetype
-  href: api/OffRouteMap.Properties.Strings.html#OffRouteMap_Properties_Strings_Dialog_Filetype
-  commentId: P:OffRouteMap.Properties.Strings.Dialog_Filetype
-  fullName: OffRouteMap.Properties.Strings.Dialog_Filetype
+  href: api/RouteEditorCS.Properties.Strings.html#RouteEditorCS_Properties_Strings_Dialog_Filetype
+  commentId: P:RouteEditorCS.Properties.Strings.Dialog_Filetype
+  fullName: RouteEditorCS.Properties.Strings.Dialog_Filetype
   nameWithType: Strings.Dialog_Filetype
-- uid: OffRouteMap.Properties.Strings.Dialog_Filetype*
+- uid: RouteEditorCS.Properties.Strings.Dialog_Filetype*
   name: Dialog_Filetype
-  href: api/OffRouteMap.Properties.Strings.html#OffRouteMap_Properties_Strings_Dialog_Filetype_
-  commentId: Overload:OffRouteMap.Properties.Strings.Dialog_Filetype
+  href: api/RouteEditorCS.Properties.Strings.html#RouteEditorCS_Properties_Strings_Dialog_Filetype_
+  commentId: Overload:RouteEditorCS.Properties.Strings.Dialog_Filetype
   isSpec: "True"
-  fullName: OffRouteMap.Properties.Strings.Dialog_Filetype
+  fullName: RouteEditorCS.Properties.Strings.Dialog_Filetype
   nameWithType: Strings.Dialog_Filetype
-- uid: OffRouteMap.Properties.Strings.FolderDialog_Title
-  name: FolderDialog_Title
-  href: api/OffRouteMap.Properties.Strings.html#OffRouteMap_Properties_Strings_FolderDialog_Title
-  commentId: P:OffRouteMap.Properties.Strings.FolderDialog_Title
-  fullName: OffRouteMap.Properties.Strings.FolderDialog_Title
-  nameWithType: Strings.FolderDialog_Title
-- uid: OffRouteMap.Properties.Strings.FolderDialog_Title*
-  name: FolderDialog_Title
-  href: api/OffRouteMap.Properties.Strings.html#OffRouteMap_Properties_Strings_FolderDialog_Title_
-  commentId: Overload:OffRouteMap.Properties.Strings.FolderDialog_Title
-  isSpec: "True"
-  fullName: OffRouteMap.Properties.Strings.FolderDialog_Title
-  nameWithType: Strings.FolderDialog_Title
-- uid: OffRouteMap.Properties.Strings.LoadDialog_Title
+- uid: RouteEditorCS.Properties.Strings.LoadDialog_Title
   name: LoadDialog_Title
-  href: api/OffRouteMap.Properties.Strings.html#OffRouteMap_Properties_Strings_LoadDialog_Title
-  commentId: P:OffRouteMap.Properties.Strings.LoadDialog_Title
-  fullName: OffRouteMap.Properties.Strings.LoadDialog_Title
+  href: api/RouteEditorCS.Properties.Strings.html#RouteEditorCS_Properties_Strings_LoadDialog_Title
+  commentId: P:RouteEditorCS.Properties.Strings.LoadDialog_Title
+  fullName: RouteEditorCS.Properties.Strings.LoadDialog_Title
   nameWithType: Strings.LoadDialog_Title
-- uid: OffRouteMap.Properties.Strings.LoadDialog_Title*
+- uid: RouteEditorCS.Properties.Strings.LoadDialog_Title*
   name: LoadDialog_Title
-  href: api/OffRouteMap.Properties.Strings.html#OffRouteMap_Properties_Strings_LoadDialog_Title_
-  commentId: Overload:OffRouteMap.Properties.Strings.LoadDialog_Title
+  href: api/RouteEditorCS.Properties.Strings.html#RouteEditorCS_Properties_Strings_LoadDialog_Title_
+  commentId: Overload:RouteEditorCS.Properties.Strings.LoadDialog_Title
   isSpec: "True"
-  fullName: OffRouteMap.Properties.Strings.LoadDialog_Title
+  fullName: RouteEditorCS.Properties.Strings.LoadDialog_Title
   nameWithType: Strings.LoadDialog_Title
-- uid: OffRouteMap.Properties.Strings.ResourceManager
+- uid: RouteEditorCS.Properties.Strings.ResourceManager
   name: ResourceManager
-  href: api/OffRouteMap.Properties.Strings.html#OffRouteMap_Properties_Strings_ResourceManager
-  commentId: P:OffRouteMap.Properties.Strings.ResourceManager
-  fullName: OffRouteMap.Properties.Strings.ResourceManager
+  href: api/RouteEditorCS.Properties.Strings.html#RouteEditorCS_Properties_Strings_ResourceManager
+  commentId: P:RouteEditorCS.Properties.Strings.ResourceManager
+  fullName: RouteEditorCS.Properties.Strings.ResourceManager
   nameWithType: Strings.ResourceManager
-- uid: OffRouteMap.Properties.Strings.ResourceManager*
+- uid: RouteEditorCS.Properties.Strings.ResourceManager*
   name: ResourceManager
-  href: api/OffRouteMap.Properties.Strings.html#OffRouteMap_Properties_Strings_ResourceManager_
-  commentId: Overload:OffRouteMap.Properties.Strings.ResourceManager
+  href: api/RouteEditorCS.Properties.Strings.html#RouteEditorCS_Properties_Strings_ResourceManager_
+  commentId: Overload:RouteEditorCS.Properties.Strings.ResourceManager
   isSpec: "True"
-  fullName: OffRouteMap.Properties.Strings.ResourceManager
+  fullName: RouteEditorCS.Properties.Strings.ResourceManager
   nameWithType: Strings.ResourceManager
-- uid: OffRouteMap.Properties.Strings.SaveDialog_Title
+- uid: RouteEditorCS.Properties.Strings.SaveDialog_Title
   name: SaveDialog_Title
-  href: api/OffRouteMap.Properties.Strings.html#OffRouteMap_Properties_Strings_SaveDialog_Title
-  commentId: P:OffRouteMap.Properties.Strings.SaveDialog_Title
-  fullName: OffRouteMap.Properties.Strings.SaveDialog_Title
+  href: api/RouteEditorCS.Properties.Strings.html#RouteEditorCS_Properties_Strings_SaveDialog_Title
+  commentId: P:RouteEditorCS.Properties.Strings.SaveDialog_Title
+  fullName: RouteEditorCS.Properties.Strings.SaveDialog_Title
   nameWithType: Strings.SaveDialog_Title
-- uid: OffRouteMap.Properties.Strings.SaveDialog_Title*
+- uid: RouteEditorCS.Properties.Strings.SaveDialog_Title*
   name: SaveDialog_Title
-  href: api/OffRouteMap.Properties.Strings.html#OffRouteMap_Properties_Strings_SaveDialog_Title_
-  commentId: Overload:OffRouteMap.Properties.Strings.SaveDialog_Title
+  href: api/RouteEditorCS.Properties.Strings.html#RouteEditorCS_Properties_Strings_SaveDialog_Title_
+  commentId: Overload:RouteEditorCS.Properties.Strings.SaveDialog_Title
   isSpec: "True"
-  fullName: OffRouteMap.Properties.Strings.SaveDialog_Title
+  fullName: RouteEditorCS.Properties.Strings.SaveDialog_Title
   nameWithType: Strings.SaveDialog_Title
-- uid: OffRouteMap.ProviderCollection
+- uid: RouteEditorCS.ProviderCollection
   name: ProviderCollection
-  href: api/OffRouteMap.ProviderCollection.html
-  commentId: T:OffRouteMap.ProviderCollection
-  fullName: OffRouteMap.ProviderCollection
+  href: api/RouteEditorCS.ProviderCollection.html
+  commentId: T:RouteEditorCS.ProviderCollection
+  fullName: RouteEditorCS.ProviderCollection
   nameWithType: ProviderCollection
-- uid: OffRouteMap.ProviderCollection.#ctor(System.Collections.Generic.IEnumerable{OffRouteMap.ProviderItem})
+- uid: RouteEditorCS.ProviderCollection.#ctor(System.Collections.Generic.IEnumerable{RouteEditorCS.ProviderItem})
   name: ProviderCollection(IEnumerable<ProviderItem>)
-  href: api/OffRouteMap.ProviderCollection.html#OffRouteMap_ProviderCollection__ctor_System_Collections_Generic_IEnumerable_OffRouteMap_ProviderItem__
-  commentId: M:OffRouteMap.ProviderCollection.#ctor(System.Collections.Generic.IEnumerable{OffRouteMap.ProviderItem})
+  href: api/RouteEditorCS.ProviderCollection.html#RouteEditorCS_ProviderCollection__ctor_System_Collections_Generic_IEnumerable_RouteEditorCS_ProviderItem__
+  commentId: M:RouteEditorCS.ProviderCollection.#ctor(System.Collections.Generic.IEnumerable{RouteEditorCS.ProviderItem})
   name.vb: New(IEnumerable(Of ProviderItem))
-  fullName: OffRouteMap.ProviderCollection.ProviderCollection(System.Collections.Generic.IEnumerable<OffRouteMap.ProviderItem>)
-  fullName.vb: OffRouteMap.ProviderCollection.New(System.Collections.Generic.IEnumerable(Of OffRouteMap.ProviderItem))
+  fullName: RouteEditorCS.ProviderCollection.ProviderCollection(System.Collections.Generic.IEnumerable<RouteEditorCS.ProviderItem>)
+  fullName.vb: RouteEditorCS.ProviderCollection.New(System.Collections.Generic.IEnumerable(Of RouteEditorCS.ProviderItem))
   nameWithType: ProviderCollection.ProviderCollection(IEnumerable<ProviderItem>)
   nameWithType.vb: ProviderCollection.New(IEnumerable(Of ProviderItem))
-- uid: OffRouteMap.ProviderCollection.#ctor*
+- uid: RouteEditorCS.ProviderCollection.#ctor*
   name: ProviderCollection
-  href: api/OffRouteMap.ProviderCollection.html#OffRouteMap_ProviderCollection__ctor_
-  commentId: Overload:OffRouteMap.ProviderCollection.#ctor
+  href: api/RouteEditorCS.ProviderCollection.html#RouteEditorCS_ProviderCollection__ctor_
+  commentId: Overload:RouteEditorCS.ProviderCollection.#ctor
   isSpec: "True"
   name.vb: New
-  fullName: OffRouteMap.ProviderCollection.ProviderCollection
-  fullName.vb: OffRouteMap.ProviderCollection.New
+  fullName: RouteEditorCS.ProviderCollection.ProviderCollection
+  fullName.vb: RouteEditorCS.ProviderCollection.New
   nameWithType: ProviderCollection.ProviderCollection
   nameWithType.vb: ProviderCollection.New
-- uid: OffRouteMap.ProviderCollection.Item(System.String)
+- uid: RouteEditorCS.ProviderCollection.Item(System.String)
   name: this[string]
-  href: api/OffRouteMap.ProviderCollection.html#OffRouteMap_ProviderCollection_Item_System_String_
-  commentId: P:OffRouteMap.ProviderCollection.Item(System.String)
+  href: api/RouteEditorCS.ProviderCollection.html#RouteEditorCS_ProviderCollection_Item_System_String_
+  commentId: P:RouteEditorCS.ProviderCollection.Item(System.String)
   name.vb: this[](String)
-  fullName: OffRouteMap.ProviderCollection.this[string]
-  fullName.vb: OffRouteMap.ProviderCollection.this[](String)
+  fullName: RouteEditorCS.ProviderCollection.this[string]
+  fullName.vb: RouteEditorCS.ProviderCollection.this[](String)
   nameWithType: ProviderCollection.this[string]
   nameWithType.vb: ProviderCollection.this[](String)
-- uid: OffRouteMap.ProviderCollection.Item*
+- uid: RouteEditorCS.ProviderCollection.Item*
   name: this
-  href: api/OffRouteMap.ProviderCollection.html#OffRouteMap_ProviderCollection_Item_
-  commentId: Overload:OffRouteMap.ProviderCollection.Item
+  href: api/RouteEditorCS.ProviderCollection.html#RouteEditorCS_ProviderCollection_Item_
+  commentId: Overload:RouteEditorCS.ProviderCollection.Item
   isSpec: "True"
   name.vb: this[]
-  fullName: OffRouteMap.ProviderCollection.this
-  fullName.vb: OffRouteMap.ProviderCollection.this[]
+  fullName: RouteEditorCS.ProviderCollection.this
+  fullName.vb: RouteEditorCS.ProviderCollection.this[]
   nameWithType: ProviderCollection.this
   nameWithType.vb: ProviderCollection.this[]
-- uid: OffRouteMap.ProviderCollection.TryGet(System.String,OffRouteMap.ProviderItem@)
+- uid: RouteEditorCS.ProviderCollection.TryGet(System.String,RouteEditorCS.ProviderItem@)
   name: TryGet(string, out ProviderItem)
-  href: api/OffRouteMap.ProviderCollection.html#OffRouteMap_ProviderCollection_TryGet_System_String_OffRouteMap_ProviderItem__
-  commentId: M:OffRouteMap.ProviderCollection.TryGet(System.String,OffRouteMap.ProviderItem@)
+  href: api/RouteEditorCS.ProviderCollection.html#RouteEditorCS_ProviderCollection_TryGet_System_String_RouteEditorCS_ProviderItem__
+  commentId: M:RouteEditorCS.ProviderCollection.TryGet(System.String,RouteEditorCS.ProviderItem@)
   name.vb: TryGet(String, ProviderItem)
-  fullName: OffRouteMap.ProviderCollection.TryGet(string, out OffRouteMap.ProviderItem)
-  fullName.vb: OffRouteMap.ProviderCollection.TryGet(String, OffRouteMap.ProviderItem)
+  fullName: RouteEditorCS.ProviderCollection.TryGet(string, out RouteEditorCS.ProviderItem)
+  fullName.vb: RouteEditorCS.ProviderCollection.TryGet(String, RouteEditorCS.ProviderItem)
   nameWithType: ProviderCollection.TryGet(string, out ProviderItem)
   nameWithType.vb: ProviderCollection.TryGet(String, ProviderItem)
-- uid: OffRouteMap.ProviderCollection.TryGet*
+- uid: RouteEditorCS.ProviderCollection.TryGet*
   name: TryGet
-  href: api/OffRouteMap.ProviderCollection.html#OffRouteMap_ProviderCollection_TryGet_
-  commentId: Overload:OffRouteMap.ProviderCollection.TryGet
+  href: api/RouteEditorCS.ProviderCollection.html#RouteEditorCS_ProviderCollection_TryGet_
+  commentId: Overload:RouteEditorCS.ProviderCollection.TryGet
   isSpec: "True"
-  fullName: OffRouteMap.ProviderCollection.TryGet
+  fullName: RouteEditorCS.ProviderCollection.TryGet
   nameWithType: ProviderCollection.TryGet
-- uid: OffRouteMap.ProviderItem
+- uid: RouteEditorCS.ProviderItem
   name: ProviderItem
-  href: api/OffRouteMap.ProviderItem.html
-  commentId: T:OffRouteMap.ProviderItem
-  fullName: OffRouteMap.ProviderItem
+  href: api/RouteEditorCS.ProviderItem.html
+  commentId: T:RouteEditorCS.ProviderItem
+  fullName: RouteEditorCS.ProviderItem
   nameWithType: ProviderItem
-- uid: OffRouteMap.ProviderItem.#ctor(System.String,System.String,GMap.NET.MapProviders.GMapProvider,System.String)
-  name: ProviderItem(string, string, GMapProvider, string)
-  href: api/OffRouteMap.ProviderItem.html#OffRouteMap_ProviderItem__ctor_System_String_System_String_GMap_NET_MapProviders_GMapProvider_System_String_
-  commentId: M:OffRouteMap.ProviderItem.#ctor(System.String,System.String,GMap.NET.MapProviders.GMapProvider,System.String)
-  name.vb: New(String, String, GMapProvider, String)
-  fullName: OffRouteMap.ProviderItem.ProviderItem(string, string, GMap.NET.MapProviders.GMapProvider, string)
-  fullName.vb: OffRouteMap.ProviderItem.New(String, String, GMap.NET.MapProviders.GMapProvider, String)
-  nameWithType: ProviderItem.ProviderItem(string, string, GMapProvider, string)
-  nameWithType.vb: ProviderItem.New(String, String, GMapProvider, String)
-- uid: OffRouteMap.ProviderItem.#ctor*
+- uid: RouteEditorCS.ProviderItem.#ctor(System.String,System.String,GMap.NET.MapProviders.GMapProvider)
+  name: ProviderItem(string, string, GMapProvider)
+  href: api/RouteEditorCS.ProviderItem.html#RouteEditorCS_ProviderItem__ctor_System_String_System_String_GMap_NET_MapProviders_GMapProvider_
+  commentId: M:RouteEditorCS.ProviderItem.#ctor(System.String,System.String,GMap.NET.MapProviders.GMapProvider)
+  name.vb: New(String, String, GMapProvider)
+  fullName: RouteEditorCS.ProviderItem.ProviderItem(string, string, GMap.NET.MapProviders.GMapProvider)
+  fullName.vb: RouteEditorCS.ProviderItem.New(String, String, GMap.NET.MapProviders.GMapProvider)
+  nameWithType: ProviderItem.ProviderItem(string, string, GMapProvider)
+  nameWithType.vb: ProviderItem.New(String, String, GMapProvider)
+- uid: RouteEditorCS.ProviderItem.#ctor*
   name: ProviderItem
-  href: api/OffRouteMap.ProviderItem.html#OffRouteMap_ProviderItem__ctor_
-  commentId: Overload:OffRouteMap.ProviderItem.#ctor
+  href: api/RouteEditorCS.ProviderItem.html#RouteEditorCS_ProviderItem__ctor_
+  commentId: Overload:RouteEditorCS.ProviderItem.#ctor
   isSpec: "True"
   name.vb: New
-  fullName: OffRouteMap.ProviderItem.ProviderItem
-  fullName.vb: OffRouteMap.ProviderItem.New
+  fullName: RouteEditorCS.ProviderItem.ProviderItem
+  fullName.vb: RouteEditorCS.ProviderItem.New
   nameWithType: ProviderItem.ProviderItem
   nameWithType.vb: ProviderItem.New
-- uid: OffRouteMap.ProviderItem.DisplayName
+- uid: RouteEditorCS.ProviderItem.DisplayName
   name: DisplayName
-  href: api/OffRouteMap.ProviderItem.html#OffRouteMap_ProviderItem_DisplayName
-  commentId: P:OffRouteMap.ProviderItem.DisplayName
-  fullName: OffRouteMap.ProviderItem.DisplayName
+  href: api/RouteEditorCS.ProviderItem.html#RouteEditorCS_ProviderItem_DisplayName
+  commentId: P:RouteEditorCS.ProviderItem.DisplayName
+  fullName: RouteEditorCS.ProviderItem.DisplayName
   nameWithType: ProviderItem.DisplayName
-- uid: OffRouteMap.ProviderItem.DisplayName*
+- uid: RouteEditorCS.ProviderItem.DisplayName*
   name: DisplayName
-  href: api/OffRouteMap.ProviderItem.html#OffRouteMap_ProviderItem_DisplayName_
-  commentId: Overload:OffRouteMap.ProviderItem.DisplayName
+  href: api/RouteEditorCS.ProviderItem.html#RouteEditorCS_ProviderItem_DisplayName_
+  commentId: Overload:RouteEditorCS.ProviderItem.DisplayName
   isSpec: "True"
-  fullName: OffRouteMap.ProviderItem.DisplayName
+  fullName: RouteEditorCS.ProviderItem.DisplayName
   nameWithType: ProviderItem.DisplayName
-- uid: OffRouteMap.ProviderItem.FileCache
-  name: FileCache
-  href: api/OffRouteMap.ProviderItem.html#OffRouteMap_ProviderItem_FileCache
-  commentId: P:OffRouteMap.ProviderItem.FileCache
-  fullName: OffRouteMap.ProviderItem.FileCache
-  nameWithType: ProviderItem.FileCache
-- uid: OffRouteMap.ProviderItem.FileCache*
-  name: FileCache
-  href: api/OffRouteMap.ProviderItem.html#OffRouteMap_ProviderItem_FileCache_
-  commentId: Overload:OffRouteMap.ProviderItem.FileCache
-  isSpec: "True"
-  fullName: OffRouteMap.ProviderItem.FileCache
-  nameWithType: ProviderItem.FileCache
-- uid: OffRouteMap.ProviderItem.Key
+- uid: RouteEditorCS.ProviderItem.Key
   name: Key
-  href: api/OffRouteMap.ProviderItem.html#OffRouteMap_ProviderItem_Key
-  commentId: P:OffRouteMap.ProviderItem.Key
-  fullName: OffRouteMap.ProviderItem.Key
+  href: api/RouteEditorCS.ProviderItem.html#RouteEditorCS_ProviderItem_Key
+  commentId: P:RouteEditorCS.ProviderItem.Key
+  fullName: RouteEditorCS.ProviderItem.Key
   nameWithType: ProviderItem.Key
-- uid: OffRouteMap.ProviderItem.Key*
+- uid: RouteEditorCS.ProviderItem.Key*
   name: Key
-  href: api/OffRouteMap.ProviderItem.html#OffRouteMap_ProviderItem_Key_
-  commentId: Overload:OffRouteMap.ProviderItem.Key
+  href: api/RouteEditorCS.ProviderItem.html#RouteEditorCS_ProviderItem_Key_
+  commentId: Overload:RouteEditorCS.ProviderItem.Key
   isSpec: "True"
-  fullName: OffRouteMap.ProviderItem.Key
+  fullName: RouteEditorCS.ProviderItem.Key
   nameWithType: ProviderItem.Key
-- uid: OffRouteMap.ProviderItem.Provider
+- uid: RouteEditorCS.ProviderItem.Provider
   name: Provider
-  href: api/OffRouteMap.ProviderItem.html#OffRouteMap_ProviderItem_Provider
-  commentId: P:OffRouteMap.ProviderItem.Provider
-  fullName: OffRouteMap.ProviderItem.Provider
+  href: api/RouteEditorCS.ProviderItem.html#RouteEditorCS_ProviderItem_Provider
+  commentId: P:RouteEditorCS.ProviderItem.Provider
+  fullName: RouteEditorCS.ProviderItem.Provider
   nameWithType: ProviderItem.Provider
-- uid: OffRouteMap.ProviderItem.Provider*
+- uid: RouteEditorCS.ProviderItem.Provider*
   name: Provider
-  href: api/OffRouteMap.ProviderItem.html#OffRouteMap_ProviderItem_Provider_
-  commentId: Overload:OffRouteMap.ProviderItem.Provider
+  href: api/RouteEditorCS.ProviderItem.html#RouteEditorCS_ProviderItem_Provider_
+  commentId: Overload:RouteEditorCS.ProviderItem.Provider
   isSpec: "True"
-  fullName: OffRouteMap.ProviderItem.Provider
+  fullName: RouteEditorCS.ProviderItem.Provider
   nameWithType: ProviderItem.Provider
-- uid: OffRouteMap.RelayCommand
+- uid: RouteEditorCS.RelayCommand
   name: RelayCommand
-  href: api/OffRouteMap.RelayCommand.html
-  commentId: T:OffRouteMap.RelayCommand
-  fullName: OffRouteMap.RelayCommand
+  href: api/RouteEditorCS.RelayCommand.html
+  commentId: T:RouteEditorCS.RelayCommand
+  fullName: RouteEditorCS.RelayCommand
   nameWithType: RelayCommand
-- uid: OffRouteMap.RelayCommand.#ctor(System.Action,System.Func{System.Boolean})
+- uid: RouteEditorCS.RelayCommand.#ctor(System.Action,System.Func{System.Boolean})
   name: RelayCommand(Action, Func<bool>)
-  href: api/OffRouteMap.RelayCommand.html#OffRouteMap_RelayCommand__ctor_System_Action_System_Func_System_Boolean__
-  commentId: M:OffRouteMap.RelayCommand.#ctor(System.Action,System.Func{System.Boolean})
+  href: api/RouteEditorCS.RelayCommand.html#RouteEditorCS_RelayCommand__ctor_System_Action_System_Func_System_Boolean__
+  commentId: M:RouteEditorCS.RelayCommand.#ctor(System.Action,System.Func{System.Boolean})
   name.vb: New(Action, Func(Of Boolean))
-  fullName: OffRouteMap.RelayCommand.RelayCommand(System.Action, System.Func<bool>)
-  fullName.vb: OffRouteMap.RelayCommand.New(System.Action, System.Func(Of Boolean))
+  fullName: RouteEditorCS.RelayCommand.RelayCommand(System.Action, System.Func<bool>)
+  fullName.vb: RouteEditorCS.RelayCommand.New(System.Action, System.Func(Of Boolean))
   nameWithType: RelayCommand.RelayCommand(Action, Func<bool>)
   nameWithType.vb: RelayCommand.New(Action, Func(Of Boolean))
-- uid: OffRouteMap.RelayCommand.#ctor*
+- uid: RouteEditorCS.RelayCommand.#ctor*
   name: RelayCommand
-  href: api/OffRouteMap.RelayCommand.html#OffRouteMap_RelayCommand__ctor_
-  commentId: Overload:OffRouteMap.RelayCommand.#ctor
+  href: api/RouteEditorCS.RelayCommand.html#RouteEditorCS_RelayCommand__ctor_
+  commentId: Overload:RouteEditorCS.RelayCommand.#ctor
   isSpec: "True"
   name.vb: New
-  fullName: OffRouteMap.RelayCommand.RelayCommand
-  fullName.vb: OffRouteMap.RelayCommand.New
+  fullName: RouteEditorCS.RelayCommand.RelayCommand
+  fullName.vb: RouteEditorCS.RelayCommand.New
   nameWithType: RelayCommand.RelayCommand
   nameWithType.vb: RelayCommand.New
-- uid: OffRouteMap.RelayCommand.CanExecute(System.Object)
+- uid: RouteEditorCS.RelayCommand.CanExecute(System.Object)
   name: CanExecute(object)
-  href: api/OffRouteMap.RelayCommand.html#OffRouteMap_RelayCommand_CanExecute_System_Object_
-  commentId: M:OffRouteMap.RelayCommand.CanExecute(System.Object)
+  href: api/RouteEditorCS.RelayCommand.html#RouteEditorCS_RelayCommand_CanExecute_System_Object_
+  commentId: M:RouteEditorCS.RelayCommand.CanExecute(System.Object)
   name.vb: CanExecute(Object)
-  fullName: OffRouteMap.RelayCommand.CanExecute(object)
-  fullName.vb: OffRouteMap.RelayCommand.CanExecute(Object)
+  fullName: RouteEditorCS.RelayCommand.CanExecute(object)
+  fullName.vb: RouteEditorCS.RelayCommand.CanExecute(Object)
   nameWithType: RelayCommand.CanExecute(object)
   nameWithType.vb: RelayCommand.CanExecute(Object)
-- uid: OffRouteMap.RelayCommand.CanExecute*
+- uid: RouteEditorCS.RelayCommand.CanExecute*
   name: CanExecute
-  href: api/OffRouteMap.RelayCommand.html#OffRouteMap_RelayCommand_CanExecute_
-  commentId: Overload:OffRouteMap.RelayCommand.CanExecute
+  href: api/RouteEditorCS.RelayCommand.html#RouteEditorCS_RelayCommand_CanExecute_
+  commentId: Overload:RouteEditorCS.RelayCommand.CanExecute
   isSpec: "True"
-  fullName: OffRouteMap.RelayCommand.CanExecute
+  fullName: RouteEditorCS.RelayCommand.CanExecute
   nameWithType: RelayCommand.CanExecute
-- uid: OffRouteMap.RelayCommand.CanExecuteChanged
+- uid: RouteEditorCS.RelayCommand.CanExecuteChanged
   name: CanExecuteChanged
-  href: api/OffRouteMap.RelayCommand.html#OffRouteMap_RelayCommand_CanExecuteChanged
-  commentId: E:OffRouteMap.RelayCommand.CanExecuteChanged
-  fullName: OffRouteMap.RelayCommand.CanExecuteChanged
+  href: api/RouteEditorCS.RelayCommand.html#RouteEditorCS_RelayCommand_CanExecuteChanged
+  commentId: E:RouteEditorCS.RelayCommand.CanExecuteChanged
+  fullName: RouteEditorCS.RelayCommand.CanExecuteChanged
   nameWithType: RelayCommand.CanExecuteChanged
-- uid: OffRouteMap.RelayCommand.Execute(System.Object)
+- uid: RouteEditorCS.RelayCommand.Execute(System.Object)
   name: Execute(object)
-  href: api/OffRouteMap.RelayCommand.html#OffRouteMap_RelayCommand_Execute_System_Object_
-  commentId: M:OffRouteMap.RelayCommand.Execute(System.Object)
+  href: api/RouteEditorCS.RelayCommand.html#RouteEditorCS_RelayCommand_Execute_System_Object_
+  commentId: M:RouteEditorCS.RelayCommand.Execute(System.Object)
   name.vb: Execute(Object)
-  fullName: OffRouteMap.RelayCommand.Execute(object)
-  fullName.vb: OffRouteMap.RelayCommand.Execute(Object)
+  fullName: RouteEditorCS.RelayCommand.Execute(object)
+  fullName.vb: RouteEditorCS.RelayCommand.Execute(Object)
   nameWithType: RelayCommand.Execute(object)
   nameWithType.vb: RelayCommand.Execute(Object)
-- uid: OffRouteMap.RelayCommand.Execute*
+- uid: RouteEditorCS.RelayCommand.Execute*
   name: Execute
-  href: api/OffRouteMap.RelayCommand.html#OffRouteMap_RelayCommand_Execute_
-  commentId: Overload:OffRouteMap.RelayCommand.Execute
+  href: api/RouteEditorCS.RelayCommand.html#RouteEditorCS_RelayCommand_Execute_
+  commentId: Overload:RouteEditorCS.RelayCommand.Execute
   isSpec: "True"
-  fullName: OffRouteMap.RelayCommand.Execute
+  fullName: RouteEditorCS.RelayCommand.Execute
   nameWithType: RelayCommand.Execute
-- uid: OffRouteMap.Tests
-  name: OffRouteMap.Tests
-  href: api/OffRouteMap.Tests.html
-  commentId: N:OffRouteMap.Tests
-  fullName: OffRouteMap.Tests
-  nameWithType: OffRouteMap.Tests
-- uid: OffRouteMap.Tests.MainViewModelTests
+- uid: RouteEditorCS.Tests
+  name: RouteEditorCS.Tests
+  href: api/RouteEditorCS.Tests.html
+  commentId: N:RouteEditorCS.Tests
+  fullName: RouteEditorCS.Tests
+  nameWithType: RouteEditorCS.Tests
+- uid: RouteEditorCS.Tests.MainViewModelTests
   name: MainViewModelTests
-  href: api/OffRouteMap.Tests.MainViewModelTests.html
-  commentId: T:OffRouteMap.Tests.MainViewModelTests
-  fullName: OffRouteMap.Tests.MainViewModelTests
+  href: api/RouteEditorCS.Tests.MainViewModelTests.html
+  commentId: T:RouteEditorCS.Tests.MainViewModelTests
+  fullName: RouteEditorCS.Tests.MainViewModelTests
   nameWithType: MainViewModelTests
-- uid: OffRouteMap.Tests.MainViewModelTests.#ctor
+- uid: RouteEditorCS.Tests.MainViewModelTests.#ctor
   name: MainViewModelTests()
-  href: api/OffRouteMap.Tests.MainViewModelTests.html#OffRouteMap_Tests_MainViewModelTests__ctor
-  commentId: M:OffRouteMap.Tests.MainViewModelTests.#ctor
+  href: api/RouteEditorCS.Tests.MainViewModelTests.html#RouteEditorCS_Tests_MainViewModelTests__ctor
+  commentId: M:RouteEditorCS.Tests.MainViewModelTests.#ctor
   name.vb: New()
-  fullName: OffRouteMap.Tests.MainViewModelTests.MainViewModelTests()
-  fullName.vb: OffRouteMap.Tests.MainViewModelTests.New()
+  fullName: RouteEditorCS.Tests.MainViewModelTests.MainViewModelTests()
+  fullName.vb: RouteEditorCS.Tests.MainViewModelTests.New()
   nameWithType: MainViewModelTests.MainViewModelTests()
   nameWithType.vb: MainViewModelTests.New()
-- uid: OffRouteMap.Tests.MainViewModelTests.#ctor*
+- uid: RouteEditorCS.Tests.MainViewModelTests.#ctor*
   name: MainViewModelTests
-  href: api/OffRouteMap.Tests.MainViewModelTests.html#OffRouteMap_Tests_MainViewModelTests__ctor_
-  commentId: Overload:OffRouteMap.Tests.MainViewModelTests.#ctor
+  href: api/RouteEditorCS.Tests.MainViewModelTests.html#RouteEditorCS_Tests_MainViewModelTests__ctor_
+  commentId: Overload:RouteEditorCS.Tests.MainViewModelTests.#ctor
   isSpec: "True"
   name.vb: New
-  fullName: OffRouteMap.Tests.MainViewModelTests.MainViewModelTests
-  fullName.vb: OffRouteMap.Tests.MainViewModelTests.New
+  fullName: RouteEditorCS.Tests.MainViewModelTests.MainViewModelTests
+  fullName.vb: RouteEditorCS.Tests.MainViewModelTests.New
   nameWithType: MainViewModelTests.MainViewModelTests
   nameWithType.vb: MainViewModelTests.New
-- uid: OffRouteMap.Tests.MainViewModelTests.WindowTitle_PropertyChanged
+- uid: RouteEditorCS.Tests.MainViewModelTests.WindowTitle_PropertyChanged
   name: WindowTitle_PropertyChanged()
-  href: api/OffRouteMap.Tests.MainViewModelTests.html#OffRouteMap_Tests_MainViewModelTests_WindowTitle_PropertyChanged
-  commentId: M:OffRouteMap.Tests.MainViewModelTests.WindowTitle_PropertyChanged
-  fullName: OffRouteMap.Tests.MainViewModelTests.WindowTitle_PropertyChanged()
+  href: api/RouteEditorCS.Tests.MainViewModelTests.html#RouteEditorCS_Tests_MainViewModelTests_WindowTitle_PropertyChanged
+  commentId: M:RouteEditorCS.Tests.MainViewModelTests.WindowTitle_PropertyChanged
+  fullName: RouteEditorCS.Tests.MainViewModelTests.WindowTitle_PropertyChanged()
   nameWithType: MainViewModelTests.WindowTitle_PropertyChanged()
-- uid: OffRouteMap.Tests.MainViewModelTests.WindowTitle_PropertyChanged*
+- uid: RouteEditorCS.Tests.MainViewModelTests.WindowTitle_PropertyChanged*
   name: WindowTitle_PropertyChanged
-  href: api/OffRouteMap.Tests.MainViewModelTests.html#OffRouteMap_Tests_MainViewModelTests_WindowTitle_PropertyChanged_
-  commentId: Overload:OffRouteMap.Tests.MainViewModelTests.WindowTitle_PropertyChanged
+  href: api/RouteEditorCS.Tests.MainViewModelTests.html#RouteEditorCS_Tests_MainViewModelTests_WindowTitle_PropertyChanged_
+  commentId: Overload:RouteEditorCS.Tests.MainViewModelTests.WindowTitle_PropertyChanged
   isSpec: "True"
-  fullName: OffRouteMap.Tests.MainViewModelTests.WindowTitle_PropertyChanged
+  fullName: RouteEditorCS.Tests.MainViewModelTests.WindowTitle_PropertyChanged
   nameWithType: MainViewModelTests.WindowTitle_PropertyChanged
-- uid: OffRouteMap.Tests.MainViewModelTests.WindowTitle_PropertyChanged_Called
+- uid: RouteEditorCS.Tests.MainViewModelTests.WindowTitle_PropertyChanged_Called
   name: WindowTitle_PropertyChanged_Called
-  href: api/OffRouteMap.Tests.MainViewModelTests.html#OffRouteMap_Tests_MainViewModelTests_WindowTitle_PropertyChanged_Called
-  commentId: F:OffRouteMap.Tests.MainViewModelTests.WindowTitle_PropertyChanged_Called
-  fullName: OffRouteMap.Tests.MainViewModelTests.WindowTitle_PropertyChanged_Called
+  href: api/RouteEditorCS.Tests.MainViewModelTests.html#RouteEditorCS_Tests_MainViewModelTests_WindowTitle_PropertyChanged_Called
+  commentId: F:RouteEditorCS.Tests.MainViewModelTests.WindowTitle_PropertyChanged_Called
+  fullName: RouteEditorCS.Tests.MainViewModelTests.WindowTitle_PropertyChanged_Called
   nameWithType: MainViewModelTests.WindowTitle_PropertyChanged_Called
-- uid: OffRouteMap.Tests.MainViewModelTests.WindowTitle_PropertyChanged_null_Called
+- uid: RouteEditorCS.Tests.MainViewModelTests.WindowTitle_PropertyChanged_null_Called
   name: WindowTitle_PropertyChanged_null_Called
-  href: api/OffRouteMap.Tests.MainViewModelTests.html#OffRouteMap_Tests_MainViewModelTests_WindowTitle_PropertyChanged_null_Called
-  commentId: F:OffRouteMap.Tests.MainViewModelTests.WindowTitle_PropertyChanged_null_Called
-  fullName: OffRouteMap.Tests.MainViewModelTests.WindowTitle_PropertyChanged_null_Called
+  href: api/RouteEditorCS.Tests.MainViewModelTests.html#RouteEditorCS_Tests_MainViewModelTests_WindowTitle_PropertyChanged_null_Called
+  commentId: F:RouteEditorCS.Tests.MainViewModelTests.WindowTitle_PropertyChanged_null_Called
+  fullName: RouteEditorCS.Tests.MainViewModelTests.WindowTitle_PropertyChanged_null_Called
   nameWithType: MainViewModelTests.WindowTitle_PropertyChanged_null_Called
-- uid: OffRouteMap.Tests.MainViewModelTests.WindowTitle_SetNullValue_PropertyChanged_null
+- uid: RouteEditorCS.Tests.MainViewModelTests.WindowTitle_SetNullValue_PropertyChanged_null
   name: WindowTitle_SetNullValue_PropertyChanged_null()
-  href: api/OffRouteMap.Tests.MainViewModelTests.html#OffRouteMap_Tests_MainViewModelTests_WindowTitle_SetNullValue_PropertyChanged_null
-  commentId: M:OffRouteMap.Tests.MainViewModelTests.WindowTitle_SetNullValue_PropertyChanged_null
-  fullName: OffRouteMap.Tests.MainViewModelTests.WindowTitle_SetNullValue_PropertyChanged_null()
+  href: api/RouteEditorCS.Tests.MainViewModelTests.html#RouteEditorCS_Tests_MainViewModelTests_WindowTitle_SetNullValue_PropertyChanged_null
+  commentId: M:RouteEditorCS.Tests.MainViewModelTests.WindowTitle_SetNullValue_PropertyChanged_null
+  fullName: RouteEditorCS.Tests.MainViewModelTests.WindowTitle_SetNullValue_PropertyChanged_null()
   nameWithType: MainViewModelTests.WindowTitle_SetNullValue_PropertyChanged_null()
-- uid: OffRouteMap.Tests.MainViewModelTests.WindowTitle_SetNullValue_PropertyChanged_null*
+- uid: RouteEditorCS.Tests.MainViewModelTests.WindowTitle_SetNullValue_PropertyChanged_null*
   name: WindowTitle_SetNullValue_PropertyChanged_null
-  href: api/OffRouteMap.Tests.MainViewModelTests.html#OffRouteMap_Tests_MainViewModelTests_WindowTitle_SetNullValue_PropertyChanged_null_
-  commentId: Overload:OffRouteMap.Tests.MainViewModelTests.WindowTitle_SetNullValue_PropertyChanged_null
+  href: api/RouteEditorCS.Tests.MainViewModelTests.html#RouteEditorCS_Tests_MainViewModelTests_WindowTitle_SetNullValue_PropertyChanged_null_
+  commentId: Overload:RouteEditorCS.Tests.MainViewModelTests.WindowTitle_SetNullValue_PropertyChanged_null
   isSpec: "True"
-  fullName: OffRouteMap.Tests.MainViewModelTests.WindowTitle_SetNullValue_PropertyChanged_null
+  fullName: RouteEditorCS.Tests.MainViewModelTests.WindowTitle_SetNullValue_PropertyChanged_null
   nameWithType: MainViewModelTests.WindowTitle_SetNullValue_PropertyChanged_null

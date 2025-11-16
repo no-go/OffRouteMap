@@ -14,198 +14,170 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/OffRouteMap.FileCacheProvider.yml",
+      "source_relative_path": "api/RouteEditorCS.GMapControlWrapper.yml",
       "output": {
         ".html": {
-          "relative_path": "api/OffRouteMap.FileCacheProvider.html"
+          "relative_path": "api/RouteEditorCS.GMapControlWrapper.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "OffRouteMap.FileCacheProvider",
+      "Title": "RouteEditorCS.GMapControlWrapper",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/OffRouteMap.FolderDialogService.yml",
+      "source_relative_path": "api/RouteEditorCS.IGMapControl.yml",
       "output": {
         ".html": {
-          "relative_path": "api/OffRouteMap.FolderDialogService.html"
+          "relative_path": "api/RouteEditorCS.IGMapControl.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "OffRouteMap.FolderDialogService",
+      "Title": "RouteEditorCS.IGMapControl",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/OffRouteMap.GMapControlWrapper.yml",
+      "source_relative_path": "api/RouteEditorCS.MainViewModel.yml",
       "output": {
         ".html": {
-          "relative_path": "api/OffRouteMap.GMapControlWrapper.html"
+          "relative_path": "api/RouteEditorCS.MainViewModel.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "OffRouteMap.GMapControlWrapper",
+      "Title": "RouteEditorCS.MainViewModel",
+      "Summary": "<p sourcefile=\"api/RouteEditorCS.MainViewModel.yml\" sourcestartlinenumber=\"1\">MainViewModel implements the UI functions joins them with data and files.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RouteEditorCS.MainWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RouteEditorCS.MainWindow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RouteEditorCS.MainWindow",
+      "Summary": "<p sourcefile=\"api/RouteEditorCS.MainWindow.yml\" sourcestartlinenumber=\"1\">MainWindow</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RouteEditorCS.Properties.Strings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RouteEditorCS.Properties.Strings.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RouteEditorCS.Properties.Strings",
+      "Summary": "<p sourcefile=\"api/RouteEditorCS.Properties.Strings.yml\" sourcestartlinenumber=\"1\">A strongly-typed resource class, for looking up localized strings, etc.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RouteEditorCS.Properties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RouteEditorCS.Properties.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RouteEditorCS.Properties",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/OffRouteMap.IGMapControl.yml",
+      "source_relative_path": "api/RouteEditorCS.ProviderCollection.yml",
       "output": {
         ".html": {
-          "relative_path": "api/OffRouteMap.IGMapControl.html"
+          "relative_path": "api/RouteEditorCS.ProviderCollection.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "OffRouteMap.IGMapControl",
+      "Title": "RouteEditorCS.ProviderCollection",
+      "Summary": "<p sourcefile=\"api/RouteEditorCS.ProviderCollection.yml\" sourcestartlinenumber=\"1\">A class to store many provider details as item.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RouteEditorCS.ProviderItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RouteEditorCS.ProviderItem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RouteEditorCS.ProviderItem",
+      "Summary": "<p sourcefile=\"api/RouteEditorCS.ProviderItem.yml\" sourcestartlinenumber=\"1\">A class to store details of a map provider.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RouteEditorCS.RelayCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RouteEditorCS.RelayCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RouteEditorCS.RelayCommand",
+      "Summary": "<p sourcefile=\"api/RouteEditorCS.RelayCommand.yml\" sourcestartlinenumber=\"1\">A Helper class to bind UI Events to simple Map methods.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RouteEditorCS.Tests.MainViewModelTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RouteEditorCS.Tests.MainViewModelTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RouteEditorCS.Tests.MainViewModelTests",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/OffRouteMap.MainViewModel.yml",
+      "source_relative_path": "api/RouteEditorCS.Tests.yml",
       "output": {
         ".html": {
-          "relative_path": "api/OffRouteMap.MainViewModel.html"
+          "relative_path": "api/RouteEditorCS.Tests.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "OffRouteMap.MainViewModel",
-      "Summary": "<p sourcefile=\"api/OffRouteMap.MainViewModel.yml\" sourcestartlinenumber=\"1\">MainViewModel implements the UI functions joins them with data and files.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/OffRouteMap.MainWindow.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/OffRouteMap.MainWindow.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "OffRouteMap.MainWindow",
-      "Summary": "<p sourcefile=\"api/OffRouteMap.MainWindow.yml\" sourcestartlinenumber=\"1\">MainWindow</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/OffRouteMap.Properties.Strings.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/OffRouteMap.Properties.Strings.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "OffRouteMap.Properties.Strings",
-      "Summary": "<p sourcefile=\"api/OffRouteMap.Properties.Strings.yml\" sourcestartlinenumber=\"1\">A strongly-typed resource class, for looking up localized strings, etc.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/OffRouteMap.Properties.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/OffRouteMap.Properties.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "OffRouteMap.Properties",
+      "Title": "RouteEditorCS.Tests",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/OffRouteMap.ProviderCollection.yml",
+      "source_relative_path": "api/RouteEditorCS.yml",
       "output": {
         ".html": {
-          "relative_path": "api/OffRouteMap.ProviderCollection.html"
+          "relative_path": "api/RouteEditorCS.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "OffRouteMap.ProviderCollection",
-      "Summary": "<p sourcefile=\"api/OffRouteMap.ProviderCollection.yml\" sourcestartlinenumber=\"1\">A class to store many provider details as item.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/OffRouteMap.ProviderItem.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/OffRouteMap.ProviderItem.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "OffRouteMap.ProviderItem",
-      "Summary": "<p sourcefile=\"api/OffRouteMap.ProviderItem.yml\" sourcestartlinenumber=\"1\">A class to store details of a map provider.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/OffRouteMap.RelayCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/OffRouteMap.RelayCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "OffRouteMap.RelayCommand",
-      "Summary": "<p sourcefile=\"api/OffRouteMap.RelayCommand.yml\" sourcestartlinenumber=\"1\">A Helper class to bind UI Events to simple Map methods.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/OffRouteMap.Tests.MainViewModelTests.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/OffRouteMap.Tests.MainViewModelTests.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "OffRouteMap.Tests.MainViewModelTests",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/OffRouteMap.Tests.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/OffRouteMap.Tests.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "OffRouteMap.Tests",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/OffRouteMap.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/OffRouteMap.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "OffRouteMap",
+      "Title": "RouteEditorCS",
       "Summary": null
     },
     {

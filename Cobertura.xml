@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.27680798004987534" branch-rate="0.2018348623853211" lines-covered="111" lines-valid="401" branches-covered="22" branches-valid="109" complexity="190" version="0" timestamp="1763289678">
+<coverage line-rate="0.28253968253968254" branch-rate="0.20930232558139536" lines-covered="89" lines-valid="315" branches-covered="18" branches-valid="86" complexity="160" version="0" timestamp="1763292651">
   <sources>
     <source>D:\a\RouteEditorCS\RouteEditorCS\</source>
   </sources>
   <packages>
-    <package name="OffRouteMap" line-rate="0.27680798004987534" branch-rate="0.2018348623853211" complexity="190">
+    <package name="RouteEditorCS" line-rate="0.28253968253968254" branch-rate="0.20930232558139536" complexity="160">
       <classes>
-        <class name="OffRouteMap.App" filename="D:\a\RouteEditorCS\RouteEditorCS\App.xaml" line-rate="0" branch-rate="1" complexity="1">
+        <class name="RouteEditorCS.App" filename="D:\a\RouteEditorCS\RouteEditorCS\App.xaml" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name="InitializeComponent" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -21,7 +21,7 @@
             <line number="5" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="OffRouteMap.App" filename="D:\a\RouteEditorCS\RouteEditorCS\obj\Release\net8.0-windows\App.g.cs" line-rate="0" branch-rate="0" complexity="2">
+        <class name="RouteEditorCS.App" filename="D:\a\RouteEditorCS\RouteEditorCS\obj\Release\net8.0-windows\App.g.cs" line-rate="0" branch-rate="0" complexity="2">
           <methods>
             <method name="InitializeComponent" signature="()" line-rate="0" branch-rate="0" complexity="2">
               <lines>
@@ -37,141 +37,7 @@
             <line number="55" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="OffRouteMap.FileCacheProvider" filename="D:\a\RouteEditorCS\RouteEditorCS\FileCacheProvider.cs" line-rate="0.125" branch-rate="0.1" complexity="12">
-          <methods>
-            <method name="PutImageToCache" signature="(System.Byte[],System.Int32,GMap.NET.GPoint,System.Int32)" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="36" hits="0" branch="false" />
-                <line number="37" hits="0" branch="false" />
-                <line number="39" hits="0" branch="false" />
-                <line number="40" hits="0" branch="false" />
-                <line number="43" hits="0" branch="false" />
-                <line number="44" hits="0" branch="false" />
-                <line number="46" hits="0" branch="false" />
-                <line number="49" hits="0" branch="false" />
-                <line number="50" hits="0" branch="false" />
-                <line number="51" hits="0" branch="false" />
-                <line number="53" hits="0" branch="false" />
-                <line number="55" hits="0" branch="false" />
-                <line number="57" hits="0" branch="false" />
-                <line number="59" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="GetImageFromCache" signature="(System.Int32,GMap.NET.GPoint,System.Int32)" line-rate="0" branch-rate="0" complexity="4">
-              <lines>
-                <line number="72" hits="0" branch="false" />
-                <line number="73" hits="0" branch="false" />
-                <line number="75" hits="0" branch="false" />
-                <line number="78" hits="0" branch="false" />
-                <line number="80" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="82" hits="0" branch="false" />
-                <line number="86" hits="0" branch="false" />
-                <line number="87" hits="0" branch="false" />
-                <line number="88" hits="0" branch="false" />
-                <line number="91" hits="0" branch="false" />
-                <line number="93" hits="0" branch="false" />
-                <line number="95" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="97" hits="0" branch="false" />
-                <line number="99" hits="0" branch="false" />
-                <line number="101" hits="0" branch="false" />
-                <line number="103" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="DeleteOlderThan" signature="(System.DateTime,System.Nullable`1&lt;System.Int32&gt;)" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="111" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="Dispose" signature="()" line-rate="0" branch-rate="0" complexity="4">
-              <lines>
-                <line number="116" hits="0" branch="false" />
-                <line number="117" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="118" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="119" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name=".ctor" signature="(System.String)" line-rate="1" branch-rate="0.5" complexity="2">
-              <lines>
-                <line number="14" hits="16" branch="false" />
-                <line number="18" hits="16" branch="false" />
-                <line number="20" hits="16" branch="true" condition-coverage="50% (1/2)" />
-                <line number="21" hits="16" branch="false" />
-                <line number="22" hits="16" branch="false" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="14" hits="16" branch="false" />
-            <line number="18" hits="16" branch="false" />
-            <line number="20" hits="16" branch="true" condition-coverage="50% (1/2)" />
-            <line number="21" hits="16" branch="false" />
-            <line number="22" hits="16" branch="false" />
-            <line number="36" hits="0" branch="false" />
-            <line number="37" hits="0" branch="false" />
-            <line number="39" hits="0" branch="false" />
-            <line number="40" hits="0" branch="false" />
-            <line number="43" hits="0" branch="false" />
-            <line number="44" hits="0" branch="false" />
-            <line number="46" hits="0" branch="false" />
-            <line number="49" hits="0" branch="false" />
-            <line number="50" hits="0" branch="false" />
-            <line number="51" hits="0" branch="false" />
-            <line number="53" hits="0" branch="false" />
-            <line number="55" hits="0" branch="false" />
-            <line number="57" hits="0" branch="false" />
-            <line number="59" hits="0" branch="false" />
-            <line number="72" hits="0" branch="false" />
-            <line number="73" hits="0" branch="false" />
-            <line number="75" hits="0" branch="false" />
-            <line number="78" hits="0" branch="false" />
-            <line number="80" hits="0" branch="true" condition-coverage="0% (0/2)" />
-            <line number="82" hits="0" branch="false" />
-            <line number="86" hits="0" branch="false" />
-            <line number="87" hits="0" branch="false" />
-            <line number="88" hits="0" branch="false" />
-            <line number="91" hits="0" branch="false" />
-            <line number="93" hits="0" branch="false" />
-            <line number="95" hits="0" branch="true" condition-coverage="0% (0/2)" />
-            <line number="97" hits="0" branch="false" />
-            <line number="99" hits="0" branch="false" />
-            <line number="101" hits="0" branch="false" />
-            <line number="103" hits="0" branch="false" />
-            <line number="111" hits="0" branch="false" />
-            <line number="116" hits="0" branch="false" />
-            <line number="117" hits="0" branch="true" condition-coverage="0% (0/2)" />
-            <line number="118" hits="0" branch="true" condition-coverage="0% (0/2)" />
-            <line number="119" hits="0" branch="false" />
-          </lines>
-        </class>
-        <class name="OffRouteMap.FolderDialogService" filename="D:\a\RouteEditorCS\RouteEditorCS\FolderDialogService.cs" line-rate="0" branch-rate="0" complexity="4">
-          <methods>
-            <method name="ShowSelectFolderDialog" signature="(System.String,System.String)" line-rate="0" branch-rate="0" complexity="4">
-              <lines>
-                <line number="9" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="10" hits="0" branch="false" />
-                <line number="11" hits="0" branch="false" />
-                <line number="12" hits="0" branch="false" />
-                <line number="13" hits="0" branch="false" />
-                <line number="14" hits="0" branch="false" />
-                <line number="15" hits="0" branch="false" />
-                <line number="17" hits="0" branch="false" />
-                <line number="18" hits="0" branch="true" condition-coverage="0% (0/2)" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="9" hits="0" branch="true" condition-coverage="0% (0/2)" />
-            <line number="10" hits="0" branch="false" />
-            <line number="11" hits="0" branch="false" />
-            <line number="12" hits="0" branch="false" />
-            <line number="13" hits="0" branch="false" />
-            <line number="14" hits="0" branch="false" />
-            <line number="15" hits="0" branch="false" />
-            <line number="17" hits="0" branch="false" />
-            <line number="18" hits="0" branch="true" condition-coverage="0% (0/2)" />
-          </lines>
-        </class>
-        <class name="OffRouteMap.GMapControlWrapper" filename="D:\a\RouteEditorCS\RouteEditorCS\GMapControlWrapper.cs" line-rate="0" branch-rate="1" complexity="19">
+        <class name="RouteEditorCS.GMapControlWrapper" filename="D:\a\RouteEditorCS\RouteEditorCS\GMapControlWrapper.cs" line-rate="0" branch-rate="1" complexity="19">
           <methods>
             <method name="get_Zoom" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -238,22 +104,22 @@
                 <line number="54" hits="0" branch="false" />
               </lines>
             </method>
-            <method name="OffRouteMap.IGMapControl.get_PrimaryCache" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="RouteEditorCS.IGMapControl.get_PrimaryCache" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="59" hits="0" branch="false" />
               </lines>
             </method>
-            <method name="OffRouteMap.IGMapControl.set_PrimaryCache" signature="(GMap.NET.PureImageCache)" line-rate="0" branch-rate="1" complexity="1">
+            <method name="RouteEditorCS.IGMapControl.set_PrimaryCache" signature="(GMap.NET.PureImageCache)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="60" hits="0" branch="false" />
               </lines>
             </method>
-            <method name="OffRouteMap.IGMapControl.get_CacheMode" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="RouteEditorCS.IGMapControl.get_CacheMode" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="65" hits="0" branch="false" />
               </lines>
             </method>
-            <method name="OffRouteMap.IGMapControl.set_CacheMode" signature="(GMap.NET.AccessMode)" line-rate="0" branch-rate="1" complexity="1">
+            <method name="RouteEditorCS.IGMapControl.set_CacheMode" signature="(GMap.NET.AccessMode)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="66" hits="0" branch="false" />
               </lines>
@@ -295,324 +161,305 @@
             <line number="69" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="OffRouteMap.MainViewModel" filename="D:\a\RouteEditorCS\RouteEditorCS\MainViewModel.cs" line-rate="0.38636363636363635" branch-rate="0.25" complexity="87">
+        <class name="RouteEditorCS.MainViewModel" filename="D:\a\RouteEditorCS\RouteEditorCS\MainViewModel.cs" line-rate="0.3717277486910995" branch-rate="0.23333333333333334" complexity="79">
           <methods>
             <method name="get_GuiZoomInCommand" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="36" hits="0" branch="false" />
+                <line number="33" hits="0" branch="false" />
               </lines>
             </method>
             <method name="get_GuiZoomOutCommand" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="37" hits="0" branch="false" />
+                <line number="34" hits="0" branch="false" />
               </lines>
             </method>
             <method name="get_BeforeClosingCommand" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="38" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="get_SetCacheRootCommand" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="39" hits="0" branch="false" />
+                <line number="35" hits="0" branch="false" />
               </lines>
             </method>
             <method name="get_RemoveRouteCommand" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="40" hits="0" branch="false" />
+                <line number="36" hits="0" branch="false" />
               </lines>
             </method>
             <method name="get_LoadRouteCommand" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="41" hits="0" branch="false" />
+                <line number="37" hits="0" branch="false" />
               </lines>
             </method>
             <method name="get_SaveRouteCommand" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="42" hits="0" branch="false" />
+                <line number="38" hits="0" branch="false" />
               </lines>
             </method>
             <method name="get_Items" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="44" hits="4" branch="false" />
+                <line number="40" hits="4" branch="false" />
               </lines>
             </method>
             <method name="get_WindowTitle" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="48" hits="4" branch="false" />
+                <line number="44" hits="4" branch="false" />
               </lines>
             </method>
             <method name="set_WindowTitle" signature="(System.String)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="51" hits="10" branch="true" condition-coverage="100% (2/2)" />
-                <line number="53" hits="8" branch="false" />
-                <line number="54" hits="8" branch="false" />
-                <line number="56" hits="10" branch="false" />
+                <line number="47" hits="10" branch="true" condition-coverage="100% (2/2)" />
+                <line number="49" hits="8" branch="false" />
+                <line number="50" hits="8" branch="false" />
+                <line number="52" hits="10" branch="false" />
               </lines>
             </method>
             <method name="get_StatusLine" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="61" hits="0" branch="false" />
+                <line number="57" hits="0" branch="false" />
               </lines>
             </method>
             <method name="set_StatusLine" signature="(System.String)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="64" hits="4" branch="true" condition-coverage="100% (2/2)" />
-                <line number="66" hits="4" branch="false" />
-                <line number="67" hits="4" branch="false" />
-                <line number="69" hits="4" branch="false" />
+                <line number="60" hits="4" branch="true" condition-coverage="100% (2/2)" />
+                <line number="62" hits="4" branch="false" />
+                <line number="63" hits="4" branch="false" />
+                <line number="65" hits="4" branch="false" />
               </lines>
             </method>
             <method name="get_GuiZoomFactor" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="74" hits="0" branch="false" />
+                <line number="70" hits="0" branch="false" />
               </lines>
             </method>
             <method name="set_GuiZoomFactor" signature="(System.Double)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="77" hits="4" branch="true" condition-coverage="100% (2/2)" />
-                <line number="79" hits="4" branch="false" />
-                <line number="80" hits="4" branch="false" />
-                <line number="82" hits="4" branch="false" />
+                <line number="73" hits="4" branch="true" condition-coverage="100% (2/2)" />
+                <line number="75" hits="4" branch="false" />
+                <line number="76" hits="4" branch="false" />
+                <line number="78" hits="4" branch="false" />
               </lines>
             </method>
             <method name="get_SelectedMap" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="86" hits="0" branch="false" />
+                <line number="82" hits="0" branch="false" />
               </lines>
             </method>
             <method name="set_SelectedMap" signature="(System.String)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="89" hits="4" branch="false" />
-                <line number="90" hits="4" branch="false" />
-                <line number="91" hits="4" branch="false" />
-                <line number="92" hits="4" branch="false" />
+                <line number="85" hits="4" branch="false" />
+                <line number="86" hits="4" branch="false" />
+                <line number="87" hits="4" branch="false" />
+                <line number="88" hits="4" branch="false" />
               </lines>
             </method>
             <method name="OnPropertyChanged" signature="(System.String)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="96" hits="20" branch="true" condition-coverage="100% (2/2)" />
-                <line number="97" hits="2" branch="false" />
+                <line number="92" hits="20" branch="true" condition-coverage="100% (2/2)" />
+                <line number="93" hits="2" branch="false" />
               </lines>
             </method>
             <method name="GuiZoomIn" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="171" hits="0" branch="false" />
-                <line number="172" hits="0" branch="false" />
-                <line number="173" hits="0" branch="false" />
-                <line number="174" hits="0" branch="false" />
+                <line number="153" hits="0" branch="false" />
+                <line number="154" hits="0" branch="false" />
+                <line number="155" hits="0" branch="false" />
+                <line number="156" hits="0" branch="false" />
               </lines>
             </method>
             <method name="GuiZoomOut" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="181" hits="0" branch="false" />
-                <line number="182" hits="0" branch="false" />
-                <line number="183" hits="0" branch="false" />
-                <line number="184" hits="0" branch="false" />
+                <line number="163" hits="0" branch="false" />
+                <line number="164" hits="0" branch="false" />
+                <line number="165" hits="0" branch="false" />
+                <line number="166" hits="0" branch="false" />
               </lines>
             </method>
-            <method name="SetCacheRoot" signature="()" line-rate="0" branch-rate="0" complexity="4">
+            <method name="HandleMapChanges" signature="()" line-rate="0.8333333333333334" branch-rate="0.75" complexity="4">
               <lines>
-                <line number="191" hits="0" branch="false" />
-                <line number="192" hits="0" branch="false" />
-                <line number="193" hits="0" branch="false" />
-                <line number="194" hits="0" branch="false" />
-                <line number="195" hits="0" branch="true" condition-coverage="0% (0/4)" />
-                <line number="197" hits="0" branch="false" />
-                <line number="198" hits="0" branch="false" />
-                <line number="199" hits="0" branch="false" />
-                <line number="200" hits="0" branch="false" />
-                <line number="202" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="HandleMapChanges" signature="()" line-rate="0.6153846153846154" branch-rate="0.6666666666666666" complexity="6">
-              <lines>
-                <line number="209" hits="4" branch="true" condition-coverage="50% (1/2)" />
-                <line number="211" hits="0" branch="false" />
-                <line number="212" hits="0" branch="false" />
-                <line number="213" hits="0" branch="false" />
-                <line number="214" hits="0" branch="false" />
-                <line number="216" hits="4" branch="false" />
-                <line number="218" hits="4" branch="true" condition-coverage="50% (1/2)" />
-                <line number="220" hits="4" branch="false" />
-                <line number="224" hits="0" branch="false" />
-                <line number="227" hits="4" branch="true" condition-coverage="100% (2/2)" />
-                <line number="229" hits="4" branch="false" />
-                <line number="230" hits="4" branch="false" />
-                <line number="232" hits="4" branch="false" />
+                <line number="173" hits="4" branch="true" condition-coverage="50% (1/2)" />
+                <line number="175" hits="4" branch="false" />
+                <line number="179" hits="0" branch="false" />
+                <line number="182" hits="4" branch="true" condition-coverage="100% (2/2)" />
+                <line number="184" hits="4" branch="false" />
+                <line number="186" hits="4" branch="false" />
               </lines>
             </method>
             <method name="BeforeClosing" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="240" hits="0" branch="false" />
-                <line number="241" hits="0" branch="false" />
-                <line number="242" hits="0" branch="false" />
-                <line number="243" hits="0" branch="false" />
-                <line number="244" hits="0" branch="false" />
-                <line number="245" hits="0" branch="false" />
+                <line number="194" hits="0" branch="false" />
+                <line number="195" hits="0" branch="false" />
+                <line number="196" hits="0" branch="false" />
+                <line number="197" hits="0" branch="false" />
+                <line number="198" hits="0" branch="false" />
+                <line number="199" hits="0" branch="false" />
               </lines>
             </method>
             <method name="OnPositionChanged" signature="(GMap.NET.PointLatLng)" line-rate="0.7777777777777778" branch-rate="0.5" complexity="2">
               <lines>
-                <line number="254" hits="4" branch="false" />
-                <line number="255" hits="4" branch="false" />
-                <line number="256" hits="4" branch="false" />
-                <line number="258" hits="4" branch="false" />
-                <line number="259" hits="4" branch="true" condition-coverage="50% (1/2)" />
-                <line number="261" hits="0" branch="false" />
-                <line number="262" hits="0" branch="false" />
-                <line number="266" hits="4" branch="false" />
-                <line number="268" hits="4" branch="false" />
+                <line number="208" hits="4" branch="false" />
+                <line number="209" hits="4" branch="false" />
+                <line number="210" hits="4" branch="false" />
+                <line number="212" hits="4" branch="false" />
+                <line number="213" hits="4" branch="true" condition-coverage="50% (1/2)" />
+                <line number="215" hits="0" branch="false" />
+                <line number="216" hits="0" branch="false" />
+                <line number="220" hits="4" branch="false" />
+                <line number="222" hits="4" branch="false" />
               </lines>
             </method>
             <method name="RemoveRoute" signature="()" line-rate="0" branch-rate="0" complexity="2">
               <lines>
-                <line number="275" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="277" hits="0" branch="false" />
-                <line number="278" hits="0" branch="false" />
-                <line number="280" hits="0" branch="false" />
-                <line number="281" hits="0" branch="false" />
-                <line number="282" hits="0" branch="false" />
+                <line number="229" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="231" hits="0" branch="false" />
+                <line number="232" hits="0" branch="false" />
+                <line number="234" hits="0" branch="false" />
+                <line number="235" hits="0" branch="false" />
+                <line number="236" hits="0" branch="false" />
               </lines>
             </method>
             <method name="SaveRoute" signature="()" line-rate="0" branch-rate="0" complexity="10">
               <lines>
-                <line number="289" hits="0" branch="true" condition-coverage="0% (0/4)" />
-                <line number="291" hits="0" branch="false" />
-                <line number="292" hits="0" branch="false" />
-                <line number="293" hits="0" branch="false" />
-                <line number="294" hits="0" branch="false" />
-                <line number="295" hits="0" branch="false" />
-                <line number="296" hits="0" branch="false" />
-                <line number="297" hits="0" branch="false" />
-                <line number="298" hits="0" branch="false" />
-                <line number="300" hits="0" branch="false" />
-                <line number="301" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="303" hits="0" branch="false" />
-                <line number="305" hits="0" branch="false" />
-                <line number="306" hits="0" branch="false" />
-                <line number="307" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="309" hits="0" branch="false" />
-                <line number="310" hits="0" branch="false" />
-                <line number="311" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="313" hits="0" branch="false" />
-                <line number="316" hits="0" branch="false" />
-                <line number="319" hits="0" branch="false" />
-                <line number="320" hits="0" branch="false" />
+                <line number="243" hits="0" branch="true" condition-coverage="0% (0/4)" />
+                <line number="245" hits="0" branch="false" />
+                <line number="246" hits="0" branch="false" />
+                <line number="247" hits="0" branch="false" />
+                <line number="248" hits="0" branch="false" />
+                <line number="249" hits="0" branch="false" />
+                <line number="250" hits="0" branch="false" />
+                <line number="251" hits="0" branch="false" />
+                <line number="252" hits="0" branch="false" />
+                <line number="254" hits="0" branch="false" />
+                <line number="255" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="257" hits="0" branch="false" />
+                <line number="259" hits="0" branch="false" />
+                <line number="260" hits="0" branch="false" />
+                <line number="261" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="263" hits="0" branch="false" />
+                <line number="264" hits="0" branch="false" />
+                <line number="265" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="267" hits="0" branch="false" />
+                <line number="270" hits="0" branch="false" />
+                <line number="273" hits="0" branch="false" />
+                <line number="274" hits="0" branch="false" />
               </lines>
             </method>
             <method name="LoadRoute" signature="()" line-rate="0" branch-rate="0" complexity="16">
               <lines>
-                <line number="327" hits="0" branch="false" />
-                <line number="328" hits="0" branch="false" />
-                <line number="329" hits="0" branch="false" />
-                <line number="330" hits="0" branch="false" />
-                <line number="331" hits="0" branch="false" />
-                <line number="332" hits="0" branch="false" />
-                <line number="333" hits="0" branch="false" />
-                <line number="334" hits="0" branch="false" />
-                <line number="335" hits="0" branch="false" />
-                <line number="337" hits="0" branch="false" />
-                <line number="339" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="341" hits="0" branch="false" />
-                <line number="343" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="345" hits="0" branch="false" />
-                <line number="347" hits="0" branch="false" />
-                <line number="349" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="351" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="352" hits="0" branch="false" />
-                <line number="353" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="357" hits="0" branch="true" condition-coverage="0% (0/4)" />
-                <line number="358" hits="0" branch="false" />
-                <line number="359" hits="0" branch="false" />
-                <line number="360" hits="0" branch="false" />
-                <line number="362" hits="0" branch="false" />
-                <line number="366" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="368" hits="0" branch="false" />
-                <line number="369" hits="0" branch="false" />
-                <line number="372" hits="0" branch="false" />
+                <line number="281" hits="0" branch="false" />
+                <line number="282" hits="0" branch="false" />
+                <line number="283" hits="0" branch="false" />
+                <line number="284" hits="0" branch="false" />
+                <line number="285" hits="0" branch="false" />
+                <line number="286" hits="0" branch="false" />
+                <line number="287" hits="0" branch="false" />
+                <line number="288" hits="0" branch="false" />
+                <line number="289" hits="0" branch="false" />
+                <line number="291" hits="0" branch="false" />
+                <line number="293" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="295" hits="0" branch="false" />
+                <line number="297" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="299" hits="0" branch="false" />
+                <line number="301" hits="0" branch="false" />
+                <line number="303" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="305" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="306" hits="0" branch="false" />
+                <line number="307" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="311" hits="0" branch="true" condition-coverage="0% (0/4)" />
+                <line number="312" hits="0" branch="false" />
+                <line number="313" hits="0" branch="false" />
+                <line number="314" hits="0" branch="false" />
+                <line number="316" hits="0" branch="false" />
+                <line number="320" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="322" hits="0" branch="false" />
+                <line number="323" hits="0" branch="false" />
+                <line number="326" hits="0" branch="false" />
               </lines>
             </method>
             <method name="ShowRoute" signature="()" line-rate="0" branch-rate="0" complexity="6">
               <lines>
-                <line number="379" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="381" hits="0" branch="false" />
-                <line number="384" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="386" hits="0" branch="false" />
-                <line number="389" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="391" hits="0" branch="false" />
-                <line number="392" hits="0" branch="false" />
-                <line number="393" hits="0" branch="false" />
-                <line number="394" hits="0" branch="false" />
-                <line number="395" hits="0" branch="false" />
-                <line number="396" hits="0" branch="false" />
-                <line number="398" hits="0" branch="false" />
-                <line number="400" hits="0" branch="false" />
+                <line number="333" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="335" hits="0" branch="false" />
+                <line number="338" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="340" hits="0" branch="false" />
+                <line number="343" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="345" hits="0" branch="false" />
+                <line number="346" hits="0" branch="false" />
+                <line number="347" hits="0" branch="false" />
+                <line number="348" hits="0" branch="false" />
+                <line number="349" hits="0" branch="false" />
+                <line number="350" hits="0" branch="false" />
+                <line number="352" hits="0" branch="false" />
+                <line number="354" hits="0" branch="false" />
               </lines>
             </method>
             <method name="DistanceKm" signature="(GMap.NET.PointLatLng,GMap.NET.PointLatLng)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="411" hits="0" branch="false" />
-                <line number="412" hits="0" branch="false" />
-                <line number="413" hits="0" branch="false" />
-                <line number="414" hits="0" branch="false" />
-                <line number="416" hits="0" branch="false" />
-                <line number="417" hits="0" branch="false" />
-                <line number="418" hits="0" branch="false" />
-                <line number="419" hits="0" branch="false" />
-                <line number="420" hits="0" branch="false" />
+                <line number="365" hits="0" branch="false" />
+                <line number="366" hits="0" branch="false" />
+                <line number="367" hits="0" branch="false" />
+                <line number="368" hits="0" branch="false" />
+                <line number="370" hits="0" branch="false" />
+                <line number="371" hits="0" branch="false" />
+                <line number="372" hits="0" branch="false" />
+                <line number="373" hits="0" branch="false" />
+                <line number="374" hits="0" branch="false" />
               </lines>
             </method>
             <method name="DegreesToRadians" signature="(System.Double)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="430" hits="0" branch="false" />
+                <line number="384" hits="0" branch="false" />
               </lines>
             </method>
             <method name="RouteLengthKm" signature="()" line-rate="0.2" branch-rate="0.3333333333333333" complexity="6">
               <lines>
-                <line number="439" hits="8" branch="true" condition-coverage="50% (2/4)" />
-                <line number="440" hits="0" branch="false" />
-                <line number="441" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="443" hits="0" branch="false" />
-                <line number="445" hits="0" branch="false" />
+                <line number="393" hits="8" branch="true" condition-coverage="50% (2/4)" />
+                <line number="394" hits="0" branch="false" />
+                <line number="395" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="397" hits="0" branch="false" />
+                <line number="399" hits="0" branch="false" />
               </lines>
             </method>
             <method name="UpdateMousePositionFrom" signature="(System.Windows.Point)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="454" hits="0" branch="false" />
-                <line number="455" hits="0" branch="false" />
-                <line number="456" hits="0" branch="false" />
+                <line number="408" hits="0" branch="false" />
+                <line number="409" hits="0" branch="false" />
+                <line number="410" hits="0" branch="false" />
               </lines>
             </method>
             <method name="AddRoutePoint" signature="()" line-rate="0" branch-rate="0" complexity="2">
               <lines>
-                <line number="465" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="466" hits="0" branch="false" />
-                <line number="467" hits="0" branch="false" />
-                <line number="468" hits="0" branch="false" />
+                <line number="419" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="420" hits="0" branch="false" />
+                <line number="421" hits="0" branch="false" />
+                <line number="422" hits="0" branch="false" />
               </lines>
             </method>
             <method name="RemoveLastRoutePoint" signature="()" line-rate="0" branch-rate="0" complexity="4">
               <lines>
-                <line number="475" hits="0" branch="true" condition-coverage="0% (0/4)" />
-                <line number="477" hits="0" branch="false" />
-                <line number="478" hits="0" branch="false" />
-                <line number="480" hits="0" branch="false" />
+                <line number="429" hits="0" branch="true" condition-coverage="0% (0/4)" />
+                <line number="431" hits="0" branch="false" />
+                <line number="432" hits="0" branch="false" />
+                <line number="434" hits="0" branch="false" />
               </lines>
             </method>
-            <method name=".ctor" signature="(OffRouteMap.IGMapControl)" line-rate="1" branch-rate="1" complexity="2">
+            <method name=".ctor" signature="(RouteEditorCS.IGMapControl)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="103" hits="4" branch="false" />
-                <line number="110" hits="4" branch="false" />
+                <line number="99" hits="4" branch="false" />
+                <line number="106" hits="4" branch="false" />
+                <line number="107" hits="4" branch="false" />
+                <line number="109" hits="4" branch="false" />
                 <line number="111" hits="4" branch="false" />
+                <line number="112" hits="4" branch="false" />
                 <line number="113" hits="4" branch="false" />
                 <line number="114" hits="4" branch="false" />
+                <line number="115" hits="4" branch="false" />
                 <line number="116" hits="4" branch="false" />
-                <line number="117" hits="4" branch="true" condition-coverage="100% (2/2)" />
+                <line number="117" hits="4" branch="false" />
+                <line number="118" hits="4" branch="false" />
                 <line number="119" hits="4" branch="false" />
                 <line number="120" hits="4" branch="false" />
                 <line number="121" hits="4" branch="false" />
                 <line number="122" hits="4" branch="false" />
+                <line number="123" hits="4" branch="false" />
+                <line number="124" hits="4" branch="false" />
                 <line number="125" hits="4" branch="false" />
                 <line number="126" hits="4" branch="false" />
                 <line number="127" hits="4" branch="false" />
@@ -627,75 +474,63 @@
                 <line number="136" hits="4" branch="false" />
                 <line number="137" hits="4" branch="false" />
                 <line number="138" hits="4" branch="false" />
-                <line number="139" hits="4" branch="false" />
                 <line number="140" hits="4" branch="false" />
                 <line number="141" hits="4" branch="false" />
                 <line number="142" hits="4" branch="false" />
                 <line number="143" hits="4" branch="false" />
-                <line number="144" hits="4" branch="false" />
                 <line number="145" hits="4" branch="false" />
                 <line number="146" hits="4" branch="false" />
-                <line number="147" hits="4" branch="false" />
-                <line number="148" hits="4" branch="false" />
-                <line number="149" hits="4" branch="false" />
-                <line number="150" hits="4" branch="false" />
-                <line number="151" hits="4" branch="false" />
-                <line number="152" hits="4" branch="false" />
-                <line number="153" hits="4" branch="false" />
-                <line number="154" hits="4" branch="false" />
-                <line number="155" hits="4" branch="false" />
-                <line number="156" hits="4" branch="false" />
-                <line number="158" hits="4" branch="false" />
-                <line number="159" hits="4" branch="false" />
-                <line number="160" hits="4" branch="false" />
-                <line number="161" hits="4" branch="false" />
-                <line number="163" hits="4" branch="false" />
-                <line number="164" hits="4" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
+            <line number="33" hits="0" branch="false" />
+            <line number="34" hits="0" branch="false" />
+            <line number="35" hits="0" branch="false" />
             <line number="36" hits="0" branch="false" />
             <line number="37" hits="0" branch="false" />
             <line number="38" hits="0" branch="false" />
-            <line number="39" hits="0" branch="false" />
-            <line number="40" hits="0" branch="false" />
-            <line number="41" hits="0" branch="false" />
-            <line number="42" hits="0" branch="false" />
+            <line number="40" hits="4" branch="false" />
             <line number="44" hits="4" branch="false" />
-            <line number="48" hits="4" branch="false" />
-            <line number="51" hits="10" branch="true" condition-coverage="100% (2/2)" />
-            <line number="53" hits="8" branch="false" />
-            <line number="54" hits="8" branch="false" />
-            <line number="56" hits="10" branch="false" />
-            <line number="61" hits="0" branch="false" />
-            <line number="64" hits="4" branch="true" condition-coverage="100% (2/2)" />
-            <line number="66" hits="4" branch="false" />
-            <line number="67" hits="4" branch="false" />
-            <line number="69" hits="4" branch="false" />
-            <line number="74" hits="0" branch="false" />
-            <line number="77" hits="4" branch="true" condition-coverage="100% (2/2)" />
-            <line number="79" hits="4" branch="false" />
-            <line number="80" hits="4" branch="false" />
-            <line number="82" hits="4" branch="false" />
-            <line number="86" hits="0" branch="false" />
-            <line number="89" hits="4" branch="false" />
-            <line number="90" hits="4" branch="false" />
-            <line number="91" hits="4" branch="false" />
-            <line number="92" hits="4" branch="false" />
-            <line number="96" hits="20" branch="true" condition-coverage="100% (2/2)" />
-            <line number="97" hits="2" branch="false" />
-            <line number="103" hits="4" branch="false" />
-            <line number="110" hits="4" branch="false" />
+            <line number="47" hits="10" branch="true" condition-coverage="100% (2/2)" />
+            <line number="49" hits="8" branch="false" />
+            <line number="50" hits="8" branch="false" />
+            <line number="52" hits="10" branch="false" />
+            <line number="57" hits="0" branch="false" />
+            <line number="60" hits="4" branch="true" condition-coverage="100% (2/2)" />
+            <line number="62" hits="4" branch="false" />
+            <line number="63" hits="4" branch="false" />
+            <line number="65" hits="4" branch="false" />
+            <line number="70" hits="0" branch="false" />
+            <line number="73" hits="4" branch="true" condition-coverage="100% (2/2)" />
+            <line number="75" hits="4" branch="false" />
+            <line number="76" hits="4" branch="false" />
+            <line number="78" hits="4" branch="false" />
+            <line number="82" hits="0" branch="false" />
+            <line number="85" hits="4" branch="false" />
+            <line number="86" hits="4" branch="false" />
+            <line number="87" hits="4" branch="false" />
+            <line number="88" hits="4" branch="false" />
+            <line number="92" hits="20" branch="true" condition-coverage="100% (2/2)" />
+            <line number="93" hits="2" branch="false" />
+            <line number="99" hits="4" branch="false" />
+            <line number="106" hits="4" branch="false" />
+            <line number="107" hits="4" branch="false" />
+            <line number="109" hits="4" branch="false" />
             <line number="111" hits="4" branch="false" />
+            <line number="112" hits="4" branch="false" />
             <line number="113" hits="4" branch="false" />
             <line number="114" hits="4" branch="false" />
+            <line number="115" hits="4" branch="false" />
             <line number="116" hits="4" branch="false" />
-            <line number="117" hits="4" branch="true" condition-coverage="100% (2/2)" />
+            <line number="117" hits="4" branch="false" />
+            <line number="118" hits="4" branch="false" />
             <line number="119" hits="4" branch="false" />
             <line number="120" hits="4" branch="false" />
             <line number="121" hits="4" branch="false" />
             <line number="122" hits="4" branch="false" />
+            <line number="123" hits="4" branch="false" />
+            <line number="124" hits="4" branch="false" />
             <line number="125" hits="4" branch="false" />
             <line number="126" hits="4" branch="false" />
             <line number="127" hits="4" branch="false" />
@@ -710,224 +545,189 @@
             <line number="136" hits="4" branch="false" />
             <line number="137" hits="4" branch="false" />
             <line number="138" hits="4" branch="false" />
-            <line number="139" hits="4" branch="false" />
             <line number="140" hits="4" branch="false" />
             <line number="141" hits="4" branch="false" />
             <line number="142" hits="4" branch="false" />
             <line number="143" hits="4" branch="false" />
-            <line number="144" hits="4" branch="false" />
             <line number="145" hits="4" branch="false" />
             <line number="146" hits="4" branch="false" />
-            <line number="147" hits="4" branch="false" />
-            <line number="148" hits="4" branch="false" />
-            <line number="149" hits="4" branch="false" />
-            <line number="150" hits="4" branch="false" />
-            <line number="151" hits="4" branch="false" />
-            <line number="152" hits="4" branch="false" />
-            <line number="153" hits="4" branch="false" />
-            <line number="154" hits="4" branch="false" />
-            <line number="155" hits="4" branch="false" />
-            <line number="156" hits="4" branch="false" />
-            <line number="158" hits="4" branch="false" />
-            <line number="159" hits="4" branch="false" />
-            <line number="160" hits="4" branch="false" />
-            <line number="161" hits="4" branch="false" />
-            <line number="163" hits="4" branch="false" />
-            <line number="164" hits="4" branch="false" />
-            <line number="171" hits="0" branch="false" />
-            <line number="172" hits="0" branch="false" />
-            <line number="173" hits="0" branch="false" />
-            <line number="174" hits="0" branch="false" />
-            <line number="181" hits="0" branch="false" />
-            <line number="182" hits="0" branch="false" />
-            <line number="183" hits="0" branch="false" />
-            <line number="184" hits="0" branch="false" />
-            <line number="191" hits="0" branch="false" />
-            <line number="192" hits="0" branch="false" />
-            <line number="193" hits="0" branch="false" />
+            <line number="153" hits="0" branch="false" />
+            <line number="154" hits="0" branch="false" />
+            <line number="155" hits="0" branch="false" />
+            <line number="156" hits="0" branch="false" />
+            <line number="163" hits="0" branch="false" />
+            <line number="164" hits="0" branch="false" />
+            <line number="165" hits="0" branch="false" />
+            <line number="166" hits="0" branch="false" />
+            <line number="173" hits="4" branch="true" condition-coverage="50% (1/2)" />
+            <line number="175" hits="4" branch="false" />
+            <line number="179" hits="0" branch="false" />
+            <line number="182" hits="4" branch="true" condition-coverage="100% (2/2)" />
+            <line number="184" hits="4" branch="false" />
+            <line number="186" hits="4" branch="false" />
             <line number="194" hits="0" branch="false" />
-            <line number="195" hits="0" branch="true" condition-coverage="0% (0/4)" />
+            <line number="195" hits="0" branch="false" />
+            <line number="196" hits="0" branch="false" />
             <line number="197" hits="0" branch="false" />
             <line number="198" hits="0" branch="false" />
             <line number="199" hits="0" branch="false" />
-            <line number="200" hits="0" branch="false" />
-            <line number="202" hits="0" branch="false" />
-            <line number="209" hits="4" branch="true" condition-coverage="50% (1/2)" />
-            <line number="211" hits="0" branch="false" />
-            <line number="212" hits="0" branch="false" />
-            <line number="213" hits="0" branch="false" />
-            <line number="214" hits="0" branch="false" />
-            <line number="216" hits="4" branch="false" />
-            <line number="218" hits="4" branch="true" condition-coverage="50% (1/2)" />
+            <line number="208" hits="4" branch="false" />
+            <line number="209" hits="4" branch="false" />
+            <line number="210" hits="4" branch="false" />
+            <line number="212" hits="4" branch="false" />
+            <line number="213" hits="4" branch="true" condition-coverage="50% (1/2)" />
+            <line number="215" hits="0" branch="false" />
+            <line number="216" hits="0" branch="false" />
             <line number="220" hits="4" branch="false" />
-            <line number="224" hits="0" branch="false" />
-            <line number="227" hits="4" branch="true" condition-coverage="100% (2/2)" />
-            <line number="229" hits="4" branch="false" />
-            <line number="230" hits="4" branch="false" />
-            <line number="232" hits="4" branch="false" />
-            <line number="240" hits="0" branch="false" />
-            <line number="241" hits="0" branch="false" />
-            <line number="242" hits="0" branch="false" />
-            <line number="243" hits="0" branch="false" />
-            <line number="244" hits="0" branch="false" />
+            <line number="222" hits="4" branch="false" />
+            <line number="229" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="231" hits="0" branch="false" />
+            <line number="232" hits="0" branch="false" />
+            <line number="234" hits="0" branch="false" />
+            <line number="235" hits="0" branch="false" />
+            <line number="236" hits="0" branch="false" />
+            <line number="243" hits="0" branch="true" condition-coverage="0% (0/4)" />
             <line number="245" hits="0" branch="false" />
-            <line number="254" hits="4" branch="false" />
-            <line number="255" hits="4" branch="false" />
-            <line number="256" hits="4" branch="false" />
-            <line number="258" hits="4" branch="false" />
-            <line number="259" hits="4" branch="true" condition-coverage="50% (1/2)" />
-            <line number="261" hits="0" branch="false" />
-            <line number="262" hits="0" branch="false" />
-            <line number="266" hits="4" branch="false" />
-            <line number="268" hits="4" branch="false" />
-            <line number="275" hits="0" branch="true" condition-coverage="0% (0/2)" />
-            <line number="277" hits="0" branch="false" />
-            <line number="278" hits="0" branch="false" />
-            <line number="280" hits="0" branch="false" />
+            <line number="246" hits="0" branch="false" />
+            <line number="247" hits="0" branch="false" />
+            <line number="248" hits="0" branch="false" />
+            <line number="249" hits="0" branch="false" />
+            <line number="250" hits="0" branch="false" />
+            <line number="251" hits="0" branch="false" />
+            <line number="252" hits="0" branch="false" />
+            <line number="254" hits="0" branch="false" />
+            <line number="255" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="257" hits="0" branch="false" />
+            <line number="259" hits="0" branch="false" />
+            <line number="260" hits="0" branch="false" />
+            <line number="261" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="263" hits="0" branch="false" />
+            <line number="264" hits="0" branch="false" />
+            <line number="265" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="267" hits="0" branch="false" />
+            <line number="270" hits="0" branch="false" />
+            <line number="273" hits="0" branch="false" />
+            <line number="274" hits="0" branch="false" />
             <line number="281" hits="0" branch="false" />
             <line number="282" hits="0" branch="false" />
-            <line number="289" hits="0" branch="true" condition-coverage="0% (0/4)" />
+            <line number="283" hits="0" branch="false" />
+            <line number="284" hits="0" branch="false" />
+            <line number="285" hits="0" branch="false" />
+            <line number="286" hits="0" branch="false" />
+            <line number="287" hits="0" branch="false" />
+            <line number="288" hits="0" branch="false" />
+            <line number="289" hits="0" branch="false" />
             <line number="291" hits="0" branch="false" />
-            <line number="292" hits="0" branch="false" />
-            <line number="293" hits="0" branch="false" />
-            <line number="294" hits="0" branch="false" />
+            <line number="293" hits="0" branch="true" condition-coverage="0% (0/2)" />
             <line number="295" hits="0" branch="false" />
-            <line number="296" hits="0" branch="false" />
-            <line number="297" hits="0" branch="false" />
-            <line number="298" hits="0" branch="false" />
-            <line number="300" hits="0" branch="false" />
-            <line number="301" hits="0" branch="true" condition-coverage="0% (0/2)" />
-            <line number="303" hits="0" branch="false" />
-            <line number="305" hits="0" branch="false" />
+            <line number="297" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="299" hits="0" branch="false" />
+            <line number="301" hits="0" branch="false" />
+            <line number="303" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="305" hits="0" branch="true" condition-coverage="0% (0/2)" />
             <line number="306" hits="0" branch="false" />
             <line number="307" hits="0" branch="true" condition-coverage="0% (0/2)" />
-            <line number="309" hits="0" branch="false" />
-            <line number="310" hits="0" branch="false" />
-            <line number="311" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="311" hits="0" branch="true" condition-coverage="0% (0/4)" />
+            <line number="312" hits="0" branch="false" />
             <line number="313" hits="0" branch="false" />
+            <line number="314" hits="0" branch="false" />
             <line number="316" hits="0" branch="false" />
-            <line number="319" hits="0" branch="false" />
-            <line number="320" hits="0" branch="false" />
-            <line number="327" hits="0" branch="false" />
-            <line number="328" hits="0" branch="false" />
-            <line number="329" hits="0" branch="false" />
-            <line number="330" hits="0" branch="false" />
-            <line number="331" hits="0" branch="false" />
-            <line number="332" hits="0" branch="false" />
-            <line number="333" hits="0" branch="false" />
-            <line number="334" hits="0" branch="false" />
+            <line number="320" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="322" hits="0" branch="false" />
+            <line number="323" hits="0" branch="false" />
+            <line number="326" hits="0" branch="false" />
+            <line number="333" hits="0" branch="true" condition-coverage="0% (0/2)" />
             <line number="335" hits="0" branch="false" />
-            <line number="337" hits="0" branch="false" />
-            <line number="339" hits="0" branch="true" condition-coverage="0% (0/2)" />
-            <line number="341" hits="0" branch="false" />
+            <line number="338" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="340" hits="0" branch="false" />
             <line number="343" hits="0" branch="true" condition-coverage="0% (0/2)" />
             <line number="345" hits="0" branch="false" />
+            <line number="346" hits="0" branch="false" />
             <line number="347" hits="0" branch="false" />
-            <line number="349" hits="0" branch="true" condition-coverage="0% (0/2)" />
-            <line number="351" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="348" hits="0" branch="false" />
+            <line number="349" hits="0" branch="false" />
+            <line number="350" hits="0" branch="false" />
             <line number="352" hits="0" branch="false" />
-            <line number="353" hits="0" branch="true" condition-coverage="0% (0/2)" />
-            <line number="357" hits="0" branch="true" condition-coverage="0% (0/4)" />
-            <line number="358" hits="0" branch="false" />
-            <line number="359" hits="0" branch="false" />
-            <line number="360" hits="0" branch="false" />
-            <line number="362" hits="0" branch="false" />
-            <line number="366" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="354" hits="0" branch="false" />
+            <line number="365" hits="0" branch="false" />
+            <line number="366" hits="0" branch="false" />
+            <line number="367" hits="0" branch="false" />
             <line number="368" hits="0" branch="false" />
-            <line number="369" hits="0" branch="false" />
+            <line number="370" hits="0" branch="false" />
+            <line number="371" hits="0" branch="false" />
             <line number="372" hits="0" branch="false" />
-            <line number="379" hits="0" branch="true" condition-coverage="0% (0/2)" />
-            <line number="381" hits="0" branch="false" />
-            <line number="384" hits="0" branch="true" condition-coverage="0% (0/2)" />
-            <line number="386" hits="0" branch="false" />
-            <line number="389" hits="0" branch="true" condition-coverage="0% (0/2)" />
-            <line number="391" hits="0" branch="false" />
-            <line number="392" hits="0" branch="false" />
-            <line number="393" hits="0" branch="false" />
+            <line number="373" hits="0" branch="false" />
+            <line number="374" hits="0" branch="false" />
+            <line number="384" hits="0" branch="false" />
+            <line number="393" hits="8" branch="true" condition-coverage="50% (2/4)" />
             <line number="394" hits="0" branch="false" />
-            <line number="395" hits="0" branch="false" />
-            <line number="396" hits="0" branch="false" />
-            <line number="398" hits="0" branch="false" />
-            <line number="400" hits="0" branch="false" />
-            <line number="411" hits="0" branch="false" />
-            <line number="412" hits="0" branch="false" />
-            <line number="413" hits="0" branch="false" />
-            <line number="414" hits="0" branch="false" />
-            <line number="416" hits="0" branch="false" />
-            <line number="417" hits="0" branch="false" />
-            <line number="418" hits="0" branch="false" />
-            <line number="419" hits="0" branch="false" />
+            <line number="395" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="397" hits="0" branch="false" />
+            <line number="399" hits="0" branch="false" />
+            <line number="408" hits="0" branch="false" />
+            <line number="409" hits="0" branch="false" />
+            <line number="410" hits="0" branch="false" />
+            <line number="419" hits="0" branch="true" condition-coverage="0% (0/2)" />
             <line number="420" hits="0" branch="false" />
-            <line number="430" hits="0" branch="false" />
-            <line number="439" hits="8" branch="true" condition-coverage="50% (2/4)" />
-            <line number="440" hits="0" branch="false" />
-            <line number="441" hits="0" branch="true" condition-coverage="0% (0/2)" />
-            <line number="443" hits="0" branch="false" />
-            <line number="445" hits="0" branch="false" />
-            <line number="454" hits="0" branch="false" />
-            <line number="455" hits="0" branch="false" />
-            <line number="456" hits="0" branch="false" />
-            <line number="465" hits="0" branch="true" condition-coverage="0% (0/2)" />
-            <line number="466" hits="0" branch="false" />
-            <line number="467" hits="0" branch="false" />
-            <line number="468" hits="0" branch="false" />
-            <line number="475" hits="0" branch="true" condition-coverage="0% (0/4)" />
-            <line number="477" hits="0" branch="false" />
-            <line number="478" hits="0" branch="false" />
-            <line number="480" hits="0" branch="false" />
+            <line number="421" hits="0" branch="false" />
+            <line number="422" hits="0" branch="false" />
+            <line number="429" hits="0" branch="true" condition-coverage="0% (0/4)" />
+            <line number="431" hits="0" branch="false" />
+            <line number="432" hits="0" branch="false" />
+            <line number="434" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="OffRouteMap.MainWindow" filename="D:\a\RouteEditorCS\RouteEditorCS\MainWindow.xaml" line-rate="0" branch-rate="0" complexity="9">
+        <class name="RouteEditorCS.MainWindow" filename="D:\a\RouteEditorCS\RouteEditorCS\MainWindow.xaml" line-rate="0" branch-rate="0" complexity="8">
           <methods>
             <method name="InitializeComponent" signature="()" line-rate="0" branch-rate="0" complexity="2">
               <lines>
                 <line number="1" hits="0" branch="true" condition-coverage="0% (0/2)" />
               </lines>
             </method>
-            <method name="System.Windows.Markup.IComponentConnector.Connect" signature="(System.Int32,System.Object)" line-rate="0" branch-rate="0" complexity="7">
+            <method name="System.Windows.Markup.IComponentConnector.Connect" signature="(System.Int32,System.Object)" line-rate="0" branch-rate="0" complexity="6">
               <lines>
-                <line number="11" hits="0" branch="true" condition-coverage="0% (0/7)" />
+                <line number="11" hits="0" branch="true" condition-coverage="0% (0/6)" />
               </lines>
             </method>
           </methods>
           <lines>
             <line number="1" hits="0" branch="true" condition-coverage="0% (0/2)" />
-            <line number="11" hits="0" branch="true" condition-coverage="0% (0/7)" />
+            <line number="11" hits="0" branch="true" condition-coverage="0% (0/6)" />
           </lines>
         </class>
-        <class name="OffRouteMap.MainWindow" filename="D:\a\RouteEditorCS\RouteEditorCS\MainWindow.xaml.cs" line-rate="0" branch-rate="0" complexity="6">
+        <class name="RouteEditorCS.MainWindow" filename="D:\a\RouteEditorCS\RouteEditorCS\MainWindow.xaml.cs" line-rate="0" branch-rate="0" complexity="6">
           <methods>
             <method name="Window_Closing" signature="(System.Object,System.ComponentModel.CancelEventArgs)" line-rate="0" branch-rate="0" complexity="2">
               <lines>
-                <line number="39" hits="0" branch="false" />
-                <line number="41" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="43" hits="0" branch="false" />
-                <line number="47" hits="0" branch="false" />
-                <line number="49" hits="0" branch="false" />
-                <line number="51" hits="0" branch="false" />
+                <line number="38" hits="0" branch="false" />
+                <line number="40" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="42" hits="0" branch="false" />
+                <line number="46" hits="0" branch="false" />
+                <line number="48" hits="0" branch="false" />
+                <line number="50" hits="0" branch="false" />
               </lines>
             </method>
             <method name="GMapControl_MouseMove" signature="(System.Object,System.Windows.Input.MouseEventArgs)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
+                <line number="59" hits="0" branch="false" />
                 <line number="60" hits="0" branch="false" />
                 <line number="61" hits="0" branch="false" />
-                <line number="62" hits="0" branch="false" />
               </lines>
             </method>
             <method name="GMapControl_MouseDoubleClick" signature="(System.Object,System.Windows.Input.MouseButtonEventArgs)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
+                <line number="70" hits="0" branch="false" />
                 <line number="71" hits="0" branch="false" />
                 <line number="72" hits="0" branch="false" />
                 <line number="73" hits="0" branch="false" />
-                <line number="74" hits="0" branch="false" />
               </lines>
             </method>
             <method name="GMapControl_MouseRightButtonDown" signature="(System.Object,System.Windows.Input.MouseButtonEventArgs)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
+                <line number="82" hits="0" branch="false" />
                 <line number="83" hits="0" branch="false" />
                 <line number="84" hits="0" branch="false" />
                 <line number="85" hits="0" branch="false" />
-                <line number="86" hits="0" branch="false" />
               </lines>
             </method>
             <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
@@ -937,16 +737,15 @@
                 <line number="19" hits="0" branch="false" />
                 <line number="20" hits="0" branch="false" />
                 <line number="21" hits="0" branch="false" />
-                <line number="22" hits="0" branch="false" />
+                <line number="24" hits="0" branch="false" />
                 <line number="25" hits="0" branch="false" />
-                <line number="26" hits="0" branch="false" />
+                <line number="27" hits="0" branch="false" />
                 <line number="28" hits="0" branch="false" />
                 <line number="29" hits="0" branch="false" />
-                <line number="30" hits="0" branch="false" />
+                <line number="31" hits="0" branch="false" />
                 <line number="32" hits="0" branch="false" />
                 <line number="33" hits="0" branch="false" />
                 <line number="34" hits="0" branch="false" />
-                <line number="35" hits="0" branch="false" />
               </lines>
             </method>
           </methods>
@@ -956,40 +755,39 @@
             <line number="19" hits="0" branch="false" />
             <line number="20" hits="0" branch="false" />
             <line number="21" hits="0" branch="false" />
-            <line number="22" hits="0" branch="false" />
+            <line number="24" hits="0" branch="false" />
             <line number="25" hits="0" branch="false" />
-            <line number="26" hits="0" branch="false" />
+            <line number="27" hits="0" branch="false" />
             <line number="28" hits="0" branch="false" />
             <line number="29" hits="0" branch="false" />
-            <line number="30" hits="0" branch="false" />
+            <line number="31" hits="0" branch="false" />
             <line number="32" hits="0" branch="false" />
             <line number="33" hits="0" branch="false" />
             <line number="34" hits="0" branch="false" />
-            <line number="35" hits="0" branch="false" />
-            <line number="39" hits="0" branch="false" />
-            <line number="41" hits="0" branch="true" condition-coverage="0% (0/2)" />
-            <line number="43" hits="0" branch="false" />
-            <line number="47" hits="0" branch="false" />
-            <line number="49" hits="0" branch="false" />
-            <line number="51" hits="0" branch="false" />
+            <line number="38" hits="0" branch="false" />
+            <line number="40" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="42" hits="0" branch="false" />
+            <line number="46" hits="0" branch="false" />
+            <line number="48" hits="0" branch="false" />
+            <line number="50" hits="0" branch="false" />
+            <line number="59" hits="0" branch="false" />
             <line number="60" hits="0" branch="false" />
             <line number="61" hits="0" branch="false" />
-            <line number="62" hits="0" branch="false" />
+            <line number="70" hits="0" branch="false" />
             <line number="71" hits="0" branch="false" />
             <line number="72" hits="0" branch="false" />
             <line number="73" hits="0" branch="false" />
-            <line number="74" hits="0" branch="false" />
+            <line number="82" hits="0" branch="false" />
             <line number="83" hits="0" branch="false" />
             <line number="84" hits="0" branch="false" />
             <line number="85" hits="0" branch="false" />
-            <line number="86" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="OffRouteMap.Properties.Settings" filename="D:\a\RouteEditorCS\RouteEditorCS\Properties\Settings.Designer.cs" line-rate="0.34782608695652173" branch-rate="1" complexity="16">
+        <class name="RouteEditorCS.Properties.Settings" filename="D:\a\RouteEditorCS\RouteEditorCS\Properties\Settings.Designer.cs" line-rate="0.35" branch-rate="1" complexity="14">
           <methods>
             <method name="get_Default" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="22" hits="24" branch="false" />
+                <line number="22" hits="20" branch="false" />
               </lines>
             </method>
             <method name="get_isDark" signature="()" line-rate="0" branch-rate="1" complexity="1">
@@ -1058,17 +856,6 @@
                 <line number="95" hits="0" branch="false" />
               </lines>
             </method>
-            <method name="get_cacheRoot" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="103" hits="4" branch="false" />
-              </lines>
-            </method>
-            <method name="set_cacheRoot" signature="(System.String)" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="106" hits="0" branch="false" />
-                <line number="107" hits="0" branch="false" />
-              </lines>
-            </method>
             <method name=".cctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
                 <line number="18" hits="2" branch="false" />
@@ -1077,7 +864,7 @@
           </methods>
           <lines>
             <line number="18" hits="2" branch="false" />
-            <line number="22" hits="24" branch="false" />
+            <line number="22" hits="20" branch="false" />
             <line number="31" hits="0" branch="false" />
             <line number="34" hits="0" branch="false" />
             <line number="35" hits="0" branch="false" />
@@ -1096,12 +883,9 @@
             <line number="91" hits="4" branch="false" />
             <line number="94" hits="0" branch="false" />
             <line number="95" hits="0" branch="false" />
-            <line number="103" hits="4" branch="false" />
-            <line number="106" hits="0" branch="false" />
-            <line number="107" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="OffRouteMap.Properties.Strings" filename="D:\a\RouteEditorCS\RouteEditorCS\Properties\Strings.Designer.cs" line-rate="0" branch-rate="0" complexity="11">
+        <class name="RouteEditorCS.Properties.Strings" filename="D:\a\RouteEditorCS\RouteEditorCS\Properties\Strings.Designer.cs" line-rate="0" branch-rate="0" complexity="9">
           <methods>
             <method name="get_ResourceManager" signature="()" line-rate="0" branch-rate="0" complexity="2">
               <lines>
@@ -1122,34 +906,24 @@
                 <line number="60" hits="0" branch="false" />
               </lines>
             </method>
-            <method name="get_CacheFolderHint" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_DelCommand_Hint" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="68" hits="0" branch="false" />
               </lines>
             </method>
-            <method name="get_DelCommand_Hint" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Dialog_Filetype" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="77" hits="0" branch="false" />
               </lines>
             </method>
-            <method name="get_Dialog_Filetype" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_LoadDialog_Title" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="86" hits="0" branch="false" />
               </lines>
             </method>
-            <method name="get_FolderDialog_Title" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="95" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="get_LoadDialog_Title" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="104" hits="0" branch="false" />
-              </lines>
-            </method>
             <method name="get_SaveDialog_Title" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="113" hits="0" branch="false" />
+                <line number="95" hits="0" branch="false" />
               </lines>
             </method>
             <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
@@ -1173,23 +947,21 @@
             <line number="77" hits="0" branch="false" />
             <line number="86" hits="0" branch="false" />
             <line number="95" hits="0" branch="false" />
-            <line number="104" hits="0" branch="false" />
-            <line number="113" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="OffRouteMap.ProviderCollection" filename="D:\a\RouteEditorCS\RouteEditorCS\ProviderCollection.cs" line-rate="0.8" branch-rate="0.5" complexity="4">
+        <class name="RouteEditorCS.ProviderCollection" filename="D:\a\RouteEditorCS\RouteEditorCS\ProviderCollection.cs" line-rate="0.8" branch-rate="0.5" complexity="4">
           <methods>
             <method name="get_Item" signature="(System.String)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="25" hits="0" branch="false" />
               </lines>
             </method>
-            <method name="TryGet" signature="(System.String,OffRouteMap.ProviderItem&amp;)" line-rate="1" branch-rate="0.5" complexity="2">
+            <method name="TryGet" signature="(System.String,RouteEditorCS.ProviderItem&amp;)" line-rate="1" branch-rate="0.5" complexity="2">
               <lines>
                 <line number="29" hits="4" branch="true" condition-coverage="50% (1/2)" />
               </lines>
             </method>
-            <method name=".ctor" signature="(System.Collections.Generic.IEnumerable`1&lt;OffRouteMap.ProviderItem&gt;)" line-rate="1" branch-rate="1" complexity="1">
+            <method name=".ctor" signature="(System.Collections.Generic.IEnumerable`1&lt;RouteEditorCS.ProviderItem&gt;)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
                 <line number="18" hits="4" branch="false" />
                 <line number="20" hits="20" branch="false" />
@@ -1205,11 +977,11 @@
             <line number="29" hits="4" branch="true" condition-coverage="50% (1/2)" />
           </lines>
         </class>
-        <class name="OffRouteMap.ProviderItem" filename="D:\a\RouteEditorCS\RouteEditorCS\ProviderItem.cs" line-rate="0.9" branch-rate="0.5" complexity="10">
+        <class name="RouteEditorCS.ProviderItem" filename="D:\a\RouteEditorCS\RouteEditorCS\ProviderItem.cs" line-rate="0.875" branch-rate="0.5" complexity="9">
           <methods>
             <method name="get_Key" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="10" hits="32" branch="false" />
+                <line number="10" hits="16" branch="false" />
               </lines>
             </method>
             <method name="get_DisplayName" signature="()" line-rate="0" branch-rate="1" complexity="1">
@@ -1222,36 +994,28 @@
                 <line number="12" hits="4" branch="false" />
               </lines>
             </method>
-            <method name="get_FileCache" signature="()" line-rate="1" branch-rate="1" complexity="1">
+            <method name=".ctor" signature="(System.String,System.String,GMap.NET.MapProviders.GMapProvider)" line-rate="1" branch-rate="0.5" complexity="6">
               <lines>
-                <line number="14" hits="4" branch="false" />
-              </lines>
-            </method>
-            <method name=".ctor" signature="(System.String,System.String,GMap.NET.MapProviders.GMapProvider,System.String)" line-rate="1" branch-rate="0.5" complexity="6">
-              <lines>
-                <line number="16" hits="16" branch="false" />
+                <line number="14" hits="16" branch="false" />
+                <line number="16" hits="16" branch="true" condition-coverage="50% (1/2)" />
+                <line number="17" hits="16" branch="true" condition-coverage="50% (1/2)" />
                 <line number="18" hits="16" branch="true" condition-coverage="50% (1/2)" />
-                <line number="19" hits="16" branch="true" condition-coverage="50% (1/2)" />
-                <line number="20" hits="16" branch="true" condition-coverage="50% (1/2)" />
-                <line number="21" hits="16" branch="false" />
-                <line number="22" hits="16" branch="false" />
+                <line number="19" hits="16" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="10" hits="32" branch="false" />
+            <line number="10" hits="16" branch="false" />
             <line number="11" hits="0" branch="false" />
             <line number="12" hits="4" branch="false" />
-            <line number="14" hits="4" branch="false" />
-            <line number="16" hits="16" branch="false" />
+            <line number="14" hits="16" branch="false" />
+            <line number="16" hits="16" branch="true" condition-coverage="50% (1/2)" />
+            <line number="17" hits="16" branch="true" condition-coverage="50% (1/2)" />
             <line number="18" hits="16" branch="true" condition-coverage="50% (1/2)" />
-            <line number="19" hits="16" branch="true" condition-coverage="50% (1/2)" />
-            <line number="20" hits="16" branch="true" condition-coverage="50% (1/2)" />
-            <line number="21" hits="16" branch="false" />
-            <line number="22" hits="16" branch="false" />
+            <line number="19" hits="16" branch="false" />
           </lines>
         </class>
-        <class name="OffRouteMap.RelayCommand" filename="D:\a\RouteEditorCS\RouteEditorCS\RelayCommand.cs" line-rate="0" branch-rate="0" complexity="6">
+        <class name="RouteEditorCS.RelayCommand" filename="D:\a\RouteEditorCS\RouteEditorCS\RelayCommand.cs" line-rate="0" branch-rate="0" complexity="6">
           <methods>
             <method name="add_CanExecuteChanged" signature="(System.EventHandler)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -1293,7 +1057,7 @@
             <line number="28" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="OffRouteMap.ThemeService" filename="D:\a\RouteEditorCS\RouteEditorCS\ThemeService.cs" line-rate="0" branch-rate="0" complexity="3">
+        <class name="RouteEditorCS.ThemeService" filename="D:\a\RouteEditorCS\RouteEditorCS\ThemeService.cs" line-rate="0" branch-rate="0" complexity="3">
           <methods>
             <method name="ApplyTheme" signature="(System.Windows.FrameworkElement,System.Boolean)" line-rate="0" branch-rate="0" complexity="2">
               <lines>
