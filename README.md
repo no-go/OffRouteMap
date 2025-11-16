@@ -7,7 +7,7 @@
 [![Dev docs](https://github.com/no-go/RouteEditorCS/actions/workflows/deploy.yml/badge.svg)](https://no-go.github.io/RouteEditorCS/api/RouteEditorCS.html)
 [![Source Code](https://img.shields.io/badge/source%20code-github-orange)](https://github.com/no-go/RouteEditorCS/)
 
-RouteEditor C# is a simple but modern Windows Application in C# and WPF to get to draw and measure routes
+RouteEditor C# is a simple but modern Windows Application in C# and WPF to draw and measure routes
 in kilometers, save and load them.
 
 A GTK4 version of RouteEditor exists here: [gitlab.com/deadlockz/routeeditor](https://gitlab.com/deadlockz/routeeditor)
