@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OffRouteMap.Properties {
+namespace RouteEditorCS.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -92,18 +92,6 @@ namespace OffRouteMap.Properties {
             }
             set {
                 this["lastMap"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string cacheRoot {
-            get {
-                return ((string)(this["cacheRoot"]));
-            }
-            set {
-                this["cacheRoot"] = value;
             }
         }
     }

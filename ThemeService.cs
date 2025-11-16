@@ -1,8 +1,8 @@
-﻿using ControlzEx.Theming;
+using ControlzEx.Theming;
 using System.Windows;
 using System.Windows.Media;
 
-namespace OffRouteMap
+namespace RouteEditorCS
 {
     /// <summary>
     /// A helper class to handle different UI themes comming from MahApps.

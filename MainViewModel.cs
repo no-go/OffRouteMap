@@ -1,7 +1,7 @@
 using GMap.NET;
 using GMap.NET.MapProviders;
 using GMap.NET.WindowsPresentation;
-using OffRouteMap.Properties;
+using RouteEditorCS.Properties;
 using Ookii.Dialogs.Wpf;
 using System.ComponentModel;
 using System.Globalization;
@@ -10,7 +10,7 @@ using System.Text;
 using System.Windows.Input;
 using System.Windows.Media;
 
-namespace OffRouteMap
+namespace RouteEditorCS
 {
     /// <summary>
     /// MainViewModel implements the UI functions joins them with data and files. 
@@ -22,7 +22,6 @@ namespace OffRouteMap
         private double _guiZoomFactor;
         private string _statusLine;
         private string _selectedMap;
-        private string _cacheRoot;
 
         private PointLatLng _mouseDownPos;
         private List<PointLatLng> _routePoints;
@@ -30,13 +29,10 @@ namespace OffRouteMap
 
         private readonly IGMapControl _gmapControl;
         
-        private readonly FolderDialogService _folderDialogService;
-
         public event PropertyChangedEventHandler PropertyChanged;
         public ICommand GuiZoomInCommand => new RelayCommand(GuiZoomIn);
         public ICommand GuiZoomOutCommand => new RelayCommand(GuiZoomOut);
         public ICommand BeforeClosingCommand => new RelayCommand(BeforeClosing);
-        public ICommand SetCacheRootCommand => new RelayCommand(SetCacheRoot);
         public ICommand RemoveRouteCommand => new RelayCommand(RemoveRoute);
         public ICommand LoadRouteCommand => new RelayCommand(LoadRoute);
         public ICommand SaveRouteCommand => new RelayCommand(SaveRoute);
@@ -110,43 +106,29 @@ namespace OffRouteMap
             WindowTitle = GetType().Namespace;
             _gmapControl = gmapControl;
 
-            _folderDialogService = new FolderDialogService();
             GuiZoomFactor = Settings.Default.guiSize;
-
-            _cacheRoot = Settings.Default.cacheRoot;
-            if (_cacheRoot == "")
-            {
-                _cacheRoot = System.IO.Path.Combine(
-                    Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-                    "Maps"
-                );
-            }
 
             Items = new ProviderCollection(new[]
             {
                 new ProviderItem(
                     "OSM",
                     "OpenStreetMap",
-                    OpenStreetMapProvider.Instance,
-                    _cacheRoot
+                    OpenStreetMapProvider.Instance
                 ),
                 new ProviderItem(
                     "googlemaps",
                     "Google Maps",
-                    GMapProviders.GoogleMap,
-                    _cacheRoot
+                    GMapProviders.GoogleMap
                 ),
                 new ProviderItem(
                     "opencyclemap",
                     "Cycle Maps",
-                    GMapProviders.OpenCycleMap,
-                    _cacheRoot
+                    GMapProviders.OpenCycleMap
                 ),
                 new ProviderItem(
                     "BingHybrid",
                     "Bing Hybrid",
-                    GMapProviders.BingHybridMap,
-                    _cacheRoot
+                    GMapProviders.BingHybridMap
                 )
             });
             SelectedMap = Settings.Default.lastMap;
@@ -184,37 +166,10 @@ namespace OffRouteMap
         }
 
         /// <summary>
-        /// UI Button function to set the path, where the map tile cache has to store the tiles for each map provider.
-        /// </summary>
-        public void SetCacheRoot ()
-        {
-            var path = _folderDialogService.ShowSelectFolderDialog(
-                Strings.FolderDialog_Title,
-                _cacheRoot
-            );
-            if (path != null && path != _cacheRoot)
-            {
-                _cacheRoot = path;
-                Settings.Default.cacheRoot = _cacheRoot;
-                Settings.Default.Save();
-                HandleMapChanges();
-            }
-        }
-
-        /// <summary>
         /// This method sets map provider and cache based on the _selectedMap and settings.
         /// </summary>
         private void HandleMapChanges ()
         {
-            if (_cacheRoot == "")
-            {
-                _cacheRoot = System.IO.Path.Combine(
-                    Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-                    "Maps"
-                );
-            }
-            string cachePath = System.IO.Path.Combine(_cacheRoot, _selectedMap);
-
             if (NetworkInterface.GetIsNetworkAvailable())
             {
                 _gmapControl.CacheMode = AccessMode.ServerAndCache;
@@ -227,7 +182,6 @@ namespace OffRouteMap
             if (Items.TryGet(_selectedMap, out var item))
             {
                 _gmapControl.MapProvider = item.Provider;
-                _gmapControl.PrimaryCache = item.FileCache;
             }
         }
 

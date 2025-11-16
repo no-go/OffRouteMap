@@ -27,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OffRouteMap.csproj" />
+    <ProjectReference Include="..\RouteEditorCS.csproj" />
   </ItemGroup>
 
 </Project>

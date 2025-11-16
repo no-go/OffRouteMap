@@ -1,4 +1,4 @@
-﻿<mah:MetroWindow x:Class="OffRouteMap.MainWindow"
+<mah:MetroWindow x:Class="RouteEditorCS.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,7 +6,7 @@
         xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:gmap="clr-namespace:GMap.NET.WindowsPresentation;assembly=GMap.NET.WindowsPresentation"
-        xmlns:local="clr-namespace:OffRouteMap"
+        xmlns:local="clr-namespace:RouteEditorCS"
         Title="{Binding WindowTitle, UpdateSourceTrigger=PropertyChanged}"
         Closing="Window_Closing"
         GlowBrush="{DynamicResource MahApps.Brushes.Accent}"
@@ -47,11 +47,6 @@
                                   Kind="Save" />
             </Button>
 
-            <Button Command="{Binding SetCacheRootCommand}" Name="btnCacheRoot">
-                <iconPacks:PackIconModern Width="22"
-                                  Height="22"
-                                  Kind="Suitcase" />
-            </Button>
         </mah:WindowCommands>
     </mah:MetroWindow.RightWindowCommands>
     

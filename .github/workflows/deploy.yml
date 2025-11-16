@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 env:
-  PROJECT_NAME: OffRouteMap
+  PROJECT_NAME: RouteEditorCS
   COVERAGE_OUTPUT_DIR: coveragereport
   DOC_OUTPUT_DIR: _site
 

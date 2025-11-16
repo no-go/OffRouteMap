@@ -1,7 +1,7 @@
-﻿<Application x:Class="OffRouteMap.App"
+<Application x:Class="RouteEditorCS.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:OffRouteMap"
+             xmlns:local="clr-namespace:RouteEditorCS"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>

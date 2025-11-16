@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Windows.Input;
 
-namespace OffRouteMap
+namespace RouteEditorCS
 {
     /// <summary>
     /// A Helper class to bind UI Events to simple Map methods.

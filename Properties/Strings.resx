@@ -117,17 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CacheFolderHint" xml:space="preserve">
-    <value>To use the new cache folder, you have to resart the application.</value>
-  </data>
   <data name="DelCommand_Hint" xml:space="preserve">
-    <value>Remove route</value>
+    <value>Clear Route</value>
   </data>
   <data name="Dialog_Filetype" xml:space="preserve">
     <value>Route files</value>
-  </data>
-  <data name="FolderDialog_Title" xml:space="preserve">
-    <value>Select a cache folder</value>
   </data>
   <data name="LoadDialog_Title" xml:space="preserve">
     <value>Load Route</value>

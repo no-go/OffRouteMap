@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OffRouteMap.Properties {
+namespace RouteEditorCS.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace OffRouteMap.Properties {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("OffRouteMap.Properties.Strings", typeof(Strings).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("RouteEditorCS.Properties.Strings", typeof(Strings).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,16 +61,7 @@ namespace OffRouteMap.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to To use the new cache folder, you have to resart the application..
-        /// </summary>
-        public static string CacheFolderHint {
-            get {
-                return ResourceManager.GetString("CacheFolderHint", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Remove route.
+        ///   Looks up a localized string similar to Clear Route.
         /// </summary>
         public static string DelCommand_Hint {
             get {
@@ -84,15 +75,6 @@ namespace OffRouteMap.Properties {
         public static string Dialog_Filetype {
             get {
                 return ResourceManager.GetString("Dialog_Filetype", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Select a cache folder.
-        /// </summary>
-        public static string FolderDialog_Title {
-            get {
-                return ResourceManager.GetString("FolderDialog_Title", resourceCulture);
             }
         }
         

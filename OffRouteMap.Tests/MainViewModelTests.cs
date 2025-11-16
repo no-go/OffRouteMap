@@ -2,7 +2,7 @@ using GMap.NET.WindowsPresentation;
 using Moq;
 using Xunit;
 
-namespace OffRouteMap.Tests
+namespace RouteEditorCS.Tests
 {
     public class MainViewModelTests
     {

@@ -1,10 +1,10 @@
-﻿using GMap.NET;
+using GMap.NET;
 using GMap.NET.MapProviders;
 using GMap.NET.WindowsPresentation;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 
-namespace OffRouteMap
+namespace RouteEditorCS
 {
     public interface IGMapControl
     {

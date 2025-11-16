@@ -1,6 +1,6 @@
 using GMap.NET.MapProviders;
 
-namespace OffRouteMap
+namespace RouteEditorCS
 {
     /// <summary>
     /// A class to store details of a map provider.
@@ -11,14 +11,11 @@ namespace OffRouteMap
         public string DisplayName { get; }
         public GMapProvider Provider { get; }
 
-        public FileCacheProvider FileCache { get; }
-
-        public ProviderItem (string key, string displayName, GMapProvider provider, string cacheRoot)
+        public ProviderItem (string key, string displayName, GMapProvider provider)
         {
             Key = key ?? throw new ArgumentNullException(nameof(key));
             DisplayName = displayName ?? key;
             Provider = provider ?? throw new ArgumentNullException(nameof(provider));
-            FileCache = new FileCacheProvider(System.IO.Path.Combine(cacheRoot, Key));
         }
     }
 }

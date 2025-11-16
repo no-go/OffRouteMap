@@ -1,9 +1,9 @@
-﻿using GMap.NET.WindowsPresentation;
+using GMap.NET.WindowsPresentation;
 using MahApps.Metro.Controls;
-using OffRouteMap.Properties;
+using RouteEditorCS.Properties;
 using System.Windows.Input;
 
-namespace OffRouteMap
+namespace RouteEditorCS
 {
 
     public partial class MainWindow : MetroWindow
@@ -16,7 +16,6 @@ namespace OffRouteMap
             InitializeComponent();
 
             // A primitve way for localisations.
-            btnCacheRoot.ToolTip = Strings.FolderDialog_Title;
             btnDelete.ToolTip = Strings.DelCommand_Hint;
             btnLoad.ToolTip = Strings.LoadDialog_Title;
             btnSave.ToolTip = Strings.SaveDialog_Title;

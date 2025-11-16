@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36518.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OffRouteMap", "OffRouteMap.csproj", "{D3BF5A7A-1430-4C7A-866D-829F7DE938AD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RouteEditorCS", "RouteEditorCS.csproj", "{D3BF5A7A-1430-4C7A-866D-829F7DE938AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OffRouteMap.Tests", "OffRouteMap.Tests\OffRouteMap.Tests.csproj", "{8C0D9363-92FA-476B-8C41-6653FCE9FAFA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RouteEditorCS.Tests", "OffRouteMap.Tests\RouteEditorCS.Tests.csproj", "{8C0D9363-92FA-476B-8C41-6653FCE9FAFA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

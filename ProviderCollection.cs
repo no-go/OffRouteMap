@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OffRouteMap
+namespace RouteEditorCS
 {
     /// <summary>
     /// A class to store many provider details as item.
