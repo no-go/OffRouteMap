@@ -1,43 +1,26 @@
-# OffRouteMap
+# RouteEditor C#
 
-[![Windows x64](docs/badge-windows.svg)](https://github.com/no-go/OffRouteMap/releases/latest/download/OffRouteMap.exe)
-![Dot Net](https://github.com/no-go/OffRouteMap/actions/workflows/build.yml/badge.svg)
-[![Tests](https://img.shields.io/badge/tests%20and%20coverage-exists-green)](https://no-go.github.io/OffRouteMap/index.html)
-[![License](https://img.shields.io/badge/license-BSD%202-yellowgreen)](https://github.com/no-go/OffRouteMap/blob/main/LICENSE.txt)
-[![Dev docs](https://github.com/no-go/OffRouteMap/actions/workflows/deploy.yml/badge.svg)](https://no-go.github.io/OffRouteMap/api/OffRouteMap.html)
-[![Source Code](https://img.shields.io/badge/source%20code-github-orange)](https://github.com/no-go/OffRouteMap/)
+[![Windows x64](docs/badge-windows.svg)](https://github.com/no-go/RouteEditorCS/releases/latest/download/OffRouteMap.exe)
+![Dot Net](https://github.com/no-go/RouteEditorCS/actions/workflows/build.yml/badge.svg)
+[![Tests](https://img.shields.io/badge/tests%20and%20coverage-exists-green)](https://no-go.github.io/RouteEditorCS/index.html)
+[![License](https://img.shields.io/badge/license-BSD%202-yellowgreen)](https://github.com/no-go/RouteEditorCS/blob/main/LICENSE.txt)
+[![Dev docs](https://github.com/no-go/RouteEditorCS/actions/workflows/deploy.yml/badge.svg)](https://no-go.github.io/RouteEditorCS/api/OffRouteMap.html)
+[![Source Code](https://img.shields.io/badge/source%20code-github-orange)](https://github.com/no-go/RouteEditorCS/)
 
-A simple but modern Windows Application in C# and WPF to get and cache free
-map tiles (e.g. OSM or OpenBusMap) and use them offline to draw and measure routes
+RouteEditor C# is a simple but modern Windows Application in C# and WPF to get to draw and measure routes
 in kilometers, save and load them.
 
+A GTK4 version of RouteEditor exists here: [gitlab.com/deadlockz/routeeditor](https://gitlab.com/deadlockz/routeeditor)
+
+Because Offline Maps does not work well, I remove it from *OffRouteMap* and call
+the Application *RouteEditor C#* now.
+
 ![Screenshot](docs/screenshot.png)
-
-## Initial creation roadmap and ideas
-
-- make this readme in inital comit and make everything public on github (good idea?!)
-- cool and easy gui size and dark/light modes via MahApps.Metro
-- store gui size and dark mode in setting
-- store last map position in settings
-- does a nuget osm package still exist with needful features?
-- design a single window application
-- hide issues, if map title not downloadable (offline mode)
-- cache map tiles in same way like foxtrotgps in a folder
-- multithread downloads (?)
-  - use a producer/consumer pattern
-  - maybe using LiveCharts2 to visualisze downloads
-- maybe allow to set different map tile url sources similar to foxtrotgps
-  - code must be open for that feature
-  - see https://github.com/ArduPilot/MissionPlanner/blob/master/ExtLibs/Maps/WMSProvider.cs
-- in code docu
 
 ## UI Features
 
 - map
-  - [x] load tiles from given folder
-  - [x] load tiles from network if missing
   - [x] select different maps
-  - [ ] add and customize different mapProvider urls (optional)
   - [x] move area via left click
   - [x] in/out zoom via mouse wheel
   - [x] display position of cursor in status line
@@ -48,7 +31,6 @@ in kilometers, save and load them.
   - [x] remove last route point via right click
   - [x] display distance in status line
 - settings
-  - [x] tiles folder
   - [x] GUI size
   - [x] initial/last position
   - [x] initial/last zoom
@@ -59,13 +41,10 @@ in kilometers, save and load them.
 
 ## Dev Docs
 
-See [here](https://no-go.github.io/OffRouteMap/api/OffRouteMap.html)!
+See [here](https://no-go.github.io/RouteEditorCS/api/OffRouteMap.html)!
 
 ## Future tasks
 
-- dark/night mode removed as feature 2025-10-17
-- [x] minimal localization
-- [ ] re-add nullable !
 - [x] ci/cd
   - [x] some unit tests via xUnit
     - [x] mock example
